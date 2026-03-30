@@ -57,7 +57,7 @@ export default function LoginPage() {
 
       <div className="relative w-full max-w-sm">
         {/* Card */}
-        <div className="bg-[#111a13] border border-white/[.08] rounded-2xl px-8 py-10 shadow-[0_24px_80px_rgba(0,0,0,.5)]">
+        <div className="bg-[#111a13] border border-white/8 rounded-2xl px-8 py-10 shadow-[0_24px_80px_rgba(0,0,0,.5)]">
 
           {/* Header */}
           <header className="mb-8">
@@ -89,7 +89,7 @@ export default function LoginPage() {
                 placeholder="you@example.com"
                 required
                 autoComplete="email"
-                className="bg-white/[.05] border border-white/[.09] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none focus:border-[#4ade80]/50 focus:bg-white/[.07] transition-all duration-150"
+                className="bg-white/5 border border-white/9 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none focus:border-[#4ade80]/50 focus:bg-white/[.07] transition-all duration-150"
               />
             </label>
 
@@ -102,7 +102,7 @@ export default function LoginPage() {
                 placeholder={mode === "register" ? "Min. 6 characters" : "••••••••"}
                 required
                 autoComplete={mode === "login" ? "current-password" : "new-password"}
-                className="bg-white/[.05] border border-white/[.09] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none focus:border-[#4ade80]/50 focus:bg-white/[.07] transition-all duration-150"
+                className="bg-white/5 border border-white/9 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none focus:border-[#4ade80]/50 focus:bg-white/[.07] transition-all duration-150"
               />
             </label>
 
@@ -125,7 +125,7 @@ export default function LoginPage() {
           {/* Google button */}
           <button
             onClick={handleGoogle}
-            className="w-full flex items-center justify-center gap-2.5 py-3.5 bg-white/[.05] border border-white/[.09] rounded-xl text-sm text-white/70 transition-all duration-150 hover:bg-white/[.09] hover:text-white hover:-translate-y-px active:translate-y-0"
+            className="w-full flex items-center justify-center gap-2.5 py-3.5 bg-white/5 border border-white/9 rounded-xl text-sm text-white/70 transition-all duration-150 hover:bg-white/9 hover:text-white hover:-translate-y-px active:translate-y-0"
           >
             <GoogleIcon />
             Continue with Google

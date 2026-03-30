@@ -24,7 +24,7 @@ export default function Dashboard() {
   const router = useRouter();
 
   const [decks, setDecks] = useState([]);
-  const [scores, setScores] = useState({});  // { [deckId]: { pct, correct, total } }
+  const [scores, setScores] = useState({});  
   const [decksLoading, setDecksLoading] = useState(true);
   const [showImport, setShowImport] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -67,7 +67,7 @@ export default function Dashboard() {
       {/* Nav */}
       <nav className="sticky top-0 z-10 flex items-center justify-between px-8 py-4.5 border-b border-white/6 backdrop-blur-xl bg-(--bg)/75">
         <span className="font-(--font-display) text-(--accent) text-lg tracking-widest">
-          QCM
+          A title(No inspi)
         </span>
         <div className="flex items-center gap-5">
           <span className="hidden sm:block text-xs text-(--text-muted)">{user.email}</span>
