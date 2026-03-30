@@ -123,17 +123,17 @@ export default function QuizPage() {
       <nav className="flex items-center justify-between mb-10">
         <button
           onClick={() => router.push("/dashboard")}
-          className="flex items-center gap-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
+          className="flex items-center gap-1.5 text-xs text-(--text-muted) hover:text-(--text) transition-colors"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           Decks
         </button>
-        <span className="text-xs text-[var(--text-muted)] font-medium tracking-widest uppercase">
+        <span className="text-xs text-(--text-muted) font-medium tracking-widest uppercase">
           {deck.topic}
         </span>
-        <span className="text-xs text-[var(--text-muted)] tabular-nums">
+        <span className="text-xs text-(--text-muted) tabular-nums">
           {index + 1} / {total}
         </span>
       </nav>
@@ -141,17 +141,17 @@ export default function QuizPage() {
       {/* Progress bar */}
       <div className="h-px bg-white/[.07] rounded-full mb-8 relative overflow-hidden">
         <div
-          className="absolute inset-y-0 left-0 bg-[var(--accent)] rounded-full transition-all duration-500 ease-out"
+          className="absolute inset-y-0 left-0 bg-(--accent) rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}
         />
       </div>
  
       {/* Card */}
       <div className={`transition-all duration-300 ease-out ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
-        <p className="text-[11px] font-medium tracking-[.12em] uppercase text-[var(--accent)] mb-3">
+        <p className="text-[11px] font-medium tracking-[.12em] uppercase text-(--accent) mb-3">
           Question {index + 1}
         </p>
-        <h2 className="font-[var(--font-display)] text-2xl font-normal leading-snug text-[var(--text)] mb-8">
+        <h2 className="font-(--font-display) text-2xl leading-snug text-(--text) mb-8">
           {q.question}
         </h2>
  
@@ -172,10 +172,10 @@ export default function QuizPage() {
                   disabled={revealed}
                   className={`
                     w-full text-left px-5 py-4 rounded-xl border text-sm transition-all duration-200
-                    ${state === "idle" ? "border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)]/50 hover:bg-[var(--surface-2)] hover:-translate-y-px" : ""}
-                    ${state === "correct" ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]" : ""}
-                    ${state === "wrong" ? "border-[var(--danger)] bg-[var(--danger)]/10 text-[var(--danger)]" : ""}
-                    ${state === "dim" ? "border-[var(--border)] opacity-35" : ""}
+                    ${state === "idle" ? "border-(--border) bg-(--surface) hover:border-(--accent)/50 hover:bg-(--surface-2) hover:-translate-y-px" : ""}
+                    ${state === "correct" ? "border-(--accent) bg-(--accent)/10 text-(--accent)" : ""}
+                    ${state === "wrong" ? "border-(--danger) bg-(--danger)/10 text-(--danger)" : ""}
+                    ${state === "dim" ? "border-(--border) opacity-35" : ""}
                     ${revealed ? "cursor-default" : "cursor-pointer"}
                   `}
                 >
@@ -193,14 +193,14 @@ export default function QuizPage() {
         {revealed && (
           <div className="animate-[fadeUp_.3s_ease_forwards]">
             {q.explanation && (
-              <div className="mb-5 px-5 py-4 rounded-xl bg-[var(--surface-2)] border border-[var(--border)] text-sm text-[var(--text-muted)] leading-relaxed">
-                <span className="text-[var(--text)] font-medium">Explication — </span>
+              <div className="mb-5 px-5 py-4 rounded-xl bg-(--surface-2) border border-(--border) text-sm text-(--text-muted) leading-relaxed">
+                <span className="text-(--text) font-medium">Explication — </span>
                 {q.explanation}
               </div>
             )}
             <button
               onClick={handleNext}
-              className="w-full py-3.5 bg-[var(--accent)] text-[#0a1a10] text-sm font-medium rounded-xl transition-all duration-150 hover:opacity-85 hover:-translate-y-px hover:shadow-[0_6px_28px_rgba(74,222,128,.2)] active:translate-y-0"
+              className="w-full py-3.5 bg-(--accent) text-[#0a1a10] text-sm font-medium rounded-xl transition-all duration-150 hover:opacity-85 hover:-translate-y-px hover:shadow-[0_6px_28px_rgba(74,222,128,.2)] active:translate-y-0"
             >
               {index + 1 < total ? "Next question →" : "See results →"}
             </button>
