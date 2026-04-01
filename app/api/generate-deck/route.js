@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
-import { PROMPT_TEMPLATE } from "@/lib/constants";
+import { PROMPT_TEMPLATE } from "@/constants/deckPrompt";
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 
