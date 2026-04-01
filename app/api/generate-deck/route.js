@@ -1,35 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
-
+import { PROMPT_TEMPLATE } from "@/lib/constants";
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const SYSTEM_PROMPT = `You are an expert at creating multiple-choice questions (QCM) from educational documents.
-
-Given a document, generate a JSON object with the following structure:
-{
-  "topic": "concise topic name derived from the document",
-  "questions": [
-    {
-      "id": 1,
-      "question": "Clear, specific question",
-      "options": ["A. option", "B. option", "C. option", "D. option"],
-      "answer": "A",
-      "explanation": "Brief explanation of why this answer is correct"
-    }
-  ]
-}
-
-Rules:
-- Generate between 10 and 30 questions depending on document length and richness
-- Always use the document's language for ALL output including topic
-- Each question must test a distinct concept
-- Options must always be prefixed: "A. ...", "B. ...", "C. ...", "D. ..."
-- "answer" must be just the letter: "A", "B", "C", or "D"
-- Distribute questions across the ENTIRE document, not just the beginning
-- Distractors (wrong options) must be plausible, not obviously wrong
-- Avoid yes/no questions, trick questions, and "all of the above" options
-- Prefer questions that test understanding over pure memorization
-- Return ONLY the raw JSON object, no markdown, no backticks, no commentary`;
 
 export async function POST(req) {
   try {
@@ -61,7 +34,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
           data: base64,
         },
       },
-      SYSTEM_PROMPT,
+      PROMPT_TEMPLATE,
     ]);
 
     const text = result.response.text().trim();

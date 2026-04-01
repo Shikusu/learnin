@@ -3,8 +3,9 @@
 import { File, FileText, Copy, Check, ClipboardPaste } from "lucide-react";
 import { useState, useRef, useCallback } from "react";
 import { useAuth } from "@/context/AuthContext";
-import { saveDeck } from "@/firebase/decks";
-import { PROMPT_TEMPLATE } from "@/constants/deckPrompt";
+import { saveFiche } from "@/firebase/fiches";
+import { sanitizeFiche } from "@/utils/sanitizeFiche";
+import { PROMPT_TEMPLATE } from "@/constants/fichePrompt";
 const TABS = [
   { id: "pdf", label: "Generate from PDF" },
   { id: "llm", label: "Ask an LLM" },
@@ -12,64 +13,7 @@ const TABS = [
 ];
 
 
-
-// Sanitize a string field — strip HTML tags and limit length
-const sanitizeString = (str, maxLength = 1000) => {
-  if (typeof str !== "string") return "";
-  return str.replace(/<[^>]*>/g, "").trim().slice(0, maxLength);
-};
-
-// Deep-validate and sanitize a parsed deck object
-const sanitizeDeck = (raw) => {
-  if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
-    return { valid: false, error: "JSON must be an object." };
-  }
-
-  const topic = sanitizeString(raw.topic, 120);
-  if (!topic) return { valid: false, error: "Missing or empty \"topic\" field." };
-
-  if (!Array.isArray(raw.questions) || raw.questions.length === 0) {
-    return { valid: false, error: "\"questions\" must be a non-empty array." };
-  }
-
-  if (raw.questions.length > 200) {
-    return { valid: false, error: "Too many questions (max 200)." };
-  }
-
-  const VALID_ANSWERS = new Set(["A", "B", "C", "D"]);
-
-  const questions = raw.questions.map((q, i) => {
-    const label = `Question ${i + 1}`;
-
-    if (!q || typeof q !== "object") throw new Error(`${label}: invalid format.`);
-
-    const question = sanitizeString(q.question, 600);
-    if (!question) throw new Error(`${label}: missing "question" text.`);
-
-    if (!Array.isArray(q.options) || q.options.length !== 4) {
-      throw new Error(`${label}: must have exactly 4 options.`);
-    }
-
-    const options = q.options.map((opt, oi) => {
-      const s = sanitizeString(opt, 300);
-      if (!s) throw new Error(`${label}, option ${oi + 1}: empty option.`);
-      return s;
-    });
-
-    const answer = sanitizeString(q.answer, 1).toUpperCase();
-    if (!VALID_ANSWERS.has(answer)) {
-      throw new Error(`${label}: "answer" must be A, B, C, or D.`);
-    }
-
-    const explanation = sanitizeString(q.explanation ?? "", 800);
-
-    return { id: i + 1, question, options, answer, explanation };
-  });
-
-  return { valid: true, data: { topic, questions } };
-};
-
-export default function ImportModal({ onClose, onSuccess }) {
+export default function FicheImportModal({ onClose, onSuccess }) {
   const { user } = useAuth();
   const [tab, setTab] = useState("pdf");
   const [dragging, setDragging] = useState(false);
@@ -99,20 +43,20 @@ export default function ImportModal({ onClose, onSuccess }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // fallback: select the pre text
+      // silent fail
     }
   };
 
-  /* ── Save a validated deck to Firebase ── */
-  const persistDeck = useCallback(async (parsed) => {
-    const result = sanitizeDeck(parsed);
+  /* ── Save a validated fiche to Firebase ── */
+  const persistFiche = useCallback(async (parsed) => {
+    const result = sanitizeFiche(parsed);
     if (!result.valid) {
       setError(result.error);
       setStatus("error");
       return;
     }
-    const deckId = await saveDeck(user.uid, result.data);
-    onSuccess({ id: deckId, ...result.data, createdAt: new Date() });
+    const ficheId = await saveFiche(user.uid, result.data);
+    onSuccess({ id: ficheId, ...result.data, createdAt: new Date() });
   }, [user, onSuccess]);
 
   /* ── PDF → Gemini ── */
@@ -124,8 +68,8 @@ export default function ImportModal({ onClose, onSuccess }) {
       setError("Only PDF files are accepted here.");
       return;
     }
-    if (file.size > 3 * 1024 * 1024) {
-      setError("File too large. Max 3MB for PDF generation.");
+    if (file.size > 10 * 1024 * 1024) {
+      setError("File too large. Max 10MB.");
       return;
     }
 
@@ -136,10 +80,9 @@ export default function ImportModal({ onClose, onSuccess }) {
       const formData = new FormData();
       formData.append("file", file);
 
-      setLoadingMsg("Generating questions…");
-      const res = await fetch("/api/generate-deck", { method: "POST", body: formData });
+      setLoadingMsg("Generating fiche…");
+      const res = await fetch("/api/generate-fiche", { method: "POST", body: formData });
 
-      // Guard against non-JSON error responses
       const contentType = res.headers.get("content-type") ?? "";
       if (!contentType.includes("application/json")) {
         setError("Unexpected server response. Please try again.");
@@ -150,18 +93,22 @@ export default function ImportModal({ onClose, onSuccess }) {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error ?? "Generation failed.");
+        if (res.status === 429) {
+          setError("Gemini is rate-limited right now. Use the \"Ask an LLM\" tab instead.");
+        } else {
+          setError(data.error ?? "Generation failed.");
+        }
         setStatus("error");
         return;
       }
 
-      setLoadingMsg("Saving deck…");
-      await persistDeck(data);
+      setLoadingMsg("Saving fiche…");
+      await persistFiche(data);
     } catch {
       setError("Something went wrong. Please try again.");
       setStatus("error");
     }
-  }, [persistDeck]);
+  }, [persistFiche]);
 
   /* ── JSON file ── */
   const processJsonFile = useCallback(async (file) => {
@@ -183,12 +130,12 @@ export default function ImportModal({ onClose, onSuccess }) {
     try {
       const text = await file.text();
       const parsed = JSON.parse(text);
-      await persistDeck(parsed);
+      await persistFiche(parsed);
     } catch (err) {
       setError(err instanceof SyntaxError ? "Invalid JSON — could not parse file." : "Something went wrong.");
       setStatus("error");
     }
-  }, [persistDeck]);
+  }, [persistFiche]);
 
   /* ── JSON paste ── */
   const processJsonPaste = useCallback(async () => {
@@ -207,28 +154,27 @@ export default function ImportModal({ onClose, onSuccess }) {
     setLoadingMsg("Importing…");
 
     try {
-      // Strip accidental markdown fences
       const clean = raw
-        .replace(/^```json\s*/i, "")
-        .replace(/^```\s*/i, "")
-        .replace(/```\s*$/i, "")
-        .trim();
+  .replace(/^```json\s*/i, "")
+  .replace(/^```\s*/i, "")
+  .replace(/```\s*$/i, "")
+  .replace(/\[cite_start\]/g, "")        
+  .replace(/\[cite:\s*[\d,\s]+\]/g, "") 
+  .trim();
       const parsed = JSON.parse(clean);
-      await persistDeck(parsed);
+      await persistFiche(parsed);
     } catch (err) {
       setError(err instanceof SyntaxError ? "Invalid JSON — check the format and try again." : "Something went wrong.");
       setStatus("error");
     }
-  }, [pasteValue, persistDeck]);
-
-  const processFile = tab === "pdf" ? processPdf : processJsonFile;
-  const accept = tab === "pdf" ? "application/pdf" : ".json";
+  }, [pasteValue, persistFiche]);
 
   const handleDrop = (e) => {
     e.preventDefault();
     setDragging(false);
     if (tab === "json" && jsonInputMode === "paste") return;
-    processFile(e.dataTransfer.files[0]);
+    if (tab === "pdf") processPdf(e.dataTransfer.files[0]);
+    if (tab === "json") processJsonFile(e.dataTransfer.files[0]);
   };
 
   return (
@@ -243,7 +189,7 @@ export default function ImportModal({ onClose, onSuccess }) {
           {/* Header */}
           <div className="flex items-start justify-between mb-6">
             <div>
-              <h2 className="text-xl font-semibold text-(--text)">Add a deck</h2>
+              <h2 className="text-xl font-semibold text-(--text)">Generate a fiche</h2>
               <p className="text-sm text-(--text-muted) mt-1">Generate from a PDF, use an LLM, or import JSON.</p>
             </div>
             <button
@@ -272,8 +218,59 @@ export default function ImportModal({ onClose, onSuccess }) {
             ))}
           </div>
 
+          {/* ── PDF Tab ── */}
+          {tab === "pdf" && (
+            <>
+              <div
+                onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+                onDragLeave={() => setDragging(false)}
+                onDrop={handleDrop}
+                onClick={() => status !== "loading" && inputRef.current?.click()}
+                className={`
+                  relative flex flex-col items-center justify-center gap-3
+                  border-2 border-dashed rounded-xl p-10 cursor-pointer
+                  transition-all duration-150
+                  ${dragging ? "border-(--accent) bg-(--accent)/5" : "border-(--border) hover:border-(--accent)/50 hover:bg-(--surface-2)"}
+                  ${status === "loading" ? "pointer-events-none opacity-60" : ""}
+                `}
+              >
+                <input ref={inputRef} type="file" accept="application/pdf" className="hidden" onChange={(e) => processPdf(e.target.files[0])} />
+
+                {status === "loading" ? (
+                  <>
+                    <div className="w-6 h-6 border-2 border-(--border) border-t-(--accent) rounded-full animate-spin" />
+                    <p className="text-sm text-(--text-muted)">{loadingMsg}</p>
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-8 h-8 text-(--accent)" />
+                    <p className="text-sm text-(--text) font-medium">Drop your PDF here</p>
+                    <p className="text-xs text-(--text-muted)">or click to browse · max 10MB</p>
+                  </>
+                )}
+              </div>
+
+              {error && (
+                <div className="mt-4 flex items-start justify-between gap-3 text-sm text-(--danger) bg-(--danger)/10 border border-(--danger)/20 rounded-lg px-4 py-2.5">
+                  <p>{error}</p>
+                  <button onClick={reset} className="shrink-0 text-xs underline underline-offset-2 hover:opacity-70 transition-opacity">
+                    Retry
+                  </button>
+                </div>
+              )}
+
+              {status === "idle" && (
+                <p className="mt-4 text-xs text-(--text-muted) text-center leading-relaxed">
+                  Gemini will read your document and generate a structured study sheet.
+                  <br />
+                  <span className="opacity-70">For larger docs, use the <span className="text-(--text)">Ask an LLM</span> tab instead.</span>
+                </p>
+              )}
+            </>
+          )}
+
           {/* ── LLM Guide Tab ── */}
-{tab === "llm" && (
+          {tab === "llm" && (
   <div className="space-y-4">
     <div className="space-y-3">
       {[
@@ -309,59 +306,9 @@ export default function ImportModal({ onClose, onSuccess }) {
     </p>
   </div>
 )}
-
-          {/* ── PDF Tab ── */}
-          {tab === "pdf" && (
-            <>
-              <div
-                onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
-                onDragLeave={() => setDragging(false)}
-                onDrop={handleDrop}
-                onClick={() => status !== "loading" && inputRef.current?.click()}
-                className={`
-                  relative flex flex-col items-center justify-center gap-3
-                  border-2 border-dashed rounded-xl p-10 cursor-pointer
-                  transition-all duration-150
-                  ${dragging ? "border-(--accent) bg-(--accent)/5" : "border-(--border) hover:border-(--accent)/50 hover:bg-(--surface-2)"}
-                  ${status === "loading" ? "pointer-events-none opacity-60" : ""}
-                `}
-              >
-                <input ref={inputRef} type="file" accept={accept} className="hidden" onChange={(e) => processFile(e.target.files[0])} />
-
-                {status === "loading" ? (
-                  <>
-                    <div className="w-6 h-6 border-2 border-(--border) border-t-(--accent) rounded-full animate-spin" />
-                    <p className="text-sm text-(--text-muted)">{loadingMsg}</p>
-                  </>
-                ) : (
-                  <>
-                    <FileText className="w-8 h-8 text-(--accent)" />
-                    <p className="text-sm text-(--text) font-medium">Drop your PDF here</p>
-                    <p className="text-xs text-(--text-muted)">or click to browse · max 3MB</p>
-                  </>
-                )}
-              </div>
-
-              {error && (
-                <p className="mt-4 text-sm text-(--danger) bg-(--danger)/10 border border-(--danger)/20 rounded-lg px-4 py-2.5">
-                  {error}
-                </p>
-              )}
-
-              {status === "idle" && (
-                <p className="mt-4 text-xs text-(--text-muted) text-center leading-relaxed">
-                  Gemini will read your document and generate as many meaningful questions as it can.
-                  <br />
-                  <span className="opacity-70">For larger docs, use the <span className="text-(--text)">Ask an LLM</span> tab instead.</span>
-                </p>
-              )}
-            </>
-          )}
-
           {/* ── JSON Tab ── */}
           {tab === "json" && (
             <>
-              {/* Toggle: File vs Paste */}
               <div className="flex gap-1 p-1 bg-(--surface-2) rounded-xl mb-4">
                 {[
                   { id: "file", label: "Upload file", icon: <File className="w-3 h-3" /> },
@@ -382,7 +329,6 @@ export default function ImportModal({ onClose, onSuccess }) {
                 ))}
               </div>
 
-              {/* File drop zone */}
               {jsonInputMode === "file" && (
                 <div
                   onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
@@ -413,7 +359,6 @@ export default function ImportModal({ onClose, onSuccess }) {
                 </div>
               )}
 
-              {/* Paste zone */}
               {jsonInputMode === "paste" && (
                 <div className="flex flex-col gap-3">
                   <textarea
@@ -434,14 +379,12 @@ export default function ImportModal({ onClose, onSuccess }) {
                 </div>
               )}
 
-              {/* Error */}
               {error && (
                 <p className="mt-4 text-sm text-(--danger) bg-(--danger)/10 border border-(--danger)/20 rounded-lg px-4 py-2.5">
                   {error}
                 </p>
               )}
 
-              {/* Schema hint */}
               <details className="mt-5 group">
                 <summary className="text-xs text-(--text-muted) cursor-pointer select-none hover:text-(--text) transition-colors">
                   Expected JSON format ↓
@@ -449,15 +392,17 @@ export default function ImportModal({ onClose, onSuccess }) {
                 <pre className="mt-2 text-xs text-(--text-muted) bg-(--surface-2) border border-(--border) rounded-lg p-3 overflow-x-auto leading-relaxed">
 {`{
   "topic": "Your topic name",
-  "questions": [
-    {
-      "id": 1,
-      "question": "What is...?",
-      "options": ["A. x", "B. y", "C. z", "D. w"],
-      "answer": "A",
-      "explanation": "Because..."
-    }
-  ]
+  "summary": ["Key idea one.", "Key idea two."],
+  "key_concepts": [
+    { "term": "Term", "definition": "Definition" }
+  ],
+  "outline": {
+    "title": "Main topic",
+    "children": [
+      { "title": "Subtopic", "children": [] }
+    ]
+  },
+  "mnemonics": []
 }`}
                 </pre>
               </details>
@@ -466,6 +411,6 @@ export default function ImportModal({ onClose, onSuccess }) {
 
         </div>
       </div>
-    </> 
+    </>
   );
 }
