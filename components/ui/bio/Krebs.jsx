@@ -93,7 +93,7 @@ export function KrebsCycle() {
           <p className="text-[11px] font-medium text-(--text-muted) mb-2">Par tour</p>
           <div className="grid grid-cols-2 gap-1.5">
             {BILAN.map(({ label, color }) => (
-              <div key={label} className="rounded-lg px-3 py-2 text-xs font-medium border border-white/5 bg-white/[.04]"
+              <div key={label} className="rounded-lg px-3 py-2 text-xs font-medium border border-white/5 bg-white/4"
                 style={{ color }}>{label}</div>
             ))}
           </div>
@@ -101,7 +101,7 @@ export function KrebsCycle() {
           <p className="text-[11px] font-medium text-(--text-muted) mb-2">× 2 tours</p>
           <div className="grid grid-cols-2 gap-1.5">
             {BILAN2.map(({ label, color }) => (
-              <div key={label} className="rounded-lg px-3 py-2 text-xs font-medium border border-white/5 bg-white/[.04]"
+              <div key={label} className="rounded-lg px-3 py-2 text-xs font-medium border border-white/5 bg-white/4"
                 style={{ color }}>{label}</div>
             ))}
           </div>

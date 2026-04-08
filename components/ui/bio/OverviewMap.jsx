@@ -1,87 +1,103 @@
 import { useState } from "react";
 import { C } from "@/constants/colors";
+
 export function OverviewMap({ onSection }) {
   const [hov, setHov] = useState(null);
+
   const steps = [
-    { id: "glycolyse", x: 60, y: 80, w: 160, h: 60, label: "GLYCOLYSE", sub: "Cytosol", color: C.accent3 },
-    { id: "krebs",     x: 260, y: 80, w: 160, h: 60, label: "CYCLE DE KREBS", sub: "Mitochondrie", color: C.accent5 },
-    { id: "chaine",    x: 460, y: 80, w: 180, h: 60, label: "CHAÎNE RESPI.", sub: "Membrane interne", color: C.accent1 },
+    {
+      id: "glycolyse", label: "GLYCOLYSE", sub: "Cytosol",
+      color: C.accent3, atp: "≈ 2 ATP",
+      output: "Pyruvate + 2 NADH",
+    },
+    {
+      id: "krebs", label: "CYCLE DE KREBS", sub: "Mitochondrie",
+      color: C.accent5, atp: "≈ 2 GTP",
+      output: "Acétyl-CoA → 8 NADH + 2 FADH₂",
+    },
+    {
+      id: "chaine", label: "CHAÎNE RESPI.", sub: "Membrane interne",
+      color: C.accent1, atp: "≈ 28–30 ATP",
+      output: "H₂O",
+    },
   ];
-  const molecules = [
-    { x: 220, y: 107, label: "Pyruvate\n+ 2 ATP\n+ 2 NADH", color: C.accent3 },
-    { x: 420, y: 107, label: "Acétyl-CoA\n+ 8 NADH\n+ 2 FADH₂\n+ 2 GTP", color: C.accent5 },
-  ];
-  const atpFinal = { x: 460, y: 200, label: "32-34 ATP" };
 
   return (
-    <svg viewBox="0 0 700 280" style={{ width: "100%", maxWidth: 700 }}>
-      {/* arrows between boxes */}
-      <defs>
-        <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L8,3 z" fill={C.accent1} />
-        </marker>
-        <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L8,3 z" fill={C.accent3} />
-        </marker>
-        <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L8,3 z" fill={C.accent5} />
-        </marker>
-      </defs>
+    <div className="w-full">
 
       {/* Glucose entry */}
-      <rect x="10" y="90" rx="8" width="50" height="40" fill={`${C.accent2}22`} stroke={C.accent2} strokeWidth="1.5"/>
-      <text x="35" y="108" fill={C.accent2} fontSize="9" textAnchor="middle" fontWeight="700">GLUCOSE</text>
-      <text x="35" y="120" fill={C.muted} fontSize="8" textAnchor="middle">C₆H₁₂O₆</text>
-      <line x1="60" y1="110" x2="58" y2="110" stroke={C.accent2} strokeWidth="1.5" markerEnd="url(#arrowBlue)"/>
+      <div className="flex justify-center mb-3">
+        <div className="px-4 py-2 rounded-xl border text-center"
+          style={{ background: `${C.accent2}18`, borderColor: `${C.accent2}55` }}>
+          <div className="text-xs font-black" style={{ color: C.accent2 }}>GLUCOSE</div>
+          <div className="text-[10px]" style={{ color: C.muted }}>C₆H₁₂O₆</div>
+        </div>
+      </div>
 
-      {/* Main boxes */}
-      {steps.map(s => (
-        <g key={s.id} style={{ cursor: "pointer" }}
-          onClick={() => onSection(s.id)}
-          onMouseEnter={() => setHov(s.id)}
-          onMouseLeave={() => setHov(null)}>
-          <rect x={s.x} y={s.y} rx="12" width={s.w} height={s.h}
-            fill={hov === s.id ? `${s.color}33` : `${s.color}18`}
-            stroke={s.color} strokeWidth={hov === s.id ? 2.5 : 1.5}
-            style={{ transition: "all .2s" }}/>
-          <text x={s.x + s.w/2} y={s.y + 26} fill={s.color} fontSize="13" fontWeight="900" textAnchor="middle">{s.label}</text>
-          <text x={s.x + s.w/2} y={s.y + 44} fill={C.muted} fontSize="10" textAnchor="middle">{s.sub}</text>
-          {hov === s.id && <text x={s.x + s.w/2} y={s.y + 58} fill={s.color} fontSize="9" textAnchor="middle">Cliquer pour explorer →</text>}
-        </g>
-      ))}
+      {/* Arrow down */}
+      <div className="flex justify-center mb-3">
+        <div className="w-px h-5" style={{ background: C.accent2 }} />
+      </div>
 
-      {/* Arrows between steps */}
-      <line x1="220" y1="110" x2="258" y2="110" stroke={C.accent3} strokeWidth="1.5" markerEnd="url(#arrowAmber)" strokeDasharray="4,2"/>
-      <line x1="420" y1="110" x2="458" y2="110" stroke={C.accent5} strokeWidth="1.5" markerEnd="url(#arrowPurple)" strokeDasharray="4,2"/>
+      {/* Steps — horizontal on sm+, vertical on mobile */}
+      <div className="flex flex-col sm:flex-row items-stretch gap-0">
+        {steps.map((s, i) => (
+          <div key={s.id} className="flex flex-col sm:flex-row items-center flex-1">
 
-      {/* Molecule labels on arrows */}
-      <text x="238" y="100" fill={C.accent3} fontSize="8.5" textAnchor="middle">Pyruvate →</text>
-      <text x="438" y="100" fill={C.accent5} fontSize="8.5" textAnchor="middle">Acétyl-CoA →</text>
+            {/* Box */}
+            <div
+              onClick={() => onSection(s.id)}
+              onMouseEnter={() => setHov(s.id)}
+              onMouseLeave={() => setHov(null)}
+              className="w-full flex-1 rounded-2xl px-4 py-4 border cursor-pointer transition-all duration-200 text-center"
+              style={{
+                background: hov === s.id ? `${s.color}30` : `${s.color}15`,
+                borderColor: hov === s.id ? s.color : `${s.color}55`,
+                borderWidth: hov === s.id ? 2 : 1,
+              }}>
+              <div className="text-[11px] font-black tracking-wider mb-1" style={{ color: s.color }}>{s.label}</div>
+              <div className="text-[10px] mb-2" style={{ color: C.muted }}>{s.sub}</div>
+              <div className="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full"
+                style={{ background: `${s.color}22`, color: s.color }}>{s.atp}</div>
+              {hov === s.id && (
+                <div className="text-[10px] mt-2" style={{ color: s.color }}>Cliquer pour explorer →</div>
+              )}
+            </div>
 
-      {/* O2 input to chain */}
-      <text x="600" y="60" fill={C.muted} fontSize="9" textAnchor="middle">O₂</text>
-      <line x1="600" y1="63" x2="580" y2="79" stroke={C.muted} strokeWidth="1" markerEnd="url(#arrowBlue)"/>
-
-      {/* ATP outputs */}
-      <text x="140" y="170" fill={C.accent3} fontSize="11" textAnchor="middle" fontWeight="700">≈ 2 ATP</text>
-      <text x="340" y="170" fill={C.accent5} fontSize="11" textAnchor="middle" fontWeight="700">≈ 2 GTP</text>
+            {/* Connector arrow — right on sm, down on mobile */}
+            {i < steps.length - 1 && (
+              <div className="flex sm:flex-col items-center justify-center px-1 py-1 sm:px-2 sm:py-0 shrink-0">
+                {/* Output label */}
+                <div className="text-[9px] text-center leading-tight hidden sm:block mb-1 max-w-17.5"
+                  style={{ color: s.color }}>{s.output}</div>
+                {/* Arrow */}
+                <div className="text-base" style={{ color: s.color }}>
+                  <span className="sm:hidden">↓</span>
+                  <span className="hidden sm:block">→</span>
+                </div>
+                <div className="text-[9px] text-center leading-tight sm:hidden mt-0.5 max-w-30"
+                  style={{ color: s.color }}>{s.output}</div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
 
       {/* Final ATP bubble */}
-      <ellipse cx="550" cy="210" rx="80" ry="30" fill={`${C.accent1}20`} stroke={C.accent1} strokeWidth="2"/>
-      <text x="550" y="206" fill={C.accent1} fontSize="14" fontWeight="900" textAnchor="middle">32–34 ATP</text>
-      <text x="550" y="220" fill={C.muted} fontSize="9" textAnchor="middle">par molécule de glucose</text>
-      <line x1="550" y1="141" x2="550" y2="178" stroke={C.accent1} strokeWidth="1.5" markerEnd="url(#arrowBlue)"/>
-
-      {/* H₂O output */}
-      <text x="660" y="210" fill={C.accent2} fontSize="10" textAnchor="middle">+ H₂O</text>
-      <line x1="642" y1="205" x2="630" y2="200" stroke={C.accent2} strokeWidth="1"/>
-
-      {/* CO₂ outputs */}
-      <text x="140" y="240" fill={C.muted} fontSize="9" textAnchor="middle">+ CO₂ (Krebs)</text>
-
-      {/* NADH/FADH₂ going to chain */}
-      <path d="M 340,145 Q 340,190 460,190" fill="none" stroke={C.accent5} strokeWidth="1.5" strokeDasharray="4,2" markerEnd="url(#arrowPurple)"/>
-      <text x="390" y="200" fill={C.accent5} fontSize="9">NADH + FADH₂ →</text>
-    </svg>
+      <div className="flex justify-center mt-4">
+        <div className="flex flex-col items-center gap-1">
+          <div className="w-px h-5" style={{ background: C.accent1 }} />
+          <div className="px-6 py-3 rounded-full border-2 text-center"
+            style={{ background: `${C.accent1}18`, borderColor: C.accent1 }}>
+            <div className="text-base font-black" style={{ color: C.accent1 }}>32–34 ATP</div>
+            <div className="text-[10px]" style={{ color: C.muted }}>par molécule de glucose</div>
+          </div>
+          <div className="flex gap-4 mt-2">
+            <span className="text-[10px]" style={{ color: C.accent2 }}>+ H₂O</span>
+            <span className="text-[10px]" style={{ color: C.muted }}>+ CO₂</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
