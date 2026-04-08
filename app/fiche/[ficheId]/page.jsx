@@ -107,7 +107,7 @@ export default function FichePage() {
           </svg>
           Fiches
         </button>
-        <span className="text-xs text-(--text-muted) font-medium tracking-widest uppercase truncate max-w-[180px]">
+        <span className="text-xs text-(--text-muted) font-medium tracking-widest uppercase truncate max-w-45">
           {fiche.topic}
         </span>
         <span className="text-xs text-(--text-muted) tabular-nums">
