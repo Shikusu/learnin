@@ -1,7 +1,7 @@
 export const LESSONS = [
   {
     id: "biogen",
-    title: "Biogenetique",
+    title: "Bioénergétique",
     },
 
   ]  
