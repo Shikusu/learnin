@@ -119,7 +119,6 @@ export default function Bioenergetique() {
                       WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                       BIOÉNERGÉTIQUE
                     </h1>
-                    <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>L2 Médecine — Dr FENOMANANA Jocia</div>
                   </div>
                 </div>
               </div>
