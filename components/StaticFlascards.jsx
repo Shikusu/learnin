@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { C } from "@/constants/colors";
+import {flashcardsBio as flashcards} from "@/constants/staticFiches";
 export default function Flashcards() {
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
