@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { getDecks, getScores, deleteDeck } from "@/firebase/decks";
-import { getFiches, deleteFiche } from "@/firebase/fiches"; // you'll create this
+import { getFiches, deleteFiche } from "@/firebase/fiches";
 import ImportModal from "@/components/ImportModal";
 import FicheImportModal from "@/components/FicheImportModal";
 import DeckCard from "@/components/DeckCard";
 import FicheCard from "@/components/FicheCard";
 import { LESSONS } from "@/constants/lessons";
+import { PLANS } from "@/constants/plans";
 
 function useStaggeredMount(count) {
   const [visible, setVisible] = useState([]);
@@ -27,6 +28,7 @@ const TABS = [
   { id: "decks", label: "Decks", icon: "🗂" },
   { id: "fiches", label: "Fiches", icon: "📋" },
   { id: "docu", label: "Leçons", icon: "📖" },
+  { id: "plans", label: "Plans", icon: "📑" },
 ];
 
 export default function Dashboard() {
@@ -45,8 +47,11 @@ export default function Dashboard() {
   const [showImport, setShowImport] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
 
-  const activeList = tab === "decks" ? decks : tab === "fiches" ? fiches : LESSONS;
-
+  const activeList =
+    tab === "decks" ? decks
+    : tab === "fiches" ? fiches
+    : tab === "docu" ? LESSONS
+    : PLANS;
 
   const visibleItems = useStaggeredMount(activeList.length);
 
@@ -73,13 +78,11 @@ export default function Dashboard() {
     return () => clearTimeout(t);
   }, []);
 
-
   const handleImportSuccess = (newDeck) => {
     setDecks((prev) => [newDeck, ...prev]);
     setShowImport(false);
   };
 
-  // You'll wire this up once the fiche import modal is ready
   const handleFicheSuccess = (newFiche) => {
     setFiches((prev) => [newFiche, ...prev]);
     setShowImport(false);
@@ -131,12 +134,17 @@ export default function Dashboard() {
               {tab === "decks"
                 ? decks.length > 0 ? `${decks.length} deck${decks.length > 1 ? "s" : ""}` : "No decks yet"
                 : tab === "fiches"
-                  ? fiches.length > 0 ? `${fiches.length} fiche${fiches.length > 1 ? "s" : ""}` : "No fiches yet"
-                  : LESSONS.length > 0 ? `${LESSONS.length} leçon${LESSONS.length > 1 ? "s" : ""}` : "0 leçons "
+                ? fiches.length > 0 ? `${fiches.length} fiche${fiches.length > 1 ? "s" : ""}` : "No fiches yet"
+                : tab === "docu"
+                ? LESSONS.length > 0 ? `${LESSONS.length} leçon${LESSONS.length > 1 ? "s" : ""}` : "0 leçons"
+                : PLANS.length > 0 ? `${PLANS.length} plan${PLANS.length > 1 ? "s" : ""}` : "Aucun plan"
               }
             </p>
             <h1 className="font-(--font-display) text-4xl leading-tight text-(--text)">
-              {tab === "decks" ? "Your decks" : tab === "fiches" ? "Your fiches" : "Des leçons"}
+              {tab === "decks" ? "Your decks"
+                : tab === "fiches" ? "Your fiches"
+                : tab === "docu" ? "Des leçons"
+                : "Plans"}
             </h1>
           </div>
           <button
@@ -146,25 +154,25 @@ export default function Dashboard() {
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
               <path d="M7 1v12M1 7h12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            {tab === "decks" ? "Import" : "New fiche"}
+            {tab === "decks" ? "Import" : tab === "fiches" ? "New fiche" : "Import"}
           </button>
         </div>
 
-{/* Bottom Navbar */}
-<nav className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around px-6 py-3 border-t border-white/6 backdrop-blur-xl bg-(--bg)/85">
-  {TABS.map((t) => (
-    <button
-      key={t.id}
-      onClick={() => setTab(t.id)}
-      className={`flex flex-col items-center gap-1 text-[10px] font-medium transition-all duration-150 ${
-        tab === t.id ? "text-(--accent)" : "text-(--text-muted) hover:text-(--text)"
-      }`}
-    >
-      <span className="text-xl">{t.icon}</span>
-      {t.label}
-    </button>
-  ))}
-</nav>
+        {/* Bottom Navbar */}
+        <nav className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around px-6 py-3 border-t border-white/6 backdrop-blur-xl bg-(--bg)/85">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={`flex flex-col items-center gap-1 text-[10px] font-medium transition-all duration-150 ${
+                tab === t.id ? "text-(--accent)" : "text-(--text-muted) hover:text-(--text)"
+              }`}
+            >
+              <span className="text-xl">{t.icon}</span>
+              {t.label}
+            </button>
+          ))}
+        </nav>
 
         <div className="h-px bg-white/[.07] my-7" />
 
@@ -175,25 +183,46 @@ export default function Dashboard() {
           </div>
         ) : isEmpty ? (
           <EmptyState tab={tab} onImport={() => setShowImport(true)} />
-        ) : tab === "docu" ? (         // ← add this condition before the ul
-  <ul className="flex flex-col gap-2.5">
-    {LESSONS.map((doc, i) => (
-      <li
-        key={doc.id}
-        className={`transition-all duration-300 ease-out ${
-          visibleItems.includes(i) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2.5"
-        }`}
-      >
-        <button
-          onClick={() => router.push(`/docu/${doc.id}`)}
-          className="w-full text-left px-5 py-4 rounded-2xl bg-(--surface) border border-(--border) hover:border-(--accent)/40 transition-all"
-        >
-          <p className="text-sm font-medium text-(--text)">{doc.title}</p>
-        </button>
-      </li>
-    ))}
-  </ul>
-) : (
+        ) : tab === "docu" ? (
+          <ul className="flex flex-col gap-2.5">
+            {LESSONS.map((doc, i) => (
+              <li
+                key={doc.id}
+                className={`transition-all duration-300 ease-out ${
+                  visibleItems.includes(i) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2.5"
+                }`}
+              >
+                <button
+                  onClick={() => router.push(`/docu/${doc.id}`)}
+                  className="w-full text-left px-5 py-4 rounded-2xl bg-(--surface) border border-(--border) hover:border-(--accent)/40 transition-all"
+                >
+                  <p className="text-sm font-medium text-(--text)">{doc.title}</p>
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : tab === "plans" ? (
+          <ul className="flex flex-col gap-2.5">
+            {PLANS.map((plan, i) => (
+              <li
+                key={plan.id}
+                className={`transition-all duration-300 ease-out ${
+                  visibleItems.includes(i) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2.5"
+                }`}
+              >
+                <button
+                  onClick={() => router.push(`/plan/${plan.id}`)}
+                  className="w-full text-left px-5 py-4 rounded-2xl bg-(--surface) border border-(--border) hover:border-(--accent)/40 transition-all"
+                >
+                  <p className="text-sm font-medium text-(--text)">{plan.title}</p>
+                  <p className="text-xs text-(--text-muted) mt-0.5">
+                    {plan.headings.length} entrée{plan.headings.length > 1 ? "s" : ""}
+                  </p>
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : (
           <ul className="flex flex-col gap-2.5">
             {tab === "decks"
               ? decks.map((deck, i) => (
@@ -225,11 +254,16 @@ export default function Dashboard() {
           </ul>
         )}
       </main>
-      {showImport && tab === "decks" &&         <ImportModal
+
+      {showImport && tab === "decks" && (
+        <ImportModal
           onClose={() => setShowImport(false)}
-          onSuccess={tab === "decks" ? handleImportSuccess : handleFicheSuccess}
-        />}
-{showImport && tab === "fiches" && <FicheImportModal onClose={() => setShowImport(false)} onSuccess={handleFicheSuccess} />}
+          onSuccess={handleImportSuccess}
+        />
+      )}
+      {showImport && tab === "fiches" && (
+        <FicheImportModal onClose={() => setShowImport(false)} onSuccess={handleFicheSuccess} />
+      )}
     </div>
   );
 }
@@ -237,19 +271,27 @@ export default function Dashboard() {
 function EmptyState({ tab, onImport }) {
   return (
     <div className="flex flex-col items-center text-center py-20 animate-[fadeUp_.45s_ease_forwards]">
-      <span className="text-4xl mb-5 grayscale-[.3]">{tab === "decks" ? "🗂" : "📋"}</span>
+      <span className="text-4xl mb-5 grayscale-[.3]">
+        {tab === "decks" ? "🗂" : tab === "fiches" ? "📋" : tab === "plans" ? "📑" : "📖"}
+      </span>
       <p className="font-(--font-display) text-xl text-(--text) mb-2">Nothing here yet</p>
       <p className="text-sm text-(--text-muted) max-w-60 leading-relaxed mb-6">
         {tab === "decks"
           ? "Make a JSON, then import it below."
-          : "Generate a fiche from a PDF to get started."}
+          : tab === "fiches"
+          ? "Generate a fiche from a PDF to get started."
+          : tab === "plans"
+          ? "Ajoute un plan dans constants/plans.js."
+          : ""}
       </p>
-      <button
-        onClick={onImport}
-        className="text-sm text-(--accent) underline underline-offset-4 hover:opacity-65 transition-opacity"
-      >
-        {tab === "decks" ? "Import your first deck →" : "Generate your first fiche →"}
-      </button>
+      {(tab === "decks" || tab === "fiches") && (
+        <button
+          onClick={onImport}
+          className="text-sm text-(--accent) underline underline-offset-4 hover:opacity-65 transition-opacity"
+        >
+          {tab === "decks" ? "Import your first deck →" : "Generate your first fiche →"}
+        </button>
+      )}
     </div>
   );
 }
