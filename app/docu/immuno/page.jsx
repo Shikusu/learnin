@@ -130,7 +130,8 @@ export default function HomePage() {
               onMouseLeave={() => setHovered(null)}
             >
               <div
-                style={{                  
+                style={{   
+                  background:"var(--bg-card)",               
                   borderRadius: 14,
                   padding: "24px 24px 20px",
                   border: `1px solid ${
