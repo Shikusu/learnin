@@ -1,0 +1,206 @@
+{
+  "immunoglobulines": [
+    {
+      "q": "Qu'est-ce qu'une immunoglobuline ?",
+      "a": "Glycoprotéine produite par les plasmocytes lors d'une réponse immunitaire. Présente dans le plasma, sécrétions et sur la surface des lymphocytes B (BCR). Support de la fonction anticorps.",
+      "category": "Définition"
+    },
+    {
+      "q": "Quelle est la structure générale d'une IgG ?",
+      "a": "Hétérotétramère en Y : 2 chaînes lourdes H (50 kDa, 450–600 AA) + 2 chaînes légères L (25 kDa, 210–220 AA), reliées par des ponts disulfures.",
+      "category": "Structure"
+    },
+    {
+      "q": "Quels sont les 2 types de chaînes légères ?",
+      "a": "Kappa (κ) et Lambda (λ) — jamais les deux sur la même molécule. Ratio κ/λ normal : 2/1.",
+      "category": "Structure"
+    },
+    {
+      "q": "Que signifie CDR ?",
+      "a": "Complementarity Determining Region — régions hypervariables formant le paratope. Chaque chaîne H et L possède 3 CDR. Ce sont les zones de reconnaissance de l'épitope antigénique.",
+      "category": "Structure"
+    },
+    {
+      "q": "Quelle est la différence entre Fab et Fc ?",
+      "a": "Fab (Fragment antigen-binding) : fixe l'antigène via le paratope. Fc (Fragment cristallisable) : effecteur — active le complément, se fixe aux récepteurs Fc des cellules immunitaires.",
+      "category": "Structure"
+    },
+    {
+      "q": "Quelles sont les 5 classes d'immunoglobulines ?",
+      "a": "IgG (la plus abondante, 4 sous-classes), IgM (pentamère, première réponse), IgA (muqueuses, dimère sécrétoire), IgD (BCR), IgE (allergie, antiparasitaire).",
+      "category": "Isotypes"
+    },
+    {
+      "q": "Quelle Ig est produite en premier lors d'une réponse primaire ?",
+      "a": "IgM — pentamère de forte valence (10 sites). Indicateur d'infection récente. Demi-vie courte (5 jours). Seul anticorps synthétisé par le fœtus.",
+      "category": "Isotypes"
+    },
+    {
+      "q": "Quel est le rôle de l'IgA sécrétoire ?",
+      "a": "Protection des muqueuses (tractus respiratoire, digestif, urogénital). Dimère lié par une pièce sécrétoire (produite par les cellules épithéliales). Résistante aux protéases.",
+      "category": "Isotypes"
+    },
+    {
+      "q": "Quel anticorps est impliqué dans les réactions allergiques ?",
+      "a": "IgE — se fixe via son Fc aux récepteurs FcεRI des mastocytes et basophiles. La pontification par l'allergène déclenche la dégranulation.",
+      "category": "Isotypes"
+    },
+    {
+      "q": "Qu'est-ce que la commutation isotypique ?",
+      "a": "Changement de classe d'Ig (IgM → IgG, IgA, IgE) sans modifier la spécificité de l'anticorps. Régulée par les cytokines (IL-4 → IgE, TGF-β → IgA). Permet la maturation de la réponse.",
+      "category": "Réponse"
+    }
+  ],
+  "complement": [
+    {
+      "q": "Par quoi est déclenchée la voie classique du complément ?",
+      "a": "Complexes antigène-anticorps (IgG ou IgM liées à l'antigène). C1q reconnaît le Fc de l'anticorps → activation de C1r et C1s.",
+      "category": "Voie classique"
+    },
+    {
+      "q": "Quelle est la particularité de la voie alterne ?",
+      "a": "Activation spontanée — C3 s'hydrolyse spontanément en C3(H₂O), puis le facteur B et D forment la C3 convertase (C3bBb). Amplifiée par les surfaces microbiennes. Ne nécessite pas d'anticorps.",
+      "category": "Voie alterne"
+    },
+    {
+      "q": "Qu'est-ce que le MAC ?",
+      "a": "Complexe d'Attaque Membranaire (C5b-6-7-8-9) — forme un pore de 10 nm dans la membrane lipidique du pathogène → lyse osmotique.",
+      "category": "MAC"
+    },
+    {
+      "q": "Quels sont les rôles biologiques du complément ?",
+      "a": "1) Lyse directe (MAC), 2) Opsonisation (C3b facilite la phagocytose), 3) Inflammation (C3a et C5a = anaphylatoxines), 4) Élimination des complexes immuns.",
+      "category": "Fonctions"
+    },
+    {
+      "q": "Comment le complément est-il régulé ?",
+      "a": "Inhibiteurs solubles : C1-INH, Facteur H, Facteur I, C4BP. Inhibiteurs membranaires : CD55 (DAF), CD59 (inhibe MAC), CR1. Ces protéines protègent les cellules du soi de l'activation du complément.",
+      "category": "Régulation"
+    }
+  ],
+  "hla": [
+    {
+      "q": "Quelle est la différence entre CMH I et CMH II ?",
+      "a": "CMH I : 1 chaîne α + β2m, présente peptides endogènes (8–10 AA) aux LT CD8+, exprimé sur toutes cellules nucléées. CMH II : chaîne α + β, présente peptides exogènes (13–25 AA) aux LT CD4+, exprimé sur CPA.",
+      "category": "Structure"
+    },
+    {
+      "q": "Qu'est-ce que la restriction par le CMH ?",
+      "a": "Les LT reconnaissent l'antigène UNIQUEMENT s'il est présenté par une molécule du CMH du soi. Un LT CD8+ reconnaît Ag + CMH I (soi), un LT CD4+ reconnaît Ag + CMH II (soi).",
+      "category": "Fonction"
+    },
+    {
+      "q": "Quels gènes codent le CMH I chez l'homme ?",
+      "a": "HLA-A, HLA-B, HLA-C (région HLA de classe I sur chromosome 6). Chaque individu exprime 6 allèles (2A + 2B + 2C) — expression codominante.",
+      "category": "Génétique"
+    },
+    {
+      "q": "Quel est le rôle des molécules HLA en transplantation ?",
+      "a": "La compatibilité HLA entre donneur et receveur est essentielle. Un mismatch HLA entraîne le rejet du greffon par les LT allospécifiques reconnaissant les molécules HLA étrangères.",
+      "category": "Application"
+    }
+  ],
+  "cytokines": [
+    {
+      "q": "Qu'est-ce que le pléiotropisme des cytokines ?",
+      "a": "Une même cytokine exerce des effets différents sur différents types cellulaires. Ex : IL-4 stimule la prolifération des LB, induit la commutation vers IgE et inhibe les macrophages.",
+      "category": "Propriétés"
+    },
+    {
+      "q": "Quelle cytokine est essentielle à la prolifération des LT ?",
+      "a": "IL-2 — produite par les LT CD4+ activés. Se fixe au récepteur IL-2R (CD25). Auto-stimulation (boucle autocrine) et stimulation des LT CD8+ et des NK.",
+      "category": "Classification"
+    },
+    {
+      "q": "Quel est le rôle de l'IFN-γ ?",
+      "a": "Cytokine de l'immunité adaptative Th1. Active les macrophages (augmente la capacité bactéricide), upregule CMH I et II, polarise la réponse vers Th1. Produit par LT CD4+ Th1, LT CD8+, NK.",
+      "category": "Classification"
+    },
+    {
+      "q": "Qu'est-ce que le cytokine network ?",
+      "a": "Réseau d'interactions complexes entre cytokines : une cytokine peut stimuler ou inhiber la production d'une autre. Ce réseau régule l'équilibre entre réponses pro- et anti-inflammatoires.",
+      "category": "Réseau"
+    },
+    {
+      "q": "Quel est le rôle du TNF-α ?",
+      "a": "Cytokine pro-inflammatoire produite par les macrophages et NK. Induit inflammation, apoptose, et activation de l'endothélium. En excès → choc septique (syndrome de réponse inflammatoire systémique).",
+      "category": "Classification"
+    }
+  ],
+  "innee": [
+    {
+      "q": "Quelles sont les 3 barrières anatomiques de l'immunité innée ?",
+      "a": "1) Peau (kératine, pH acide, sébum, flore commensale), 2) Muqueuses (mucus, cils, IgA sécrétoire, lysozyme), 3) Barrières physiologiques (température, pH gastrique).",
+      "category": "Barrières"
+    },
+    {
+      "q": "Quelles sont les étapes de la phagocytose ?",
+      "a": "1) Reconnaissance/adhésion, 2) Formation de pseudopodes, 3) Formation du phagosome, 4) Bactéricidie (fusion avec lysosomes), 5) Digestion intracellulaire, 6) Exocytose des débris.",
+      "category": "Phagocytose"
+    },
+    {
+      "q": "Qu'est-ce que l'explosion oxydative (burst oxydatif) ?",
+      "a": "Mécanisme bactéricide oxygène-dépendant. La NADPH oxydase produit O₂⁻ → H₂O₂ → HOCl (hypochlorite, via MPO). Ces radicaux libres détruisent les membranes bactériennes.",
+      "category": "Phagocytose"
+    },
+    {
+      "q": "Quel est le rôle des cellules NK ?",
+      "a": "Lymphocytes de l'immunité innée. Tuent les cellules infectées (virus) ou tumorales sans présentation par CMH. Détectent l'absence de CMH I (\"missing self\"). Médiée par perforine/granzyme.",
+      "category": "Cellules"
+    },
+    {
+      "q": "Quelles sont les phases de l'inflammation aiguë ?",
+      "a": "1) Phase vasculaire : vasodilatation, augmentation perméabilité (histamine, PGs), 2) Phase cellulaire : diapédèse des PNN puis macrophages, 3) Phase de résolution : retour à la normale ou fibrose.",
+      "category": "Inflammation"
+    }
+  ],
+  "acquise": [
+    {
+      "q": "Quels sont les 2 signaux nécessaires à l'activation des LT naïfs ?",
+      "a": "Signal 1 : reconnaissance TCR + complexe CMH-peptide. Signal 2 (costimulation) : interaction CD28 (LT) + B7/CD80/CD86 (CPA). Sans signal 2 → anergie (tolérance périphérique).",
+      "category": "Activation"
+    },
+    {
+      "q": "Quelle est la différence entre LT CD4+ et CD8+ ?",
+      "a": "LT CD4+ (auxiliaires/helper) : reconnaissent CMH II + Ag, produisent des cytokines (IL-2, IFN-γ, IL-4...), activent LB et macrophages. LT CD8+ (cytotoxiques) : reconnaissent CMH I + Ag, lysent les cellules cibles.",
+      "category": "Lymphocytes"
+    },
+    {
+      "q": "Comment un LT CD8+ détruit-il une cellule cible ?",
+      "a": "Voie perforine/granzyme : perfore la membrane → injecte granzymes → apoptose. Voie Fas/FasL : FasL du CTL se lie à Fas de la cible → apoptose. Ces mécanismes sont spécifiques et orientés.",
+      "category": "Cytotoxicité"
+    },
+    {
+      "q": "Quel est le rôle des cellules dendritiques ?",
+      "a": "CPA professionnelles les plus efficaces. Captent Ag en périphérie, migrent vers les ganglions, présentent Ag via CMH I et II, expriment B7 → initient la réponse T primaire.",
+      "category": "CPA"
+    }
+  ],
+  "introduction": [
+    {
+      "q": "Définition de l'immunité",
+      "a": "Ensemble des mécanismes biologiques permettant à un organisme de maintenir la cohérence de ses cellules et tissus et d'assurer son intégrité en éliminant ses constituants altérés et les substances étrangères.",
+      "category": "Définition"
+    },
+    {
+      "q": "Différence entre immunité innée et adaptative",
+      "a": "Innée : non spécifique, réponse immédiate, mémoire absente, cellules myéloïdes (macrophages, NK, PNN). Adaptative : spécifique, délai 5–10 j, mémoire immunologique, cellules lymphoïdes (LT, LB).",
+      "category": "Concepts"
+    },
+    {
+      "q": "Qu'est-ce que la tolérance immunitaire ?",
+      "a": "Incapacité spécifique à répondre contre ses propres antigènes (soi). Centrale (thymus pour LT, moelle osseuse pour LB) et périphérique (anergie, suppression par Treg). Sa rupture → auto-immunité.",
+      "category": "Concepts"
+    },
+    {
+      "q": "Différence entre immunité humorale et cellulaire",
+      "a": "Humorale : médiée par les anticorps (LB → plasmocytes), cibles extracellulaires. Cellulaire : médiée par les LT (CD4+/CD8+), cibles intracellulaires (cellules infectées, tumorales).",
+      "category": "Concepts"
+    }
+  ],
+  "antigenes": [],
+  "organes": [],
+  "immunorecepteurs": [],
+  "reponse": [],
+  "humorale": []
+}

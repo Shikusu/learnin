@@ -1,0 +1,18 @@
+{
+  "lessonKey": {
+    "name": "Lesson Name",
+    "slideCount": 0,
+    "sections": [
+      {
+        "title": "Section Title",
+        "content": "Main point 1\nMain point 2\nMain point 3",
+        "subsections": [
+          {
+            "title": "Subsection Title",
+            "content": "Detail 1\nDetail 2\nDetail 3"
+          }
+        ]
+      }
+    ]
+  }
+}

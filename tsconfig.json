@@ -35,7 +35,12 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "app/docu/page.jsx"
+    "app/docu/page.jsx",
+    "data/modules.js",
+    "app/docu/immuno/page.jsx",
+    "app/docu/immuno/layout.jsx",
+    "app/docu/immuno/modules/[slug]/ModuleClient.jsx",
+    "app/docu/immuno/modules/[slug]/page.jsx"
   ],
   "exclude": [
     "node_modules"
