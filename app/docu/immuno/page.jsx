@@ -59,7 +59,7 @@ export default function HomePage() {
                 fontFamily: "var(--font-mono)",
                 fontSize: 11,
                 letterSpacing: "0.12em",
-                textTransform: "uppercase" ,
+                textTransform: "uppercase",
                 color: "#c0392b",
                 background: "rgba(192,57,43,0.12)",
                 padding: "4px 10px",
@@ -129,26 +129,26 @@ export default function HomePage() {
               onMouseEnter={() => setHovered(mod.slug)}
               onMouseLeave={() => setHovered(null)}
             >
-<div
-  style={{
-    // Using the variable ensures it flips automatically
-    background: "var(--bg-card)", 
-    borderRadius: 14,
-    padding: "24px 24px 20px",
-    border: `1px solid ${
-      hovered === mod.slug ? mod.color + "40" : "var(--border)"
-    }`,
-    transition: "all 0.22s ease",
-    transform: hovered === mod.slug ? "translateY(-3px)" : "none",
-    boxShadow:
-      hovered === mod.slug
-        ? `0 12px 32px ${mod.color}18`
-        : "0 2px 8px rgba(0,0,0,0.1)", // Slightly stronger shadow for dark mode visibility
-    cursor: "pointer",
-    animation: "fadeUp 0.4s ease both",
-    animationDelay: `${i * 40}ms`,
-  }}
->
+              <div
+                style={{
+                  // Using the variable ensures it flips automatically
+                  background: "var(--bg-card)",
+                  borderRadius: 14,
+                  padding: "24px 24px 20px",
+                  border: `1px solid ${
+                    hovered === mod.slug ? mod.color + "40" : "var(--border)"
+                  }`,
+                  transition: "all 0.22s ease",
+                  transform: hovered === mod.slug ? "translateY(-3px)" : "none",
+                  boxShadow:
+                    hovered === mod.slug
+                      ? `0 12px 32px ${mod.color}18`
+                      : "0 2px 8px rgba(0,0,0,0.1)", // Slightly stronger shadow for dark mode visibility
+                  cursor: "pointer",
+                  animation: "fadeUp 0.4s ease both",
+                  animationDelay: `${i * 40}ms`,
+                }}
+              >
                 <div
                   style={{
                     display: "flex",
@@ -207,9 +207,7 @@ export default function HomePage() {
                 >
                   {mod.subtitle}
                 </p>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: 6 }}
-                >
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                   {mod.topics.slice(0, 3).map((t) => (
                     <span
                       key={t}
