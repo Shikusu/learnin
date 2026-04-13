@@ -129,25 +129,26 @@ export default function HomePage() {
               onMouseEnter={() => setHovered(mod.slug)}
               onMouseLeave={() => setHovered(null)}
             >
-              <div
-                style={{   
-                  background:"var(--bg-card)",               
-                  borderRadius: 14,
-                  padding: "24px 24px 20px",
-                  border: `1px solid ${
-                    hovered === mod.slug ? mod.color + "40" : "#e2ded5"
-                  }`,
-                  transition: "all 0.22s ease",
-                  transform: hovered === mod.slug ? "translateY(-3px)" : "none",
-                  boxShadow:
-                    hovered === mod.slug
-                      ? `0 12px 32px ${mod.color}18`
-                      : "0 2px 8px rgba(0,0,0,0.04)",
-                  cursor: "pointer",
-                  animation: "fadeUp 0.4s ease both",
-                  animationDelay: `${i * 40}ms`,
-                }}
-              >
+<div
+  style={{
+    // Using the variable ensures it flips automatically
+    background: "var(--bg-card)", 
+    borderRadius: 14,
+    padding: "24px 24px 20px",
+    border: `1px solid ${
+      hovered === mod.slug ? mod.color + "40" : "var(--border)"
+    }`,
+    transition: "all 0.22s ease",
+    transform: hovered === mod.slug ? "translateY(-3px)" : "none",
+    boxShadow:
+      hovered === mod.slug
+        ? `0 12px 32px ${mod.color}18`
+        : "0 2px 8px rgba(0,0,0,0.1)", // Slightly stronger shadow for dark mode visibility
+    cursor: "pointer",
+    animation: "fadeUp 0.4s ease both",
+    animationDelay: `${i * 40}ms`,
+  }}
+>
                 <div
                   style={{
                     display: "flex",
