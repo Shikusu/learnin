@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 function cleanContent(raw) {
+  if (!raw) return [];
   return raw
     .split("\n")
     .map((l) => l.trim())
@@ -18,10 +19,10 @@ function SubSection({ subsection, color, index }) {
     <div
       style={{
         borderRadius: 8,
-        border: `1px solid ${open ? color + "30" : "#f0ece6"}`,
+        border: `1px solid ${open ? `${color}40` : "var(--border)"}`,
         overflow: "hidden",
-        transition: "border-color 0.2s",
-        background: open ? color + "05" : "#fafafa",
+        transition: "all 0.2s",
+        background: open ? `${color}05` : "var(--background)",
       }}
     >
       <button
@@ -45,14 +46,14 @@ function SubSection({ subsection, color, index }) {
               width: 20,
               height: 20,
               borderRadius: 4,
-              background: open ? color + "20" : "#ece8e1",
+              background: open ? color : "var(--border)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontSize: 9,
               fontFamily: "var(--font-mono)",
               fontWeight: 700,
-              color: color,
+              color: open ? "white" : "var(--text-muted)",
               flexShrink: 0,
             }}
           >
@@ -62,8 +63,7 @@ function SubSection({ subsection, color, index }) {
             style={{
               fontSize: 13,
               fontWeight: 600,
-              color: open ? color : "#374151",
-              transition: "color 0.2s",
+              color: open ? color : "var(--foreground)",
             }}
           >
             {subsection.title}
@@ -71,13 +71,10 @@ function SubSection({ subsection, color, index }) {
         </div>
         <span
           style={{
-            fontSize: 14,
+            fontSize: 12,
             color: color,
-            flexShrink: 0,
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
-            transition: "transform 0.25s ease",
-            display: "inline-block",
-            opacity: 0.7,
+            transition: "transform 0.2s",
           }}
         >
           ↓
@@ -86,14 +83,33 @@ function SubSection({ subsection, color, index }) {
 
       {open && points.length > 0 && (
         <div style={{ padding: "0 14px 12px 42px" }}>
-          <div style={{ height: 1, background: color + "15", marginBottom: 10 }} />
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: 6,
+            }}
+          >
             {points.map((point, j) => (
-              <li key={j} style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
-                <span style={{ color: color, fontWeight: 700, fontSize: 12, lineHeight: "20px", flexShrink: 0 }}>
+              <li
+                key={j}
+                style={{ display: "flex", gap: 8, alignItems: "flex-start" }}
+              >
+                <span style={{ color: color, fontWeight: 700, fontSize: 12 }}>
                   ·
                 </span>
-                <span style={{ fontSize: 13, color: "#4b5563", lineHeight: 1.6 }}>{point}</span>
+                <span
+                  style={{
+                    fontSize: 13,
+                    color: "var(--text-muted)",
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {point}
+                </span>
               </li>
             ))}
           </ul>
@@ -109,26 +125,25 @@ export default function KeyConcepts({ sections, color = "#c0392b" }) {
   const meaningful = sections.filter(
     (s) =>
       s.content.trim().length > 30 &&
-      !s.title.includes("OBJECTIF") &&
-      !s.title.includes("PRE-REQUIS") &&
-      !s.title.includes("MERCI") &&
-      !s.title.includes("PLAN\n")
+      !s.title.includes("PLAN") &&
+      !s.title.includes("MERCI")
   );
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
       {meaningful.map((section, i) => {
         const isOpen = open === i;
         const points = cleanContent(section.content);
-        const hasSubsections = section.subsections && section.subsections.length > 0;
+        const hasSubsections =
+          section.subsections && section.subsections.length > 0;
 
         return (
           <div
             key={i}
             style={{
-              background: "white",
-              borderRadius: 10,
-              border: `1px solid ${isOpen ? color + "40" : "#e2ded5"}`,
+              background: "var(--bg-card)",
+              borderRadius: 12,
+              border: `1px solid ${isOpen ? `${color}50` : "var(--border)"}`,
               overflow: "hidden",
               transition: "border-color 0.2s",
             }}
@@ -140,61 +155,55 @@ export default function KeyConcepts({ sections, color = "#c0392b" }) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                padding: "16px 20px",
+                padding: "18px 20px",
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                gap: 12,
                 textAlign: "left",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <div
                   style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: 6,
-                    background: isOpen ? color : color + "15",
+                    width: 32,
+                    height: 32,
+                    borderRadius: 8,
+                    background: isOpen ? color : `${color}15`,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: 11,
+                    fontSize: 12,
                     fontFamily: "var(--font-mono)",
                     fontWeight: 700,
                     color: isOpen ? "white" : color,
                     flexShrink: 0,
-                    transition: "all 0.2s",
                   }}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                  <span
+                <div>
+                  <div
                     style={{
                       fontFamily: "var(--font-display)",
-                      fontSize: 15,
+                      fontSize: 16,
                       fontWeight: 600,
-                      color: isOpen ? color : "#1a1a2e",
-                      transition: "color 0.2s",
+                      color: isOpen ? color : "var(--foreground)",
                     }}
                   >
-                    {section.title.replace(/\(\d+\)/, "").trim().slice(0, 70)}
-                  </span>
+                    {section.title.trim()}
+                  </div>
                   {hasSubsections && (
-                    <span style={{ fontSize: 11, color: "#9ca3af" }}>
-                      {section.subsections.length} sous-section{section.subsections.length > 1 ? "s" : ""}
-                    </span>
+                    <div style={{ fontSize: 11, color: "var(--text-muted)" }}>
+                      {section.subsections.length} sections
+                    </div>
                   )}
                 </div>
               </div>
               <span
                 style={{
-                  fontSize: 18,
-                  color: color,
-                  flexShrink: 0,
                   transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-                  transition: "transform 0.25s ease",
-                  display: "inline-block",
+                  transition: "0.2s",
+                  color: color,
                 }}
               >
                 ↓
@@ -202,29 +211,46 @@ export default function KeyConcepts({ sections, color = "#c0392b" }) {
             </button>
 
             {isOpen && (
-              <div style={{ padding: "0 20px 20px 60px", animation: "fadeUp 0.25s ease both" }}>
-                <div style={{ height: 1, background: color + "20", marginBottom: 16 }} />
-
-                {points.length > 0 && (
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8, marginBottom: hasSubsections ? 16 : 0 }}>
-                    {points.map((point, j) => (
-                      <li key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start", animationDelay: `${j * 30}ms`, animation: "fadeUp 0.3s ease both" }}>
-                        <span style={{ color: color, fontWeight: 700, fontSize: 14, lineHeight: "22px", flexShrink: 0 }}>·</span>
-                        <span style={{ fontSize: 14, color: "#374151", lineHeight: 1.65 }}>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
+              <div
+                style={{
+                  padding: "0 20px 24px 66px",
+                  animation: "fadeUp 0.3s ease both",
+                }}
+              >
+                {points.map((p, j) => (
+                  <div
+                    key={j}
+                    style={{ display: "flex", gap: 10, marginBottom: 8 }}
+                  >
+                    <span style={{ color: color, fontWeight: 900 }}>·</span>
+                    <span
+                      style={{
+                        fontSize: 14,
+                        color: "var(--foreground)",
+                        lineHeight: 1.6,
+                        opacity: 0.9,
+                      }}
+                    >
+                      {p}
+                    </span>
+                  </div>
+                ))}
                 {hasSubsections && (
-                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                    {points.length > 0 && (
-                      <div style={{ fontSize: 11, fontWeight: 700, color: color, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>
-                        Sous-sections
-                      </div>
-                    )}
+                  <div
+                    style={{
+                      marginTop: 20,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 8,
+                    }}
+                  >
                     {section.subsections.map((sub, k) => (
-                      <SubSection key={k} subsection={sub} color={color} index={k} />
+                      <SubSection
+                        key={k}
+                        subsection={sub}
+                        color={color}
+                        index={k}
+                      />
                     ))}
                   </div>
                 )}
