@@ -91,7 +91,7 @@ export default function HomePage() {
               marginBottom: 40,
             }}
           >
-            It took me too much time and I'm still not done but...chek it out
+            Almost better than good
           </p>
         </div>
       </header>
@@ -131,7 +131,6 @@ export default function HomePage() {
             >
               <div
                 style={{
-                  // Using the variable ensures it flips automatically
                   background: "var(--bg-card)",
                   borderRadius: 14,
                   padding: "24px 24px 20px",
@@ -143,7 +142,7 @@ export default function HomePage() {
                   boxShadow:
                     hovered === mod.slug
                       ? `0 12px 32px ${mod.color}18`
-                      : "0 2px 8px rgba(0,0,0,0.1)", // Slightly stronger shadow for dark mode visibility
+                      : "0 2px 8px rgba(0,0,0,0.1)",
                   cursor: "pointer",
                   animation: "fadeUp 0.4s ease both",
                   animationDelay: `${i * 40}ms`,
@@ -171,19 +170,6 @@ export default function HomePage() {
                   >
                     {mod.icon}
                   </div>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 11,
-                      color: mod.color,
-                      background: mod.bg,
-                      padding: "3px 8px",
-                      borderRadius: 4,
-                      fontWeight: 500,
-                    }}
-                  >
-                    {mod.slideCount} slides
-                  </span>
                 </div>
                 <h3
                   style={{

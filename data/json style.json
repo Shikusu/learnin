@@ -1,5 +1,4 @@
 {
-  "lesson": {
     "id": "lesson-001",
     "title": "Lesson Name",
     "tldr": "A 1-2 sentence high-level summary of the entire lesson.",
@@ -37,4 +36,3 @@
       }
     ]
   }
-}

@@ -1,49 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import dynamic from "next/dynamic";
-import { ModuleMeta, MODULES } from "@/data/modules";
+import { MODULES } from "@/data/modules";
 import KeyConcepts from "@/components/KeyConcepts";
 import Flashcards from "@/components/Flashcards";
-
-// Diagram imports (Keep as is)
-const IgDiagram = dynamic(() => import("@/components/IgDiagram"), {
-  ssr: false,
-});
-const ComplementDiagram = dynamic(
-  () => import("@/components/ComplementDiagram"),
-  { ssr: false }
-);
-const HLADiagram = dynamic(() => import("@/components/HLADiagram"), {
-  ssr: false,
-});
-const PhagocytosisDiagram = dynamic(
-  () => import("@/components/PhagocytosisDiagram"),
-  { ssr: false }
-);
-const CytokineDiagram = dynamic(() => import("@/components/CytokineDiagram"), {
-  ssr: false,
-});
-const ImmuneResponseDiagram = dynamic(
-  () => import("@/components/ImmuneResponseDiagram"),
-  { ssr: false }
-);
-
-const DIAGRAMS = {
-  immunoglobulines: IgDiagram,
-  complement: ComplementDiagram,
-  hla: HLADiagram,
-  innee: PhagocytosisDiagram,
-  cytokines: CytokineDiagram,
-  reponse: ImmuneResponseDiagram,
-  acquise: ImmuneResponseDiagram,
-};
-
-const TABS = [
-  { id: "cours", label: "📖 Cours" },
-  { id: "schema", label: "🔬 Schéma" },
-  { id: "fiches", label: "🃏 Fiches" },
-];
+import { TABS, DIAGRAMS } from "@/constants/immunoModule";
 
 export default function ModuleClient({ meta, content, flashcards }) {
   const [tab, setTab] = useState("cours");
@@ -171,15 +132,6 @@ export default function ModuleClient({ meta, content, flashcards }) {
                   }}
                 >
                   Module {modIndex + 1} / {MODULES.length}
-                </span>
-                <span
-                  style={{
-                    ...badgeStyle,
-                    color: "var(--text-muted)",
-                    border: "1px solid var(--border)",
-                  }}
-                >
-                  {meta.slideCount} diapositives
                 </span>
               </div>
               <h1
@@ -416,7 +368,6 @@ export default function ModuleClient({ meta, content, flashcards }) {
   );
 }
 
-// Sub-styles for cleaner code
 const badgeStyle = {
   fontFamily: "var(--font-mono)",
   fontSize: 11,
