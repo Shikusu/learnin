@@ -1,0 +1,172 @@
+{
+    "id": "lesson-001",
+    "title": "L'immunité acquise à médiation cellulaire",
+    "tldr": "Cette leçon détaille les mécanismes de la réponse immunitaire spécifique, l'activation des lymphocytes T et les processus de destruction des cellules infectées ou cancéreuses.",
+    "keyTakeaways": [
+      "L'immunité acquise est spécifique, sollicitée en cas d'échec de l'immunité innée, et possède une mémoire immunitaire.",
+      "L'activation des lymphocytes T nécessite deux signaux : la reconnaissance de l'antigène via le CMH et une co-stimulation (B7-CD28).",
+      "Les lymphocytes T CD4+ se divisent en sous-populations Th1 (réponse cellulaire) et Th2 (réponse humorale).",
+      "La cytotoxicité T s'exerce principalement via deux voies : perforine/granzyme (dépendante du calcium) et Fas/FasL (indépendante du calcium).",
+      "L'exploration biologique repose sur la cytométrie en flux (CMF) pour le comptage des sous-populations et l'IDR pour tester la fonction cellulaire in vivo."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définitions",
+        "summary": "Présentation des concepts de base et des différentes formes d'acquisition de l'immunité.",
+        "bulletPoints": [
+          "L'immunité acquise vise à éliminer l'agent pathogène de façon spécifique après l'échec de l'immunité innée.",
+          "L'immunité acquise passive naturelle implique la transmission d'anticorps maternels par le placenta ou le lait.",
+          "L'immunité acquise passive artificielle provient de l'administration d'effecteurs comme les immunoglobulines.",
+          "L'immunité acquise active naturelle résulte d'une infection.",
+          "L'immunité acquise active artificielle est le résultat de la vaccination à des fins préventives."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Rôles Généraux",
+            "bulletPoints": [
+              "Élimination des cellules infectées par des pathogènes intracellulaires comme la tuberculose ou les virus.",
+              "Destruction des cellules cancéreuses.",
+              "Réaction contre les cellules d'une greffe allogénique."
+            ],
+            "callout": "L'immunité cellulaire fait intervenir principalement les lymphocytes T et les cellules présentatrices de l'antigène (CPA)."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Les Cellules Effectrices",
+        "summary": "Description des types cellulaires impliqués dans la médiation cellulaire.",
+        "bulletPoints": [
+          "Les Lymphocytes T (LT) sont le support de l'immunité spécifique et sont restreints par les molécules du CMH.",
+          "Les LT auxiliaires (CD4+) reconnaissent les antigènes liés au CMH de classe II.",
+          "Les LT cytotoxiques (CD8+) reconnaissent le CMH de classe I et assurent la lyse des cellules infectées.",
+          "Les cellules dendritiques (DC) sont les seules capables de stimuler un lymphocyte T naïf."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Sous-populations CD4+ et DC",
+            "bulletPoints": [
+              "Les Th1 privilégient la réponse cellulaire et agissent sur les macrophages.",
+              "Les Th2 privilégient la réponse humorale et coopèrent avec les lymphocytes B.",
+              "Les DC1 sont localisées dans les tissus non lymphoïdes et produisent des cytokines comme l'IL-12 et le TNF-alpha.",
+              "Les DC2 se trouvent dans les zones T des tissus lymphoïdes et produisent l'IFN-alpha/beta."
+            ],
+            "callout": "Les macrophages dérivent des monocytes et nécessitent parfois l'aide des LT CD4 Th1 pour devenir pleinement effecteurs."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Activations Cellulaires",
+        "summary": "Les étapes nécessaires pour rendre les cellules immunitaires fonctionnelles.",
+        "bulletPoints": [
+          "L'activation des cellules dendritiques comprend leur maturation et leur migration vers les organes lymphoïdes secondaires.",
+          "L'activation des LT CD4 nécessite un premier signal (contact TCR/CMH II) et un deuxième signal (liaison B7/CD28).",
+          "Cette activation déclenche la synthèse d'interleukine-2 (IL-2) et de son récepteur, permettant la prolifération clonale.",
+          "L'activation des macrophages nécessite l'IFN-gamma (signal 1) et un co-signal comme le TNF ou les lipopolysaccharides."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Différenciation et Mémoire",
+            "bulletPoints": [
+              "Certains lymphocytes activés se différencient en cellules effectrices.",
+              "D'autres se différencient en cellules mémoires pour assurer une protection future."
+            ],
+            "callout": "Les molécules d'adhérence (ICAM1, LFA1, LFA3) sont indispensables pour stabiliser les contacts cellulaires lors de l'activation."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "La Cytotoxicité T",
+        "summary": "Mécanismes de destruction des cellules cibles par les lymphocytes T cytotoxiques (CTL).",
+        "bulletPoints": [
+          "La cytotoxicité aboutit soit à la nécrose (membrane), soit à l'apoptose (noyau).",
+          "Le processus de lyse comprend l'adhésion, une étape métabolique, et la formation de pores.",
+          "Un CTL peut lyser entre 10 et 20 cellules cibles successivement."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Voie Perforine / Granzyme",
+            "bulletPoints": [
+              "Dépendante du calcium (Ca++).",
+              "La perforine forme des pores transmembranaires.",
+              "Les granzymes pénètrent dans le cytosol pour induire l'apoptose.",
+              "Une entrée massive d'eau par osmose peut faire éclater la cellule."
+            ],
+            "callout": "L'IFN-gamma produit par les CTL possède également un effet inhibiteur direct sur la réplication virale."
+          },
+          {
+            "id": "subsec-4-b",
+            "title": "Voie Fas / FasL",
+            "bulletPoints": [
+              "Indépendante du calcium.",
+              "L'interaction Fas-L (CTL) et Fas (Cible) forme le complexe DISC.",
+              "Cela active une cascade de caspases menant à l'apoptose."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Exploration de l'Immunité Cellulaire",
+        "summary": "Méthodes cliniques et de laboratoire pour évaluer la réponse immunitaire.",
+        "bulletPoints": [
+          "La numération et formule sanguine (NFS) permet d'évaluer la répartition relative des cellules.",
+          "La cytométrie en flux (CMF) permet l'immunophénotypage et le comptage des sous-populations via des marqueurs CD spécifiques.",
+          "L'étude de la prolifération in vitro utilise des mitogènes comme la PhytoHémagglutinine A (PHA) pour stimuler les LT.",
+          "L'IDR (intradermoréaction) à la tuberculine explore les réactions d'hypersensibilité retardée (HSR) in vivo."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Marqueurs CD Principaux",
+            "bulletPoints": [
+              "CD3 : Marqueur universel des LT (lié au TCR).",
+              "CD4 : LT auxiliaires.",
+              "CD8 : LT cytotoxiques.",
+              "CD19 : Lymphocytes B.",
+              "CD16 / CD56 : Cellules NK (Natural Killer)."
+            ],
+            "callout": "Le CD25 correspond au récepteur de l'IL-2 (IL2R) et marque les lymphocytes activés."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "CPA",
+        "definition": "Cellules présentatrices de l'antigène (ex: cellules dendritiques, macrophages)."
+      },
+      {
+        "term": "CTL",
+        "definition": "Lymphocytes T cytotoxiques, principalement CD8+."
+      },
+      {
+        "term": "Apoptose",
+        "definition": "Mort cellulaire programmée impliquant des atteintes nucléaires."
+      },
+      {
+        "term": "Nécrose",
+        "definition": "Mort cellulaire par destruction de la membrane cytoplasmique."
+      },
+      {
+        "term": "CMH / HLA",
+        "definition": "Complexe Majeur d'Histocompatibilité, système de reconnaissance du 'soi' présentant les peptides aux LT."
+      },
+      {
+        "term": "Mitogènes",
+        "definition": "Substances induisant la prolifération des lymphocytes (ex: PHA, PWM)."
+      },
+      {
+        "term": "Synapse immune",
+        "definition": "Espace délimité entre le CTL et la cellule cible pour la libération des granules cytotoxiques."
+      }
+    ]
+  }

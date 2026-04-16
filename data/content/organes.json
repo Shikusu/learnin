@@ -1,0 +1,167 @@
+{
+    "id": "lesson-001",
+    "title": "Organes de l'Immunité",
+    "tldr": "Cette leçon explore l'organisation structurale et fonctionnelle des organes lymphoïdes, classés en primaires pour la maturation des cellules et secondaires pour le déclenchement des réponses immunitaires.",
+    "keyTakeaways": [
+      "Les organes lymphoïdes primaires (thymus, moelle osseuse) sont les lieux de maturation et d'acquisition de l'immunocompétence sans contact avec l'antigène.",
+      "Les organes lymphoïdes secondaires (ganglions, rate, MALT) sont les sites de rencontre entre l'antigène et les cellules immunocompétentes.",
+      "Le thymus assure une double sélection rigoureuse des lymphocytes T pour garantir la reconnaissance du CMH et l'absence d'auto-réactivité.",
+      "Les organes lymphoïdes tertiaires sont des structures ectopiques temporaires apparaissant uniquement lors d'inflammations chroniques."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction aux Organes Lymphoïdes",
+        "summary": "Présentation des deux grandes catégories d'organes lymphoïdes et de leurs rôles respectifs dans le cycle de vie des cellules immunitaires.",
+        "bulletPoints": [
+          "Les organes lymphoïdes peuvent être des structures individualisées et encapsulées ou de simples accumulations de tissu lymphoïde.",
+          "Les organes primaires sont les sites de multiplication, de différenciation et de maturation des cellules lymphoïdes.",
+          "Les organes secondaires sont les lieux de contact privilégiés entre l'antigène et les cellules immunocompétentes."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Distinction Fonctionnelle",
+            "bulletPoints": [
+              "Acquisition de l'immunocompétence dans les organes primaires.",
+              "Déclenchement de la réponse immunitaire spécifique dans les organes secondaires."
+            ],
+            "callout": "Une fois les cellules sorties des organes lymphoïdes primaires, il n'y a plus de recirculation au niveau de ces derniers."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Les Organes Lymphoïdes Primaires (OLP)",
+        "summary": "Étude détaillée du thymus et de la moelle osseuse, centres de genèse des lymphocytes.",
+        "bulletPoints": [
+          "Lieux de différenciation à partir des cellules souches lymphoïdes.",
+          "Acquisition du répertoire de récepteurs spécifiques d'antigène.",
+          "Les OLP sont constitués principalement du thymus et de la moelle osseuse."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Le Thymus",
+            "bulletPoints": [
+              "Organe lympho-épithélial situé dans le médiastin antérieur.",
+              "Structure lobulée comprenant une zone corticale externe (prolifération) et une zone médullaire centrale (maturation).",
+              "Le réseau épithélial (cellules nourricières, corticales et médullaires) guide la sélection des cellules T.",
+              "Sélection positive : survie des lymphocytes ayant une affinité intermédiaire pour le complexe majeur d'histocompatibilité (CMH).",
+              "Sélection négative : élimination par apoptose des lymphocytes reconnaissant les antigènes du Soi.",
+              "Les lymphocytes passent de l'état double négatif (CD4-/CD8-) à double positif (CD4+/CD8+) avant de devenir simple positif (CD4+ ou CD8+)."
+            ],
+            "callout": "Le thymus subit une involution progressive après la puberté, laissant place à du tissu adipeux."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "La Moelle Osseuse",
+            "bulletPoints": [
+              "Site de maturation des lymphocytes B au contact des cellules stromales réticulaires.",
+              "Les précurseurs des lymphocytes T quittent la moelle pour migrer vers le thymus.",
+              "L'expression des immunoglobulines de surface marque l'acquisition du récepteur spécifique d'antigène chez les cellules B."
+            ],
+            "callout": "Chez le fœtus, la différenciation des cellules B s'effectue initialement dans le foie à partir de la 9ème semaine."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Les Organes Lymphoïdes Secondaires (OLS)",
+        "summary": "Analyse des sites où se développent les réactions immunitaires face aux agents pathogènes.",
+        "bulletPoints": [
+          "Composés des ganglions lymphatiques, de la rate et des formations lymphoïdes des muqueuses (MALT).",
+          "Présentent systématiquement une zone thymo-dépendante (zone T) et une zone thymo-indépendante (zone B)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Les Ganglions Lymphatiques",
+            "bulletPoints": [
+              "Répartis au nombre d'environ 1000 sur le trajet de la lymphe (cou, creux axillaire, aine, etc.).",
+              "Zone corticale (B-dépendante) : contient des follicules primaires ou secondaires avec centres germinatifs.",
+              "Zone paracorticale (T-dépendante) : contient des cellules interdigitées et permet le passage des lymphocytes du sang vers la lymphe.",
+              "Zone médullaire : contient des cordons cellulaires riches en plasmocytes lors d'une stimulation."
+            ],
+            "callout": "Rôle des ganglions : protection vis-à-vis des antigènes pénétrant par la peau ou les surfaces internes véhiculés par la lymphe."
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "La Rate",
+            "bulletPoints": [
+              "Située dans l'hypochondre gauche, elle réagit aux antigènes administrés par voie sanguine.",
+              "Pulpe blanche : composée du manchon lymphoïde périartériel (zone T) et des corpuscules de Malpighi (zone B).",
+              "Pulpe rouge : zone de réserve de plaquettes, globules rouges et blancs, contenant les cordons de Bilroth.",
+              "Zone marginale : interface entre les pulpes, riche en macrophages et cellules B mémoire."
+            ],
+            "callout": "Chez l'homme, la zone marginale de la rate ne se développe qu'à partir de l'âge de 2 ans."
+          },
+          {
+            "id": "subsec-3-c",
+            "title": "Formations Lymphoïdes des Muqueuses (MALT)",
+            "bulletPoints": [
+              "Comprend le GALT (intestin), le BALT (bronches) et d'autres tissus associés aux muqueuses.",
+              "Représente 50% de la masse totale du tissu lymphoïde.",
+              "Les cellules M des plaques de Peyer transportent les antigènes vers les cellules présentatrices d'antigène sans les dégrader."
+            ],
+            "callout": "Rôle majeur : sécrétion d'IgA sécrétoires pour la défense des muqueuses."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Les Organes Lymphoïdes Tertiaires",
+        "summary": "Focus sur les structures lymphoïdes induites par des pathologies chroniques.",
+        "bulletPoints": [
+          "Formations ectopiques apparaissant lors d'inflammations chroniques (auto-immunité, infections microbiennes persistantes).",
+          "Possèdent une structure organisée similaire aux OLS avec des zones T et B spécifiques.",
+          "Disparaissent totalement après l'élimination de l'antigène déclencheur."
+        ],
+        "callout": null
+      },
+      {
+        "id": "sec-5",
+        "title": "Conclusion",
+        "summary": "Synthèse sur l'organisation spatiale du système immunitaire.",
+        "bulletPoints": [
+          "Le système immunitaire repose sur une compartimentalisation stricte des organes.",
+          "Chaque organe présente des zones T et B bien distinctes permettant une réponse coordonnée."
+        ],
+        "callout": null
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Immunocompétence",
+        "definition": "Capacité d'une cellule immunitaire à reconnaître un antigène spécifique via ses récepteurs."
+      },
+      {
+        "term": "Thymus",
+        "definition": "Organe lymphoïde primaire responsable de la maturation et de la sélection des lymphocytes T."
+      },
+      {
+        "term": "TCR (T Cell Receptor)",
+        "definition": "Récepteur de surface des lymphocytes T capable de reconnaître un peptide antigénique présenté par le CMH."
+      },
+      {
+        "term": "CD (Cluster of Differentiation)",
+        "definition": "Marqueurs de surface utilisés pour identifier et classer les lignées et stades de différenciation des cellules immunitaires."
+      },
+      {
+        "term": "CMH (Complexe Majeur d'Histocompatibilité)",
+        "definition": "Molécules de surface présentant les peptides antigéniques aux lymphocytes T."
+      },
+      {
+        "term": "Follicule Lymphoïde",
+        "definition": "Amas de lymphocytes B dans la zone corticale des organes secondaires ; qualifié de secondaire s'il possède un centre germinatif."
+      },
+      {
+        "term": "MALT (Mucosae Associated Lymphoid Tissue)",
+        "definition": "Ensemble des tissus lymphoïdes associés aux muqueuses (digestives, respiratoires)."
+      },
+      {
+        "term": "Cellules M",
+        "definition": "Cellules spécialisées des muqueuses transportant les antigènes vers le tissu lymphoïde sous-jacent."
+      }
+    ]
+  }

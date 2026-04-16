@@ -1,0 +1,242 @@
+{
+    "id": "lesson-001",
+    "title": "Immunoglobulines",
+    "tldr": "Une exploration complète des immunoglobulines (anticorps), de leur structure moléculaire et classification à leurs fonctions biologiques et applications cliniques.",
+    "keyTakeaways": [
+      "Les immunoglobulines sont des glycoprotéines en forme de Y composées de deux chaînes lourdes (H) et deux chaînes légères (L).",
+      "Il existe cinq classes d'isotypes (IgG, IgM, IgA, IgD, IgE) définies par la nature de leur chaîne lourde.",
+      "La structure se divise en fragments Fab (liaison à l'antigène) et Fc (fonctions effectrices comme l'activation du complément).",
+      "Le paratope, formé par les régions hypervariables (CDR), assure la reconnaissance spécifique de l'épitope de l'antigène.",
+      "Seules les IgG ont la capacité de traverser la barrière placentaire pour assurer l'immunité néonatale."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définitions",
+        "summary": "Présentation des immunoglobulines comme effecteurs de l'immunité spécifique humorale.",
+        "bulletPoints": [
+          "L'organisme fait face à des agressions continues nécessitant une immunité innée et spécifique.",
+          "Les immunoglobulines (Ig) sont des glycoprotéines produites lors d'une réponse immunitaire.",
+          "Elles sont présentes dans le plasma, les sécrétions et à la surface des lymphocytes B (immunorécepteurs).",
+          "Anciennement nommées gamma-globulines en raison de leur migration lors de l'électrophorèse des protéines sériques."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Rôle Fondamental",
+            "bulletPoints": [
+              "Support de la fonction anticorps.",
+              "Reconnaissance spécifique de l'antigène (épitope) ayant généré leur production."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Structure Générale des Immunoglobulines",
+        "summary": "Analyse de la composition moléculaire et de l'organisation spatiale des Ig.",
+        "bulletPoints": [
+          "Hétérodimère composé de quatre chaînes (tétrapeptide) en forme de Y.",
+          "Composé de 2 chaînes lourdes (H) de 50 kDa et 2 chaînes légères (L) de 25 kDa.",
+          "Les chaînes sont reliées par des ponts disulfures.",
+          "Présence d'une région charnière apportant de la flexibilité à la molécule."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Régions Variables et Constantes",
+            "bulletPoints": [
+              "Régions variables (VH et VL) : situées du côté N-terminal, elles contiennent 3 zones hypervariables.",
+              "Régions constantes (CH et CL) : situées du côté C-terminal.",
+              "Le paratope est formé par l'association des zones hypervariables (CDR) pour reconnaître l'épitope."
+            ],
+            "callout": "CDR (Complementarity Determining Region) : Zone spécifique de chaque chaîne déterminant la complémentarité avec l'antigène."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "Domaines et Superfamille",
+            "bulletPoints": [
+              "Les chaînes sont organisées en domaines (structure globuleuse compacte stabilisée par un pont disulfure).",
+              "La configuration 'Ig-like' se retrouve dans d'autres molécules (CMH, TCR, récepteurs Fc), formant la superfamille des immunoglobulines."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Dégradation Enzymatique",
+        "summary": "Action des enzymes sur la structure des immunoglobulines pour isoler leurs fonctions.",
+        "bulletPoints": [
+          "La digestion enzymatique permet de séparer les fonctions de liaison et les fonctions effectrices.",
+          "Utilisation historique de la papaïne et de la pepsine pour modéliser l'IgG."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Papaïne vs Pepsine",
+            "bulletPoints": [
+              "Papaïne : Clivage en 2 fragments Fab (liaison Ag) et 1 fragment Fc (cristallisable).",
+              "Pepsine : Clivage en 1 gros fragment F(ab')2 (bivalent) et des petits peptides (pFc)."
+            ],
+            "callout": "Fragment Fab : VL-CL / VH-CH1. Fragment Fc : CH2-CH3."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Isotypie, Allotypie et Idiotypie",
+        "summary": "Les trois niveaux de variations antigéniques des immunoglobulines.",
+        "bulletPoints": [
+          "Isotypie : Différences de classes communes à tous les individus d'une espèce.",
+          "Allotypie : Variations alléliques entre individus d'une même espèce.",
+          "Idiotypie : Déterminants propres à une seule molécule d'Ig, liés au paratope."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Classes d'Isotypes Humains",
+            "bulletPoints": [
+              "5 classes de chaînes lourdes : gamma (IgG), alpha (IgA), mu (IgM), delta (IgD), epsilon (IgE).",
+              "2 types de chaînes légères : kappa (κ) ou lambda (λ)."
+            ],
+            "callout": "Chez l'homme, le ratio des chaînes légères est de 2 kappa pour 1 lambda."
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Caractéristiques des Classes d'Ig",
+        "summary": "Détails spécifiques sur les cinq classes majeures d'immunoglobulines.",
+        "bulletPoints": [
+          "IgG (70-75%) : Majoritaires, défense antibactérienne, traversent le placenta.",
+          "IgM : Première ligne de défense, forme pentamérique dans le sérum, fort pouvoir agglutinant.",
+          "IgA : Protection des muqueuses, présentes dans les sécrétions (salive, larmes, lait).",
+          "IgD : Rôle de récepteur à la surface des lymphocytes B matures.",
+          "IgE : Impliquées dans l'hypersensibilité immédiate (allergies) et la lutte antiparasitaire."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "L'IgA Sécrétoire",
+            "bulletPoints": [
+              "Structure : 2 monomères + chaîne J + pièce sécrétoire.",
+              "Rôle crucial dans l'immunité locale des muqueuses."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-6",
+        "title": "Fonctions Biologiques et Relations Structure-Activité",
+        "summary": "Comment la structure Fab et Fc dicte les activités de l'anticorps.",
+        "bulletPoints": [
+          "Fonctions Fab : Reconnaissance et liaison spécifique de l'épitope.",
+          "Fonctions Fc : Catabolisme (CH2), transfert placentaire (IgG uniquement), fixation du complément (C1q sur CH2), fixation sur les récepteurs cellulaires (NK, phagocytes)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-6-a",
+            "title": "Activation du Complément",
+            "bulletPoints": [
+              "L'activation de la voie classique est surtout le fait des IgM et de certaines IgG (G1, G3, G2).",
+              "L'IgG4 et l'IgA sont incapables d'activer le complément par la voie classique."
+            ],
+            "callout": "Règle de traversée placentaire : Seule l'IgG possède cette capacité."
+          }
+        ]
+      },
+      {
+        "id": "sec-7",
+        "title": "Ontogénie et Phylogénie",
+        "summary": "Développement des Ig chez l'individu et évolution à travers les espèces.",
+        "bulletPoints": [
+          "Ontogénie : Production fœtale d'IgM dès la 10ème semaine. Transfert d'IgG maternelles dès la 20ème semaine.",
+          "Phylogénie : L'IgM est la classe la plus ancienne apparue au cours de l'évolution.",
+          "Apparition des IgG chez les mammifères et l'homme."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-7-a",
+            "title": "Évolution Post-natale",
+            "bulletPoints": [
+              "Les IgG maternelles disparaissent vers 6 mois.",
+              "Le taux d'adulte pour les IgG est atteint vers 5-7 ans, et à la puberté pour les IgA."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-8",
+        "title": "Réponses et Applications",
+        "summary": "Différences entre types de réponses et usages en médecine.",
+        "bulletPoints": [
+          "Réponse Polyclonale : Plusieurs clones de lymphocytes produisent des anticorps d'affinités variées contre plusieurs épitopes.",
+          "Réponse Monoclonale : Un seul clone produit des anticorps identiques dirigés contre un seul épitope.",
+          "Applications Diagnostiques : Sérodiagnostic de maladies infectieuses ou dégénératives (immunomarquage, précipitation).",
+          "Applications Thérapeutiques : Vaccination (préventif) et anticorps monoclonaux (curatif)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-8-a",
+            "title": "Techniques de Diagnostic",
+            "bulletPoints": [
+              "Immunoprécipitation.",
+              "Immunoagglutination.",
+              "Immunomarquage (enzymes, fluorochromes, radioactivité)."
+            ],
+            "callout": null
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Anticorps",
+        "definition": "Molécule capable de réagir spécifiquement avec l'antigène qui a induit sa production."
+      },
+      {
+        "term": "Antigène",
+        "definition": "Substance capable de déclencher une réponse immunitaire et de réagir avec les produits de cette réponse."
+      },
+      {
+        "term": "Épitope",
+        "definition": "Partie de l'antigène reconnue par l'anticorps (déterminant antigénique)."
+      },
+      {
+        "term": "Paratope",
+        "definition": "Site de combinaison de l'anticorps avec l'épitope, formé par les régions hypervariables."
+      },
+      {
+        "term": "Isotype",
+        "definition": "Variations de structure des chaînes lourdes et légères définissant les classes d'Ig communes à une espèce."
+      },
+      {
+        "term": "Allotype",
+        "definition": "Variations génétiques (alléliques) des Ig entre individus d'une même espèce."
+      },
+      {
+        "term": "Idiotype",
+        "definition": "Ensemble des déterminants antigéniques (idiotopes) propres à une molécule d'anticorps donnée."
+      },
+      {
+        "term": "Fragment Fc",
+        "definition": "Fragment cristallisable de l'Ig responsable des fonctions biologiques effectrices."
+      },
+      {
+        "term": "Fragment Fab",
+        "definition": "Fragment de l'anticorps contenant le site de liaison à l'antigène."
+      },
+      {
+        "term": "Chaîne J",
+        "definition": "Chaîne polypeptidique de jonction permettant la polymérisation des IgM et IgA."
+      },
+      {
+        "term": "Pièce sécrétoire",
+        "definition": "Composant ajouté aux IgA pour permettre leur passage et protection dans les sécrétions externes."
+      }
+    ]
+  }

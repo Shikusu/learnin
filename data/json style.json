@@ -1,17 +1,39 @@
 {
-  "lessonKey": {
-    "name": "Lesson Name",
-    "slideCount": 0,
+  "lesson": {
+    "id": "lesson-001",
+    "title": "Lesson Name",
+    "tldr": "A 1-2 sentence high-level summary of the entire lesson.",
+    "keyTakeaways": [
+      "The most important concept to remember.",
+      "The second most important concept."
+    ],
     "sections": [
       {
+        "id": "sec-1",
         "title": "Section Title",
-        "content": "Main point 1\nMain point 2\nMain point 3",
+        "summary": "A brief overview of what this section covers.",
+        "bulletPoints": [
+          "Main point 1 broken out into its own string.",
+          "Main point 2, making front-end mapping easy.",
+          "Main point 3."
+        ],
         "subsections": [
           {
+            "id": "subsec-1-a",
             "title": "Subsection Title",
-            "content": "Detail 1\nDetail 2\nDetail 3"
+            "bulletPoints": [
+              "Detail 1",
+              "Detail 2"
+            ],
+            "callout": "A specific rule, warning, or formula to highlight in a colored box on the UI."
           }
         ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Key Vocabulary Word",
+        "definition": "A short, punchy definition."
       }
     ]
   }

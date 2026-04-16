@@ -1,0 +1,210 @@
+{
+    "id": "lesson-001",
+    "title": "Réponse Immunitaire à Médiation Cellulaire",
+    "tldr": "L'immunité à médiation cellulaire est la réponse spécifique du système immunitaire visant à détruire les pathogènes intracellulaires et les cellules altérées, impliquant des effecteurs cellulaires spécifiques (Lymphocytes T) et non spécifiques (cellules NK, macrophages).",
+    "keyTakeaways": [
+      "Contrairement à l'immunité humorale (ciblant l'extracellulaire), l'immunité cellulaire cible les pathogènes intracellulaires (virus, mycobactéries) et les cellules tumorales.",
+      "L'activation d'un lymphocyte T naïf requiert absolument un double signal : la reconnaissance peptide-CMH et un signal de costimulation.",
+      "Les lymphocytes T cytotoxiques (CD8+) et les cellules NK détruisent directement les cellules cibles par nécrose (perforines/granzymes) ou apoptose (voie Fas).",
+      "L'ADCC relie l'immunité humorale et cellulaire, utilisant des cellules non spécifiques porteuses de récepteurs Fc pour détruire des cibles marquées par des anticorps.",
+      "La réaction d'hypersensibilité retardée (médiée par les LT CD4+) recrute massivement des macrophages pour éliminer les pathogènes persistants, atteignant son pic après 48 à 72 heures."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction à l'Immunité Cellulaire",
+        "summary": "Définition des rôles et des acteurs de l'immunité à médiation cellulaire par rapport à l'immunité humorale.",
+        "bulletPoints": [
+          "L'immunité à médiation cellulaire est dirigée spécifiquement contre les virus, bactéries intracellulaires, champignons et cellules tumorales.",
+          "Les cellules effectrices spécifiques incluent les LT CD4+ (sécrétrices de cytokines) et les LT CD8+ (cytotoxiques).",
+          "Les cellules effectrices non spécifiques comprennent les cellules Natural Killer (NK), les macrophages et les polynucléaires (PNN/PNE).",
+          "L'activité des cellules dépend fortement de la concentration locale des diverses cytokines."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Interconnexion des Réponses Immunitaires",
+            "bulletPoints": [
+              "Les macrophages, PNN, PNE et NK peuvent reconnaître les anticorps fixés sur les pathogènes.",
+              "Les peptides générés par l'activation du système du complément participent également à l'activation de ces cellules cellulaires."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Réponse Primaire vs Secondaire",
+        "summary": "Comparaison de la cinétique et de l'intensité de la réponse immunitaire selon le nombre d'expositions à l'antigène.",
+        "bulletPoints": [
+          "La réponse primaire implique la présentation de l'antigène par les CPA, l'activation des LT (CD4 ou CD8) et leur prolifération en clones d'effecteurs et de cellules mémoires.",
+          "La réponse secondaire est plus rapide et d'une plus grande intensité."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Dynamique de la Réponse Secondaire",
+            "bulletPoints": [
+              "La phase d'induction ne dure que quelques heures grâce à l'afflux local de LT à mémoire.",
+              "Elle se développe en général 24 à 48 heures après la nouvelle introduction de l'antigène.",
+              "Elle entraîne l'activation rapide des cellules phagocytaires et tueuses, une destruction tissulaire potentielle, suivie d'une fibrose locale et de la guérison."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Propriétés Générales des Cellules T Effectrices",
+        "summary": "Les mécanismes d'activation spécifiques, l'expression des molécules de surface et les différents profils cytokiniques des Lymphocytes T.",
+        "bulletPoints": [
+          "L'activation d'un LT effecteur déjà sensibilisé requiert moins (ou pas) de signal de costimulation par rapport à un LT naïf.",
+          "Les LT effecteurs expriment de grandes quantités de molécules d'adhésion, leur permettant de circuler vers la peau, les muqueuses et les sites inflammatoires.",
+          "Ils expriment diverses molécules effectrices de surface : récepteurs TNF (LT CD8+), récepteurs TNF β (LT Th1) et ligand du CD40 (LT Th2)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "L'Activation Nécessitant Deux Signaux (LT Naïfs)",
+            "bulletPoints": [
+              "Signal principal : Interaction entre le TCR et les co-récepteurs CD4/CD8 avec le complexe peptide/CMH de la CPA.",
+              "Deuxième signal (Costimulation) : Interaction entre molécules membranaires (ex: CD28 sur le LT et B7 sur la CPA)."
+            ],
+            "callout": "Règle de Tolérance : L'absence de signal de costimulation lors de la présentation antigénique conduit à un état de tolérance immunitaire."
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Profils des Populations CD4+ et CD8+",
+            "bulletPoints": [
+              "Le profil TH1 sécrète IL2, IFN γ, TNF β et IL3 pour activer les macrophages et les LT cytotoxiques, participant à l'hypersensibilité retardée.",
+              "Le profil TH2 sécrète IL4, IL5, IL10, IL13 pour stimuler la production d'anticorps (dont IgE) et l'activation des polynucléaires éosinophiles.",
+              "La population des LT CD8+ sécrète des cytotoxines (granzymes, perforines) ainsi que de l'IFN γ et du TNF β."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Lymphocytes T Cytotoxiques (CTL)",
+        "summary": "Le rôle et le mécanisme par lequel les LT CD8+ reconnaissent et détruisent les cellules du Soi infectées ou altérées.",
+        "bulletPoints": [
+          "Les CTL ont pour rôle principal la reconnaissance et la lyse des cellules du Soi altérées.",
+          "Leur activité est restreinte par le CMH de classe I.",
+          "Leur mise en action se fait en deux phases : la maturation à partir de précurseurs puis la destruction active de la cible."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Création des CTL",
+            "bulletPoints": [
+              "Nécessite le signal spécifique TCR - Complexe peptide/CMH.",
+              "Nécessite la costimulation classique (CD28-B7).",
+              "Un troisième signal est requis : l'interaction de l'IL-2 avec son récepteur de haute affinité."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-4-b",
+            "title": "Mécanisme de Destruction Cellulaire",
+            "bulletPoints": [
+              "Formation physique d'un conjugué intime entre le CTL et la cellule cible.",
+              "Migration et libération du contenu des granules intracytoplasmiques à la zone de contact.",
+              "Induction de la mort cellulaire soit par nécrose (voie des perforines/granzymes), soit par apoptose (voie du récepteur Fas)."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Cellules NK et Cytotoxicité ADCC",
+        "summary": "L'action immédiate des cellules Natural Killer et le pont créé par l'ADCC entre anticorps et immunité cellulaire.",
+        "bulletPoints": [
+          "Les cellules NK agissent en première ligne contre certains virus et bactéries intracellulaires, utilisant également perforines et granzymes."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Activation des Cellules NK",
+            "bulletPoints": [
+              "La surface des NK est dotée de récepteurs activateurs et inhibiteurs.",
+              "À l'état basal, les signaux inhibiteurs surpassent les signaux activateurs pour protéger les cellules saines."
+            ],
+            "callout": "Déclenchement NK : L'attaque est déclenchée lors d'une diminution anormale des molécules du CMH I à la surface de la cellule cible (phénomène typique lors d'une infection virale)."
+          },
+          {
+            "id": "subsec-5-b",
+            "title": "ADCC (Antibody-Dependent Cell-Mediated Cytotoxicity)",
+            "bulletPoints": [
+              "L'ADCC fait intervenir des macrophages, monocytes, cellules NK, PNN et PNE.",
+              "Bien que ces cellules soient non spécifiques, elles possèdent des récepteurs membranaires pour le fragment Fc des anticorps.",
+              "Ceci permet de diriger l'attaque cellulaire avec la haute spécificité de la liaison Anticorps/Antigène (ex: réaction du greffon contre l'hôte)."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-6",
+        "title": "Hypersensibilité Retardée",
+        "summary": "La réponse inflammatoire cellulaire puissante, médiée par les LT CD4+, visant à éliminer les pathogènes particulièrement résistants.",
+        "bulletPoints": [
+          "Elle est essentielle pour la défense contre les pathogènes intracellulaires chroniques.",
+          "La réaction complète comprend une phase de sensibilisation initiale suivie de phases de déclenchement lors d'expositions ultérieures."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-6-a",
+            "title": "Phase de Sensibilisation et Expositions Ultérieures",
+            "bulletPoints": [
+              "Sensibilisation : Premier contact où l'antigène est phagocyté, apprêté par les macrophages, et présenté aux LT helper qui prolifèrent.",
+              "Exposition : Sécrétion massive de cytokines (IFNγ, TNFβ, IL3, GM-CSF) recrutant des macrophages et autres cellules inflammatoires.",
+              "L'apparition clinique de la réaction se fait après 24h, avec un maximum à la 48ème ou 72ème heure."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-6-b",
+            "title": "Réactions Cliniques et Granulomes",
+            "bulletPoints": [
+              "Si l'antigène est difficile à éliminer, la réponse mène au développement d'une réaction granulomateuse isolant le pathogène.",
+              "L'intradermoréaction (IDR) à la tuberculine est l'exemple clinique classique de cette hypersensibilité.",
+              "L'importance vitale de cette réaction est démontrée par sa défaillance chez les patients atteints du SIDA (infection VIH)."
+            ],
+            "callout": null
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Immunité à Médiation Cellulaire",
+        "definition": "Branche de l'immunité spécifique ciblant les pathogènes situés à l'intérieur des cellules et les cellules tumorales, orchestrée par les lymphocytes T."
+      },
+      {
+        "term": "Costimulation",
+        "definition": "Le deuxième signal nécessaire à l'activation complète d'un lymphocyte T naïf (ex: CD28 sur le LT liant B7 sur la CPA), sans lequel la cellule devient tolérante."
+      },
+      {
+        "term": "Perforines et Granzymes",
+        "definition": "Protéines cytotoxiques sécrétées par les LT CD8+ et les cellules NK. Les perforines créent des pores dans la membrane de la cible, permettant aux granzymes d'entrer et d'induire la mort cellulaire."
+      },
+      {
+        "term": "ADCC",
+        "definition": "Cytotoxicité à médiation cellulaire dépendante des anticorps. Processus où des cellules immunitaires innées (portant des récepteurs Fc) détruisent une cible marquée par un anticorps."
+      },
+      {
+        "term": "Voie de Fas",
+        "definition": "Mécanisme induisant l'apoptose (mort cellulaire programmée) lorsqu'un LT cytotoxique engage son ligand FasL avec le récepteur Fas de la cellule cible."
+      },
+      {
+        "term": "Hypersensibilité Retardée",
+        "definition": "Réponse inflammatoire à médiation cellulaire (LT CD4+ et macrophages) qui nécessite 48 à 72 heures pour atteindre son pic d'intensité après une réexposition à un antigène."
+      },
+      {
+        "term": "Réaction Granulomateuse",
+        "definition": "Amas de cellules immunitaires chroniques (souvent autour de macrophages) se formant lorsque l'organisme tente de circonscrire un pathogène intracellulaire impossible à éliminer totalement."
+      }
+    ]
+  }

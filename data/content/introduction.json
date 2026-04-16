@@ -1,0 +1,165 @@
+{
+    "id": "lesson-001",
+    "title": "Introduction à l'Immunologie",
+    "tldr": "L'immunologie est l'étude du système immunitaire, permettant à l'organisme de se défendre contre les agressions externes et de maintenir son intégrité en discriminant le Soi du non-Soi[cite: 39, 50, 53].",
+    "keyTakeaways": [
+      "L'immunité naturelle (innée) agit via des barrières anatomiques, physiologiques, phagocytaires et inflammatoires[cite: 70].",
+      "L'immunité adaptative (spécifique) repose sur les lymphocytes B pour la médiation humorale et les lymphocytes T pour la médiation cellulaire[cite: 74, 76, 122].",
+      "La tolérance immunitaire est essentielle car elle empêche le système de s'attaquer à ses propres tissus, protégeant ainsi le Soi[cite: 91].",
+      "Les pathologies du système immunitaire incluent les allergies, les maladies auto-immunes, les rejets de greffes et les défaillances menant aux cancers[cite: 110, 112]."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définitions",
+        "summary": "Concepts fondamentaux et définitions de base de l'immunité et de ses différents types.",
+        "bulletPoints": [
+          "Le terme immunis signifie libre de, dispensé de, ou exempté de[cite: 45].",
+          "L'immunité regroupe les mécanismes biologiques permettant de maintenir la cohérence tissulaire et d'éliminer les constituants altérés ou les substances étrangères[cite: 50].",
+          "L'immunologie est définie comme la science de la discrimination du Soi et du non-Soi[cite: 53]."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Les Types d'Immunité Globale",
+            "bulletPoints": [
+              "L'immunité active implique que l'individu produit lui-même ses effecteurs après contact avec l'agresseur[cite: 55].",
+              "L'immunité passive correspond à la transmission d'effecteurs, que ce soit physiologiquement (grossesse) ou artificiellement (sérothérapie)[cite: 55]."
+            ],
+            "callout": "Définition Clé : Un Antigène (Ag) est une substance capable d'induire une réponse immunitaire spécifique[cite: 54]."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Historique et Théories de l'Immunité",
+        "summary": "Évolution de la compréhension immunologique et des modèles théoriques qui l'expliquent.",
+        "bulletPoints": [
+          "Thucydide a été parmi les premiers à observer le phénomène lors de la peste d'Athènes[cite: 58].",
+          "La variolisation a été observée par Voltaire chez les Chinois en 1733, et Jenner a formalisé la vaccination en 1798[cite: 58].",
+          "La recherche est passée d'une focalisation humorale puis cellulaire, à la période actuelle d'immunologie moléculaire[cite: 58]."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Les Différentes Théories",
+            "bulletPoints": [
+              "Théorie sélective : Des récepteurs préformés sur les cellules réagissent aux agents infectieux, l'antigène sélectionnant le récepteur le plus approprié[cite: 62].",
+              "Théorie instructive : L'antigène sert de matrice autour de laquelle l'anticorps se replie[cite: 64].",
+              "Théorie clonale : Les lymphocytes expriment des récepteurs spécifiques avant même l'exposition à l'antigène[cite: 66]."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Les Composantes de l'Immunité",
+        "summary": "Distinction majeure entre l'immunité non spécifique (innée) et spécifique (adaptative).",
+        "bulletPoints": [
+          "L'immunité non spécifique repose sur des barrières anatomiques (peau, muqueuses), physiologiques (pH, température), phagocytaires et inflammatoires[cite: 70].",
+          "L'immunité spécifique possède une mémoire et se divise en immunité humorale et cellulaire[cite: 72]."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Immunité à Médiation Humorale",
+            "bulletPoints": [
+              "Elle est orchestrée par les lymphocytes B[cite: 74].",
+              "Leurs récepteurs sont des anticorps reconnaissant les antigènes sous leur forme native et intacte[cite: 74].",
+              "Après contact, ils se différencient en cellules à mémoire et en plasmocytes sécréteurs d'anticorps[cite: 74]."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Immunité à Médiation Cellulaire",
+            "bulletPoints": [
+              "Elle est orchestrée par les lymphocytes T[cite: 76].",
+              "Le récepteur TCR reconnaît les antigènes digérés et présentés à la surface des cellules[cite: 76].",
+              "Il existe deux sous-populations principales : les CD4+ (helper) et les CD8+ (cytotoxiques)[cite: 79]."
+            ],
+            "callout": "Règle de Restriction : La reconnaissance par les lymphocytes T nécessite impérativement l'association de l'antigène avec une molécule du Complexe Majeur d'Histocompatibilité (CMH)[cite: 77]."
+          },
+          {
+            "id": "subsec-3-c",
+            "title": "Les Cellules Présentatrices de l'Antigène (CPA)",
+            "bulletPoints": [
+              "Elles incluent les macrophages, les cellules dendritiques et les lymphocytes B[cite: 81].",
+              "Elles expriment des molécules de classe II du CMH[cite: 81]."
+            ],
+            "callout": "Notion de Costimulation : Un deuxième signal est requis pour valider la pertinence de la réponse. Son absence entraîne une non-réponse, expliquant la tolérance au Soi[cite: 83, 85]."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Déroulement Global de la Réponse",
+        "summary": "Chronologie de l'action immunitaire et développement de la mémoire.",
+        "bulletPoints": [
+          "La séquence d'événements s'enchaîne ainsi : Agression, suivie de l'immunité innée, de l'inflammation, puis de la réponse adaptative[cite: 89].",
+          "La tolérance immunitaire s'obtient par l'élimination des lymphocytes ciblant le Soi pendant leur développement[cite: 91]."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Réponse Primaire vs Secondaire",
+            "bulletPoints": [
+              "La réponse primaire survient lors de la toute première rencontre avec un antigène donné[cite: 93].",
+              "La réponse secondaire, lors d'une réintroduction du même antigène, est modifiée grâce à la mémoire immunologique[cite: 93]."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Pathologies Dues à la Réponse Immunitaire",
+        "summary": "Les déséquilibres immunitaires conduisant aux maladies.",
+        "bulletPoints": [
+          "L'allergie résulte d'une réponse inappropriée contre des antigènes ubiquitaires bénins (pollens, aliments)[cite: 110].",
+          "Les maladies auto-immunes proviennent d'une perte de discrimination entre le Soi et le non-Soi[cite: 110].",
+          "Les cancers peuvent survenir suite à une défaillance du système immunitaire, tandis que les transplantations posent un problème de réaction contre les tissus étrangers[cite: 112]."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Classification des Hypersensibilités (Gell et Coombs)",
+            "bulletPoints": [
+              "Type I (immédiate) : Activation des mastocytes et libération de médiateurs de l'inflammation[cite: 114].",
+              "Type II (cytotoxicité) : Fixation d'anticorps sur des cellules entraînant leur destruction (ADCC)[cite: 116].",
+              "Type III (complexes immuns) : Dommages causés par le dépôt tissulaire ou vasculaire de complexes immuns[cite: 118].",
+              "Type IV (retardée) : Activation des macrophages par les lymphocytes T CD4+ après plus de 24 heures[cite: 118, 119]."
+            ],
+            "callout": null
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Immunité",
+        "definition": "Ensemble des mécanismes biologiques permettant de maintenir la cohérence de l'organisme et d'assurer son intégrité face aux altérations et substances étrangères[cite: 50]."
+      },
+      {
+        "term": "Antigène (Ag)",
+        "definition": "Substance capable d'induire une réponse immunitaire spécifique[cite: 54]."
+      },
+      {
+        "term": "Soi et Non-Soi",
+        "definition": "Le Soi représente les propres tissus de l'organisme, tandis que le non-Soi désigne les éléments étrangers. L'immunologie est la science de leur discrimination[cite: 53]."
+      },
+      {
+        "term": "Complexe Majeur d'Histocompatibilité (CMH)",
+        "definition": "Molécule indispensable à laquelle les antigènes doivent s'associer pour être reconnus par les lymphocytes T[cite: 77]."
+      },
+      {
+        "term": "Costimulation",
+        "definition": "Deuxième signal essentiel délivré par la cellule présentatrice d'antigène pour confirmer l'activation de la réponse immunitaire et éviter l'auto-immunité[cite: 81, 83]."
+      },
+      {
+        "term": "Tolérance Immunitaire",
+        "definition": "Absence de réponse immunitaire dirigée contre ses propres tissus, obtenue par élimination des lymphocytes réactifs au Soi[cite: 91]."
+      }
+    ]
+  }

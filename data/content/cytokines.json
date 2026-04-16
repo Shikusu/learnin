@@ -1,0 +1,130 @@
+{
+    "id": "lesson-cytokines-01",
+    "title": "Les Cytokines",
+    "topic": "Immunologie",
+    "tldr": "Les cytokines sont des glycoprotéines solubles essentielles à la communication intercellulaire, régulant la réponse immunitaire innée et adaptative via un réseau complexe et hautement interconnecté.",
+    "slideCount": 50,
+    "keyTakeaways": [
+      "Les cytokines assurent la communication entre les cellules, principalement de façon locale (autocrine, paracrine), sans stockage préalable (synthèse de novo).",
+      "Elles se caractérisent par 4 propriétés fondamentales : le pléiotropisme, la redondance, la synergie et l'antagonisme.",
+      "Leur action est régulée en cascade, formant un système interdépendant appelé « Cytokine Network ».",
+      "Elles sont classées selon leur nomenclature (cible/source), leur structure 3D (4 grands groupes) et leur rôle fonctionnel (immunité innée, adaptative ou hématopoïèse)."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définition",
+        "summary": "Définition des cytokines et distinction par rapport aux hormones classiques.",
+        "bulletPoints": [
+          "Étymologie : du grec 'cytos' (cellule) et 'kinos' (mouvement).",
+          "Ce sont des facteurs protéiques solubles extracellulaires, sécrétés par des cellules spécifiques suite à une activation.",
+          "Elles constituent le support principal de la communication entre les cellules immunitaires.",
+          "La maîtrise du 'Cytokine Network' permet de comprendre leurs sites d'action, leurs régulations et leurs applications thérapeutiques."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Cytokines vs Hormones",
+            "bulletPoints": [
+              "Nature : Protéines solubles pour les deux.",
+              "Mode d'action : Principalement local (+++) pour les cytokines, à distance (+++) pour les hormones.",
+              "Sécrétion : Par des cellules nucléées diverses (mastocytes, lymphocytes, macrophages) pour les cytokines, par des glandes spécifiques pour les hormones.",
+              "Langage : Intercellulaire pour les cytokines, entre les glandes et les organes pour les hormones."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Propriétés Générales",
+        "summary": "Mécanismes de sécrétion, modes d'action et propriétés fondamentales des cytokines.",
+        "bulletPoints": [
+          "La sécrétion est brève et instantanée.",
+          "Elle est réalisée 'de novo', c'est-à-dire sans stockage préalable (contrairement aux facteurs de croissance purs).",
+          "Elles ne sont pas sécrétées par des cellules au repos."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Modes d'action",
+            "bulletPoints": [
+              "Autocrine : La cellule productrice est également la cellule cible (ex: monocyte sur lui-même).",
+              "Paracrine : La cellule productrice cible une cellule de type différent située à proximité.",
+              "Endocrine : Production locale qui passe dans la circulation générale pour agir à distance.",
+              "Juxtacrine : Action sur une cellule en contact direct avec la cellule productrice."
+            ],
+            "callout": "Règle mnémotechnique : Les activités paracrine et autocrine définissent des effets LOCAUX, tandis que l'activité endocrine définit un effet à DISTANCE."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "Propriétés Fondamentales",
+            "bulletPoints": [
+              "Pléiotropisme : Une même cytokine a des effets différents selon la cellule cible (ex: l'IL-4 active les LB mais inhibe les macrophages).",
+              "Redondance : Plusieurs cytokines différentes provoquent le même effet (ex: IL-2, IL-4, IL-5 stimulent toutes la prolifération des LB).",
+              "Synergie : L'action combinée de deux cytokines décuple l'effet (ex: IFN-y + TNF augmentent massivement l'expression du CMH I).",
+              "Antagonisme : Une cytokine inhibe l'action d'une autre (ex: IL-10 inhibe les macrophages, alors que l'IFN-y les active)."
+            ]
+          },
+          {
+            "id": "subsec-2-c",
+            "title": "Modes de Régulation",
+            "bulletPoints": [
+              "Amplification en cascade : Cellule 1 → Cytokine A → Cellule 2 → Cytokine D.",
+              "Rétro-inhibition : La cytokine produite finit par inhiber sa propre cellule productrice.",
+              "Inhibition directe : Sécrétion d'inhibines pour bloquer la réponse."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Classification des Cytokines",
+        "summary": "Les cytokines peuvent être classées selon leur nom, leur structure spatiale ou leur fonction immunologique.",
+        "bulletPoints": [
+          "Nomenclature par cible : Interleukines (ciblent les lymphocytes).",
+          "Nomenclature par source : Lymphokines (lymphocytes), Monokines (monocytes), Adipokines (adipocytes).",
+          "Nomenclature par fonction : Chimiokines (chimiotactisme), Interférons (anti-viral), CSF (hématopoïèse), TNF (nécrose tumorale)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Classification Structurale",
+            "bulletPoints": [
+              "Groupe I (4 hélices alpha) : Chaîne courte (IL-2, IL-3, IL-5...) ou chaîne longue (IL-6, IL-10, IL-11).",
+              "Groupe II (Longue chaîne Bêta plissée) : TNF, IL-1, TGF-b.",
+              "Groupe III (Courte chaîne Alpha-Bêta / Chimiokines) : Familles CC, CXC, CX3C et XC selon l'espacement des résidus cystéines.",
+              "Groupe IV (Structure en mosaïque) : IL-12."
+            ]
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Classification Fonctionnelle",
+            "bulletPoints": [
+              "Cytokines de l'immunité naturelle : Alertent d'un danger (inflammation) et réponse antivirale (IFN I, IL-1, TNF-alpha, IL-6, Chimiokines).",
+              "Cytokines de l'immunité adaptative : Régulent les lymphocytes T (Th1/Th2) et incluent des régulateurs périphériques/centraux comme le TGF-b (immunosuppression) ou l'IL-10.",
+              "Cytokines Hématopoïétiques : Régulent les progéniteurs et la génération de cellules immatures dans la moelle."
+            ],
+            "callout": "La classification fonctionnelle a ses limites car une même cellule peut sécréter plusieurs cytokines différentes, et une cytokine peut avoir de multiples fonctions. La classification par récepteur spécifique est souvent plus exacte."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Cytokine Network",
+        "definition": "Réseau complexe et interdépendant décrivant l'ensemble des modes d'action, de production en cascade et de régulation des cytokines."
+      },
+      {
+        "term": "Synthèse de novo",
+        "definition": "Fabrication d'une molécule à la demande, sans que celle-ci ne soit stockée au préalable dans la cellule."
+      },
+      {
+        "term": "Pléiotropisme",
+        "definition": "Propriété d'une cytokine unique à induire des réponses biologiques différentes selon le type de cellule cible qu'elle rencontre."
+      },
+      {
+        "term": "Chimiokines",
+        "definition": "Sous-famille de cytokines dont le rôle principal est de diriger la migration (chimiotactisme) des cellules immunitaires vers le site de l'inflammation."
+      }
+    ]
+  }

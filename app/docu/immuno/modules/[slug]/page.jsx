@@ -1,7 +1,5 @@
 import { MODULES } from "@/data/modules";
 import ModuleClient from "./ModuleClient";
-import contentData from "@/data/content.json";
-import flashcardsData from "@/data/flashcards.json";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -11,10 +9,23 @@ export async function generateStaticParams() {
 export default async function ModulePage({ params }) {
   const { slug } = await params;
   const meta = MODULES.find((m) => m.slug === slug);
+
   if (!meta) notFound();
 
-  const content = contentData[slug];
-  const flashcards = flashcardsData[slug] || [];
+  let content = null;
+  let flashcards = [];
+
+  try {
+    const contentModule = await import(`@/data/content/${slug}.json`);
+    content = contentModule.default;
+
+    const flashcardsModule = await import(`@/data/flashcards.json`);
+    flashcards = flashcardsModule.default;
+  } catch (error) {
+    console.error(`Data not found for slug: ${slug}`, error);
+  }
+
+  if (!content) notFound();
 
   return <ModuleClient meta={meta} content={content} flashcards={flashcards} />;
 }

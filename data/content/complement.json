@@ -1,0 +1,197 @@
+{
+    "id": "lesson-001",
+    "title": "Le Système Complément",
+    "tldr": "Un réseau complexe de protéines sériques agissant comme un pont entre l'immunité innée et acquise pour éliminer les pathogènes par lyse, opsonisation et inflammation.",
+    "keyTakeaways": [
+      "Le complément représente environ 10% des protéines du sérum et fonctionne par une cascade d'activations enzymatiques.",
+      "Il existe trois voies d'activation (classique, alterne, et des lectines) qui convergent vers une voie commune terminale.",
+      "Le but final de l'activation est la formation du Complexe d'Attaque Membranaire (MAC) pour détruire la membrane du pathogène.",
+      "Les fragments de clivage (C3a, C5a) jouent un rôle crucial dans l'inflammation en tant qu'anaphylatoxines.",
+      "Les déficits en protéines du complément entraînent des susceptibilités spécifiques à diverses infections bactériennes ou maladies auto-immunes."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Propriétés Générales",
+        "summary": "Présentation du système complément comme composant essentiel de l'immunité naturelle découvert à la fin du XIXe siècle.",
+        "bulletPoints": [
+          "Le complément constitue environ 10% des protéines totales du sérum.",
+          "C'est un élément clé de l'immunité naturelle et non spécifique.",
+          "Il joue un rôle central dans le développement des réactions inflammatoires.",
+          "Les protéines sont présentes dans le sérum, la lymphe et les exsudats, mais absentes dans la salive, l'urine et les larmes.",
+          "Le système est thermolabile : il est détruit par une exposition à 56°C pendant 20 minutes."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Objectifs du Cours",
+            "bulletPoints": [
+              "Connaître la nomenclature et les éléments constitutifs.",
+              "Décrire les étapes d'activation et la voie commune.",
+              "Identifier les rôles biologiques et les conséquences des déficits."
+            ],
+            "callout": "Le système complément n'est pas spécifique et est présent en dehors de toute immunisation préalable."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Nomenclature et Principes de Fonctionnement",
+        "summary": "Règles de dénomination des facteurs et de leurs fragments issus de l'activation protéolytique.",
+        "bulletPoints": [
+          "Les facteurs des voies classique et terminale sont désignés par la lettre C suivie d'un chiffre (C1 à C9).",
+          "Les facteurs de la voie alterne sont désignés par d'autres lettres (Facteur B, D, P).",
+          "La protéolyse divise un facteur en deux fragments : 'a' pour le petit et 'b' pour le grand.",
+          "Un trait au-dessus du nom du facteur (ex: C3bBb) indique une forme activée possédant une activité enzymatique.",
+          "La lettre 'i' ajoutée à la fin (ex: C3bi) désigne un facteur inactivé."
+        ],
+        "subsections": [],
+        "callout": "Exception de nomenclature : Pour le facteur C2, le fragment 'a' est traditionnellement le plus grand et le fragment 'b' le plus petit."
+      },
+      {
+        "id": "sec-3",
+        "title": "Les Voies d'Activation",
+        "summary": "Description des trois mécanismes distincts permettant de déclencher la cascade du complément.",
+        "bulletPoints": [
+          "La Voie Alterne : activée directement par la surface des microbes.",
+          "La Voie Classique : activée par des complexes antigène-anticorps.",
+          "La Voie des Lectines : activée par la reconnaissance des glucides microbiens (mannose)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "La Voie Alterne",
+            "bulletPoints": [
+              "Déclenchée par le dépôt de C3b sur la surface microbienne.",
+              "Le Facteur B se lie au C3b, puis est clivé par le Facteur D pour former Ba et Bb.",
+              "Formation de la C3 convertase de la voie alterne : C3bBb.",
+              "Formation de la C5 convertase de la voie alterne : C3bBbC3b.",
+              "Cette voie possède un mécanisme d'auto-amplification par la création continue de nouvelles C3 convertases."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "La Voie Classique",
+            "bulletPoints": [
+              "Nécessite des anticorps IgG ou IgM fixés à la surface d'une cible.",
+              "L'unité C1 clive les substrats C4 et C2.",
+              "Formation de la C3 convertase de la voie classique : C4b2a.",
+              "La fixation de C3b à ce complexe forme la C5 convertase : C4b2a3b."
+            ],
+            "callout": "L'IgG4 est le seul isotype d'IgG incapable d'activer la voie classique du complément."
+          },
+          {
+            "id": "subsec-3-c",
+            "title": "La Voie des Lectines",
+            "bulletPoints": [
+              "Similaire à la voie classique mais sans anticorps.",
+              "Utilise la MBL (Mannose Binding Lectin) comme unité de reconnaissance.",
+              "La MBL s'associe aux sérines protéases MASP pour cliver C4 et C2.",
+              "Aboutit à la formation de la C3 convertase C4b2a."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "La Voie Commune et le Complexe d'Attaque Membranaire (MAC)",
+        "summary": "Étape terminale de la cascade menant à la destruction physique de la cellule cible.",
+        "bulletPoints": [
+          "La voie commune débute par le clivage de C5 par les C5 convertases.",
+          "Le fragment C5b se fixe à la membrane et recrute successivement C6, C7 et C8.",
+          "Le complexe C5b678 provoque la polymérisation de plusieurs molécules de C9.",
+          "Le MAC (C5b-9) forme un pore transmembranaire provoquant un choc osmotique et la lyse de la cellule."
+        ],
+        "subsections": [],
+        "callout": "Formule du MAC : C5b + C6 + C7 + C8 + nC9."
+      },
+      {
+        "id": "sec-5",
+        "title": "Régulation du Complément",
+        "summary": "Mécanismes de contrôle nécessaires pour protéger les tissus de l'hôte contre une activation incontrôlée.",
+        "bulletPoints": [
+          "Facteur I et Facteur H : Inactivent les fragments C3b pour stopper la cascade.",
+          "C1 inhibiteur (C1-INH) : Contrôle l'activation initiale de la voie classique.",
+          "Protéine S et C4bp (C4 binding protein) : Empêchent l'assemblage des complexes activés.",
+          "Carboxypeptidase : Inactive les anaphylatoxines circulantes (C3a, C5a)."
+        ],
+        "subsections": [],
+        "callout": "Une régulation défaillante peut entraîner des dommages tissulaires graves ou des maladies inflammatoires chroniques."
+      },
+      {
+        "id": "sec-6",
+        "title": "Rôles Biologiques",
+        "summary": "Les fonctions effectrices du complément au-delà de la simple destruction cellulaire.",
+        "bulletPoints": [
+          "Activité cytolytique : Destruction directe par le MAC.",
+          "Opsonisation : Les fragments C3b et C3bi facilitent la phagocytose par les macrophages et PNN.",
+          "Activité anaphylactique : Les fragments C3a et C5a provoquent la dégranulation des mastocytes et l'inflammation.",
+          "Chimiotactisme : Attraction des leucocytes vers le site de l'infection.",
+          "Élimination des complexes immuns : Fixation des complexes Ag-Ac pour transport vers la rate ou le foie.",
+          "Neutralisation des virus et activation des lymphocytes B."
+        ],
+        "subsections": [],
+        "callout": "C3a et C5a sont appelés anaphylatoxines car ils imitent les symptômes d'une anaphylaxie en libérant des médiateurs inflammatoires."
+      },
+      {
+        "id": "sec-7",
+        "title": "Déficits en Complément",
+        "summary": "Conséquences cliniques liées à l'absence ou au dysfonctionnement des composants du système.",
+        "bulletPoints": [
+          "Déficit en C3 : Infections bactériennes graves et récurrentes dès le jeune âge.",
+          "Déficit en MBL : Sensibilité accrue aux infections chez les nourrissons.",
+          "Déficit en Facteurs B ou D : Absence d'amplification de la voie alterne (infections à pyogènes).",
+          "Déficit en Properdine : Prédisposition aux méningites graves à méningocoques.",
+          "Déficit en voie terminale (C5-C9) : Infections graves à bactéries à Gram négatif (Neisseria).",
+          "Déficit en C1 inhibiteur : Cause l'œdème angioneurotique (angio-œdème héréditaire)."
+        ],
+        "subsections": [],
+        "callout": "Les déficits en Facteur H ou I produisent un tableau clinique identique au déficit en C3 car le C3 est consommé sans contrôle."
+      },
+      {
+        "id": "sec-8",
+        "title": "Conclusion",
+        "summary": "Synthèse des points clés du système complément.",
+        "bulletPoints": [
+          "C'est un élément majeur de l'immunité innée protectrice.",
+          "Toutes les voies d'activation convergent vers un but commun : le MAC.",
+          "Il assure un rôle anti-infectieux vital mais nécessite une régulation stricte.",
+          "Ses multiples rôles (lyse, opsonisation, inflammation) en font un système polyvalent."
+        ],
+        "subsections": []
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Anaphylatoxine",
+        "definition": "Fragment de protéine du complément (C3a, C5a) induisant une inflammation aiguë et la dégranulation mastocytaire."
+      },
+      {
+        "term": "C3 Convertase",
+        "definition": "Complexe enzymatique (C4b2a ou C3bBb) qui clive la protéine C3 en fragments C3a et C3b."
+      },
+      {
+        "term": "Chimiotactisme",
+        "definition": "Capacité à attirer des cellules immunitaires vers un gradient de concentration chimique (ex: C5a)."
+      },
+      {
+        "term": "Complexe d'Attaque Membranaire (MAC)",
+        "definition": "Structure tubulaire formée par C5b à C9 qui perce des trous dans les membranes cellulaires."
+      },
+      {
+        "term": "MBL (Mannose Binding Lectin)",
+        "definition": "Protéine plasmatique reconnaissant spécifiquement les résidus mannose sur les parois bactériennes."
+      },
+      {
+        "term": "Opsonisation",
+        "definition": "Recouvrement d'un pathogène par des molécules (C3b) facilitant sa reconnaissance et son ingestion par les phagocytes."
+      },
+      {
+        "term": "Thermolabilité",
+        "definition": "Propriété d'être détruit ou inactivé par la chaleur (56°C pour le complément)."
+      }
+    ]
+  
+}

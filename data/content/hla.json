@@ -1,0 +1,215 @@
+{
+    "id": "lesson-001",
+    "title": "Le Système HLA (Human Leukocyte Antigen)",
+    "tldr": "Un système génétique complexe situé sur le chromosome 6 codant pour des glycoprotéines membranaires essentielles à la présentation des antigènes et à l'histocompatibilité.",
+    "keyTakeaways": [
+      "Les molécules HLA de classe I et II présentent les peptides antigéniques aux lymphocytes T (CD8+ et CD4+ respectivement).",
+      "Le système est caractérisé par un polymorphisme et une polygénie extrêmes, rendant chaque individu quasi unique.",
+      "Les gènes HLA sont transmis en bloc (haplotypes) selon un mode codominant.",
+      "Certaines spécificités HLA sont des marqueurs de prédisposition à des maladies auto-immunes comme la spondylarthrite ankylosante (HLA-B27)."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Historique",
+        "summary": "Présentation générale du système HLA et de sa découverte historique.",
+        "bulletPoints": [
+          "Le système HLA fait partie du Complexe Majeur d'Histocompatibilité (CMH).",
+          "Il code pour des protéines membranaires dont le rôle est de lier et présenter des fragments peptidiques.",
+          "Joue un rôle fondamental dans le déclenchement de la réponse immunitaire."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Historique de la Découverte",
+            "bulletPoints": [
+              "1930 : Découverte du CMH chez la souris (complexe H-2) lors d'études sur le rejet de greffe.",
+              "1950 : Découverte par Jean Dausset chez l'homme via l'agglutination de lymphocytes par des sérums de polytransfusés."
+            ],
+            "callout": "Le nom HLA signifie 'Human Leukocyte Antigen' car ces molécules ont d'abord été identifiées sur les globules blancs."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Définitions et Nomenclature",
+        "summary": "Concepts génétiques de base et règles de dénomination des allèles HLA.",
+        "bulletPoints": [
+          "Locus : Position précise d'un gène sur le chromosome.",
+          "Allèle : Une des versions possibles d'un gène à un locus donné.",
+          "Haplotype : Ensemble des allèles situés sur un même chromosome, transmis en bloc.",
+          "Le terme 'Majeur' souligne l'importance des produits de ces gènes dans le rejet de greffe."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Règles de Nomenclature",
+            "bulletPoints": [
+              "Locus désigné par une lettre (HLA-A, HLA-B, etc.).",
+              "Le suffixe 'w' est ajouté après la lettre C (HLA-Cw) pour éviter la confusion avec le système du complément.",
+              "Détermination sérologique : Lettre suivie d'un chiffre (ex: HLA-A2).",
+              "Détermination moléculaire : Lettre suivie d'une étoile et d'au moins 4 chiffres (ex: HLA-A*0101)."
+            ],
+            "callout": "Les gènes et allèles s'écrivent en italique, tandis que les produits (protéines) s'écrivent en police normale."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Structure des Molécules HLA",
+        "summary": "Description structurale des glycoprotéines de classe I et de classe II.",
+        "bulletPoints": [
+          "Toutes les molécules HLA possèdent un site de liaison pour le peptide (niche ou cavité).",
+          "Elles présentent une structure de type Immunoglobuline dans certains domaines."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Classe I (HLA-A, B, C)",
+            "bulletPoints": [
+              "Hétérodimère composé d'une chaîne lourde alpha (44 kDa) et d'une chaîne légère bêta-2 microglobuline (11,5 kDa).",
+              "La chaîne lourde possède 3 domaines extracellulaires (a1, a2, a3).",
+              "Le site de liaison du peptide est formé par les domaines a1 et a2.",
+              "Cavité fermée acceptant des nanopeptides (8 à 10 acides aminés)."
+            ],
+            "callout": "La molécule de classe I est reconnue par le co-récepteur CD8 des lymphocytes T cytotoxiques via le domaine a3."
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Classe II (HLA-DR, DQ, DP)",
+            "bulletPoints": [
+              "Hétérodimère composé d'une chaîne alpha (31-34 kDa) et d'une chaîne bêta (26-29 kDa).",
+              "Chaque chaîne possède 2 domaines extracellulaires.",
+              "Le site de liaison est formé par les domaines a1 et b1.",
+              "Cavité ouverte acceptant des peptides plus longs (12 à 15 acides aminés)."
+            ],
+            "callout": "La molécule de classe II est reconnue par le co-récepteur CD4 des lymphocytes T auxiliaires (Helper)."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Génétique et Transmission",
+        "summary": "Organisation des gènes sur le chromosome 6 et règles d'expression.",
+        "bulletPoints": [
+          "Le complexe HLA est situé sur le bras court du chromosome 6 (environ 4000 kpb).",
+          "Gènes de classe I : HLA-A, B, C (et non-classiques E, F, G).",
+          "Gènes de classe II : HLA-DP, DQ, DR (et régulateurs DM, DO).",
+          "Gènes de classe III : Codent pour le complément (C2, C4), le TNF et la 21-hydroxylase."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Polymorphisme et Transmission",
+            "bulletPoints": [
+              "Système polygénique : Plusieurs gènes différents codent pour des fonctions similaires.",
+              "Hautement polymorphe : De très nombreux allèles pour chaque locus dans la population.",
+              "Transmission codominante : Les allèles des deux parents s'expriment simultanément.",
+              "Déséquilibre de liaison : Tendance de certains allèles à être associés plus fréquemment que par le simple hasard."
+            ],
+            "callout": "Il existe plus de 10 milliards de combinaisons génotypiques possibles, rendant quasi impossible de trouver deux individus non apparentés HLA-identiques."
+          },
+          {
+            "id": "subsec-4-b",
+            "title": "Expression Tissulaire",
+            "bulletPoints": [
+              "Classe I : Présente sur toutes les cellules nucléées (sauf cerveau, testicule et placenta où l'expression est faible/nulle).",
+              "Classe II : Présente uniquement sur les cellules présentatrices d'antigènes (CPA) professionnelles : macrophages, cellules dendritiques, lymphocytes B."
+            ],
+            "callout": "L'expression des molécules HLA peut être induite ou augmentée par l'Interféron gamma (IFN-g) lors de l'inflammation."
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Fonctions Physiologiques",
+        "summary": "Le rôle central du HLA dans la présentation antigénique et la surveillance immunitaire.",
+        "bulletPoints": [
+          "Fonction principale : Présenter un peptide à la fois au récepteur T (TCR).",
+          "Permet la reconnaissance du 'Soi' et du 'non-Soi'.",
+          "Indispensable à la sélection et à l'activation des effecteurs immunitaires."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Voies de Présentation",
+            "bulletPoints": [
+              "Voie Endogène (Classe I) : Concerne les protéines intracellulaires (virus, tumeurs) dégradées par le protéasome. Présentation aux LT CD8+.",
+              "Voie Exogène (Classe II) : Concerne les protéines extracellulaires capturées par endocytose. Présentation aux LT CD4+."
+            ],
+            "callout": "La restriction au CMH signifie qu'un lymphocyte T ne peut reconnaître son antigène spécifique que s'il est présenté par une molécule HLA de l'individu."
+          },
+          {
+            "id": "subsec-5-b",
+            "title": "Autres Fonctions",
+            "bulletPoints": [
+              "Inhibition des cellules NK : Les molécules HLA-E (via peptides présentés) envoient un signal inhibiteur aux cellules Natural Killer pour éviter la lyse des cellules saines.",
+              "Grossesse : Le HLA-G joue un rôle crucial dans la tolérance foeto-maternelle.",
+              "Transplantation : Détermine la compatibilité et le risque de réaction greffon contre hôte (GVHD)."
+            ],
+            "callout": "En cas de pré-éclampsie, on observe souvent une disparition de l'expression de HLA-G à la limite foeto-maternelle."
+          }
+        ]
+      },
+      {
+        "id": "sec-6",
+        "title": "Pathologies et Explorations",
+        "summary": "Lien entre le système HLA, les maladies et les méthodes de diagnostic.",
+        "bulletPoints": [
+          "Association HLA-Maladies : Présence préférentielle de certains allèles chez les malades.",
+          "Échappement tumoral : Les cellules cancéreuses peuvent diminuer leur expression HLA pour ne plus être reconnues par les LT CD8+."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-6-a",
+            "title": "Associations Cliniques Notables",
+            "bulletPoints": [
+              "Spondylarthrite ankylosante : 90 % des patients sont HLA-B27+.",
+              "Narcolepsie : Près de 100 % des patients sont HLA-DR2+.",
+              "Diabète Insulino-Dépendant (DID) : Forte association avec HLA-DR3 et DR4."
+            ],
+            "callout": "L'HLA-B27 est l'un des marqueurs de prédisposition génétique les plus puissants connus en médecine."
+          },
+          {
+            "id": "subsec-6-b",
+            "title": "Méthodes d'Exploration (Typage)",
+            "bulletPoints": [
+              "Techniques sérologiques : Utilisation d'anticorps spécifiques (historique).",
+              "Biologie moléculaire : PCR-SSO, PCR-SSP ou séquençage (méthode de référence actuelle).",
+              "Techniques cellulaires : Test de culture mixte lymphocytaire (rarement utilisé)."
+            ]
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "CMH",
+        "definition": "Complexe Majeur d'Histocompatibilité ; ensemble de gènes codant pour les protéines de présentation de l'antigène."
+      },
+      {
+        "term": "Bêta-2 microglobuline",
+        "definition": "Chaîne légère invariante associée à la chaîne lourde des molécules HLA de classe I, codée sur le chromosome 15."
+      },
+      {
+        "term": "Codominance",
+        "definition": "Mode de transmission où les deux allèles d'un même gène (paternel et maternel) s'expriment simultanément."
+      },
+      {
+        "term": "CPA",
+        "definition": "Cellule Présentatrice d'Antigène (ex: cellule dendritique, macrophage) capable d'activer les lymphocytes T."
+      },
+      {
+        "term": "GVHD",
+        "definition": "Graft Versus Host Disease (Réaction du Greffon contre l'Hôte) ; complication où les lymphocytes du donneur attaquent les tissus du receveur."
+      },
+      {
+        "term": "Polymorphisme",
+        "definition": "Existence de multiples variations (allèles) d'un même gène au sein d'une population."
+      },
+      {
+        "term": "Restriction au CMH",
+        "definition": "Nécessité pour un lymphocyte T de reconnaître l'antigène uniquement lorsqu'il est présenté par une molécule du CMH du sujet."
+      }
+    ]
+  }

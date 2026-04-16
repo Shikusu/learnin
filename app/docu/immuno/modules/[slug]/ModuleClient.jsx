@@ -273,7 +273,7 @@ export default function ModuleClient({ meta, content, flashcards }) {
       >
         {tab === "cours" && content && (
           <div className="fade-up">
-            <KeyConcepts sections={content.sections} color={meta.color} />
+            <KeyConcepts lesson={content} color={meta.color} />
           </div>
         )}
 

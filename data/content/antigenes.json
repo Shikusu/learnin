@@ -1,0 +1,213 @@
+{
+    "id": "lesson-001",
+    "title": "Cours d'Immunologie : Les Antigènes",
+    "tldr": "Une étude approfondie sur la nature des antigènes, les facteurs régissant leur immunogénicité et les mécanismes de reconnaissance par les épitopes B et T.",
+    "keyTakeaways": [
+      "Distinction entre l'antigénicité (capacité de liaison) et l'immunogénicité (capacité d'induire une réponse immunitaire).",
+      "L'immunogénicité est multifactorielle : elle dépend des propriétés de la molécule (taille, complexité), de l'hôte (génétique, âge) et des conditions d'immunisation.",
+      "Les haptènes sont des molécules antigéniques mais non immunogènes seules ; elles nécessitent une protéine porteuse pour déclencher une réponse.",
+      "Les épitopes B sont généralement conformationnels et de surface, tandis que les épitopes T sont des peptides internes présentés obligatoirement par le CMH.",
+      "Les antigènes thymo-indépendants peuvent activer les lymphocytes B sans l'aide des lymphocytes T helper, contrairement à la majorité des antigènes naturels."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définitions Fondamentales",
+        "summary": "Présentation des concepts clés permettant de qualifier une substance vis-à-vis du système immunitaire.",
+        "bulletPoints": [
+          "L'immunité est la capacité de reconnaître le Soi et d'éliminer le non-Soi.",
+          "La structure moléculaire de l'antigène détermine la qualité de la réponse immunitaire.",
+          "La voie de pénétration influence le type de réaction immunitaire produite.",
+          "Un antigène est formé d'une mosaïque de déterminants antigéniques."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Antigénicité vs Immunogénicité",
+            "bulletPoints": [
+              "Antigénicité : Capacité de se combiner spécifiquement avec les produits de la réponse immunitaire (humorale ou cellulaire).",
+              "Immunogénicité : Capacité d'induire une réponse immunitaire.",
+              "Les déterminants antigéniques ou épitopes sont les régions spécifiques reconnues par les récepteurs (BCR, TCR ou anticorps)."
+            ],
+            "callout": "Règle d'or : Les immunogènes sont toujours des antigènes, mais les antigènes ne sont pas forcément des immunogènes (ex: antigènes du Soi)."
+          },
+          {
+            "id": "subsec-1-b",
+            "title": "Haptènes et Autres Substances",
+            "bulletPoints": [
+              "Haptène : Substance réactogène mais non immunogène seule à cause de son faible poids moléculaire.",
+              "Tolérogène : Substance réactogène qui induit une tolérance immunitaire plutôt qu'une réponse.",
+              "Allergène : Substance immunogène pour certains individus et non pour d'autres."
+            ],
+            "callout": "Formule : Haptène + Protéine porteuse (« Carrier ») = Substance Immunogène."
+          },
+          {
+            "id": "subsec-1-c",
+            "title": "Réactions Croisées",
+            "bulletPoints": [
+              "C'est la réaction d'un antigène avec un anticorps qu'il n'a pas lui-même induit.",
+              "Causes : Partage d'épitopes entre deux antigènes ou épitopes de structures très voisines."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Classification des Antigènes",
+        "summary": "Typologie des antigènes selon leur origine et leur relation génétique avec l'organisme hôte.",
+        "bulletPoints": [
+          "Les antigènes naturels peuvent être particulaires (bactéries, virus) ou solubles (toxines).",
+          "Les antigènes synthétiques incluent de nombreux médicaments.",
+          "Les antigènes artificiels sont des substances naturelles modifiées chimiquement."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Classification selon l'Espèce",
+            "bulletPoints": [
+              "Xénoantigènes : Provenant d'espèces différentes.",
+              "Alloantigènes : Provenant d'individus de la même espèce mais de génotypes différents.",
+              "Isoantigènes : Chez des individus ayant le même génotype (ex: vrais jumeaux).",
+              "Autoantigènes : Propres à l'individu lui-même."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Paramètres Intervenant dans l'Immunogénicité",
+        "summary": "Analyse des facteurs influençant la puissance et l'efficacité de la réponse immunitaire déclenchée.",
+        "bulletPoints": [
+          "Distance taxonomique : Plus la substance est étrangère au Soi (distance phylogénétique), meilleure est la réponse.",
+          "Taille moléculaire : L'immunogénicité commence vers 5000 Da et devient optimale à partir de 100 kDa.",
+          "Rigidité et Complexité : Une structure diversifiée et stable est nécessaire pour la complémentarité avec les anticorps.",
+          "Catabolisme : Les antigènes à dégradation lente stimulent le système immunitaire plus durablement."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Nature Biochimique",
+            "bulletPoints": [
+              "Protéines : Les plus immunogènes en raison de leur polymorphisme.",
+              "Glucides : Immunogènes sous forme de polyosides complexes.",
+              "Lipides et Acides nucléiques : Généralement non immunogènes, sauf s'ils se comportent comme des haptènes ou induisent des auto-anticorps."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Apprêtement et Présentation",
+            "bulletPoints": [
+              "Déterminants cryptiques : Épitopes inaccessibles dans la molécule native, révélés après fragmentation par une cellule présentatrice (CPA).",
+              "La solubilité joue un rôle : les molécules insolubles sont mieux phagocytées et apprêtées.",
+              "La valence antigénique représente le nombre maximal d'anticorps qu'un antigène peut fixer simultanément."
+            ],
+            "callout": "Règle : Les macromolécules non dégradables par les enzymes de l'hôte (ex: stéréoisomères D) sont de mauvais immunogènes."
+          },
+          {
+            "id": "subsec-3-c",
+            "title": "Facteurs Liés à l'Hôte et à l'Immunisation",
+            "bulletPoints": [
+              "Génétique : Présence de gènes de réponse immunitaire (Ir) liés au CMH de classe II.",
+              "Dose : Des doses trop faibles ou trop élevées peuvent induire une tolérance immunitaire (paralysie).",
+              "Voies : Les voies sous-cutanée et intradermique sont très immunogènes, contrairement à la voie intraveineuse.",
+              "Adjuvants : Substances inertes qui amplifient la réponse en retardant l'élimination de l'antigène."
+            ],
+            "callout": "Définition Superantigène : Molécule capable de provoquer une activation polyclonale massive des lymphocytes T en se fixant sur les domaines constants du TCR et du CMH."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Antigènes Thymo-Dépendants et Thymo-Indépendants",
+        "summary": "Distinction basée sur le rôle des lymphocytes T helper dans l'activation des lymphocytes B.",
+        "bulletPoints": [
+          "La majorité des antigènes naturels sont thymo-dépendants.",
+          "Les antigènes thymo-indépendants stimulent directement les lymphocytes B."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Types d'Antigènes Thymo-Indépendants",
+            "bulletPoints": [
+              "Type 1 : Stimulent les LB matures et immatures (ex: Lipopolysaccharides).",
+              "Type 2 : Stimulent uniquement les LB matures (ex: polysaccharides du pneumocoque)."
+            ],
+            "callout": "Règle : Les antigènes thymo-dépendants nécessitent impérativement la stimulation par les lymphocytes T helper."
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Propriétés des Épitopes B et T",
+        "summary": "Comparaison des caractéristiques structurelles et des modes de reconnaissance des épitopes par les lymphocytes.",
+        "bulletPoints": [
+          "L'épitope B est reconnu par l'anticorps via des liaisons non covalentes faibles.",
+          "L'épitope T ne peut pas se lier à des peptides libres."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Caractéristiques des Épitopes B",
+            "bulletPoints": [
+              "Localisation : Surface de la protéine, zones flexibles.",
+              "Nature : Souvent hydrophiles.",
+              "Structure : Peuvent être séquentiels ou non séquentiels (conformationnels).",
+              "Accessibilité : Si le motif n'est pas accessible, la dénaturation de la protéine est nécessaire."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-5-b",
+            "title": "Caractéristiques des Épitopes T",
+            "bulletPoints": [
+              "Localisation : Souvent interne à la molécule.",
+              "Structure : Peptides linéaires résultant de l'apprêtement.",
+              "Reconnaissance : Nécessite obligatoirement la présentation par les molécules du CMH."
+            ],
+            "callout": "Règle de Restriction : La cavité de fixation du CMH détermine la taille et la nature du peptide que la cellule T peut reconnaître."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Antigène",
+        "definition": "Molécule capable de se combiner spécifiquement avec les récepteurs ou produits de la réponse immunitaire."
+      },
+      {
+        "term": "Immunogène",
+        "definition": "Substance capable de déclencher une réponse immunitaire active."
+      },
+      {
+        "term": "Haptène",
+        "definition": "Petite molécule qui n'est immunogène qu'après couplage à une protéine porteuse."
+      },
+      {
+        "term": "Épitope",
+        "definition": "Déterminant antigénique, la plus petite unité de l'antigène reconnue par un récepteur spécifique."
+      },
+      {
+        "term": "Paratope",
+        "definition": "Site de combinaison de l'anticorps (immunoglobuline) avec l'antigène."
+      },
+      {
+        "term": "Valence antigénique",
+        "definition": "Nombre de sites de fixation d'anticorps disponibles sur une seule molécule d'antigène."
+      },
+      {
+        "term": "CMH",
+        "definition": "Complexe Majeur d'Histocompatibilité, système de molécules présentant les peptides aux lymphocytes T."
+      },
+      {
+        "term": "Adjuvant",
+        "definition": "Substance qui, administrée avec l'antigène, augmente l'intensité de la réponse immunitaire."
+      },
+      {
+        "term": "Apprêtement",
+        "definition": "Processus de dégradation de l'antigène en peptides pour sa présentation au système immunitaire."
+      }
+    ]
+  }

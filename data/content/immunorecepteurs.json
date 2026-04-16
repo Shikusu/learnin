@@ -1,0 +1,642 @@
+{
+    "id": "lesson-001",
+    "title": "Immunorécepteurs",
+    "tldr": "Les immunorécepteurs sont des complexes multimoléculaires à la surface des cellules immunitaires qui reconnaissent des antigènes spécifiques ou non et déclenchent des cascades de signalisation intracellulaire menant à l'activation cellulaire. Ils regroupent les récepteurs de l'immunité innée, les récepteurs des cytokines, les récepteurs de l'immunité adaptative et les récepteurs des immunoglobulines.",
+    "keyTakeaways": [
+      "Les immunorécepteurs sont tous constitués d'une sous-unité de reconnaissance (fixation de l'Ag extracellulaire) et d'une sous-unité de signalisation (transmission intracellulaire du signal), associées par des acides aminés chargés dans les régions transmembranaires.",
+      "Les motifs ITAM (double séquence YxxL/I) assurent la régulation positive de l'activation, tandis que les motifs ITIM (simple séquence YxxL/I) assurent la régulation négative — la tyrosine et la leucine sont indispensables à leur activité.",
+      "Les récepteurs de l'immunité innée (PRR) reconnaissent les PAMPs, structures conservées présentes sur les micro-organismes mais absentes des cellules eucaryotes ; ils comprennent collectines, lectines de type C, scavengers, récepteurs du complément, TLR, NOD et récepteurs des NK.",
+      "Les immunorécepteurs adaptatifs (BCR et TCR) nécessitent un complexe de signalisation associé (Igα/Igβ pour le BCR ; CD3/dimère ζ pour le TCR) ainsi qu'un 2ème signal de costimulation pour éviter l'anergie ou l'apoptose.",
+      "Les applications cliniques des immunorécepteurs incluent le diagnostic immunologique, la thérapeutique ciblée (anti-CD20, modulateurs de costimulation, neutralisation de toxines) et la compréhension des maladies auto-immunes et infectieuses."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction — Définition et organisation générale des immunorécepteurs",
+        "summary": "Les immunorécepteurs sont des récepteurs spécifiques présents sur les cellules immunitaires dont la fixation de l'antigène déclenche une cascade d'évènements intracellulaires aboutissant à l'activation cellulaire. Ils sont regroupés en trois grands groupes.",
+        "bulletPoints": [
+          "La réponse immunitaire est initiée par la fixation d'antigènes sur des récepteurs spécifiques appelés immunorécepteurs.",
+          "Les immunorécepteurs se divisent en trois grands groupes : immunorécepteurs de l'immunité innée, immunorécepteurs de l'immunité adaptative et récepteurs des immunoglobulines.",
+          "Les immunorécepteurs reconnaissent des ligands spécifiques ou non spécifiques.",
+          "La liaison de l'antigène aux immunorécepteurs initie une cascade d'évènements intracellulaires aboutissant à une activation cellulaire."
+        ],
+        "subsections": []
+      },
+      {
+        "id": "sec-2",
+        "title": "Structure générale des immunorécepteurs",
+        "summary": "Les immunorécepteurs sont des complexes multicaténaires comportant une sous-unité de reconnaissance et une sous-unité de signalisation, reliées par des interactions dans les régions transmembranaires, et portant des motifs peptidiques ITAM ou ITIM.",
+        "bulletPoints": [
+          "Les immunorécepteurs sont des complexes multicaténaires constitués de 1 à 2 chaînes de reconnaissance et de 2 à 6 chaînes de signalisation.",
+          "Les sous-unités de reconnaissance et de signalisation sont associées grâce à des acides aminés chargés dans les régions transmembranaires.",
+          "Les motifs ITAM et ITIM situés dans la portion intracytoplasmique assurent respectivement la régulation positive et négative de l'activation cellulaire."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Sous-unité de reconnaissance",
+            "bulletPoints": [
+              "Protéines transmembranaires capables de fixer l'antigène directement ou indirectement par leur portion extracellulaire.",
+              "Nombre variable de domaines possédant la structure caractéristique des domaines d'immunoglobulines (séquences d'environ 110 acides aminés s'organisant en domaines).",
+              "Module composé de 1 à 2 chaînes selon le récepteur considéré."
+            ],
+            "callout": "Les sous-unités de reconnaissance fixent l'Ag par leur portion extracellulaire mais sont dépourvues de capacité de signalisation propre."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "Sous-unité de signalisation",
+            "bulletPoints": [
+              "Constituée d'un petit domaine extracellulaire et d'un grand domaine intracellulaire.",
+              "Capable de délivrer des signaux à l'intérieur de la cellule mais incapable de fixer l'antigène.",
+              "Associée à la sous-unité de reconnaissance via des acides aminés chargés dans les régions transmembranaires.",
+              "Module comprenant 2 à 6 chaînes selon l'immunorécepteur."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-2-c",
+            "title": "Motifs ITAM et ITIM",
+            "bulletPoints": [
+              "ITAM (Immunoreceptor Tyrosine-based Activation Motif) : motif peptidique formé d'une double séquence YxxL/I séparées par 6 à 8 acides aminés.",
+              "Les résidus tyrosine (Y) et leucine/isoleucine (L/I) de l'ITAM sont indispensables à son activité.",
+              "ITIM (Immunoreceptor Tyrosine-based Inhibitor Motif) : motif peptidique formé d'une seule séquence YxxL/I.",
+              "Rôle des ITAM/ITIM : couplage des récepteurs aux effecteurs cytoplasmiques après pontage par l'antigène, déclenchant les voies de signalisation intracellulaire.",
+              "ITAM → régulation positive de l'activation cellulaire ; ITIM → régulation négative."
+            ],
+            "callout": "ITAM = double séquence YxxL/I (6–8 aa entre les deux séquences) → activation. ITIM = simple séquence YxxL/I → inhibition. Tyrosines et leucines indispensables à leur activité."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Immunorécepteurs naturels (de l'immunité innée)",
+        "summary": "Les cellules de l'immunité innée expriment des récepteurs appelés PRR (Pattern Recognition Receptors) qui reconnaissent des structures moléculaires conservées des micro-organismes (PAMPs). Ils comprennent sept grandes familles.",
+        "bulletPoints": [
+          "Les PRR (Pattern Recognition Receptors) reconnaissent des molécules à motifs structuraux très conservés présents sur l'enveloppe des micro-organismes mais absents des cellules eucaryotes.",
+          "Les structures reconnues sont les PAMPs (Pathogen-Associated Molecular Patterns).",
+          "Les sept familles de récepteurs naturels sont : collectines et ficolines, lectines de type C, récepteurs scavengers, récepteurs du complément, récepteurs Toll-like (TLR), récepteurs intracellulaires NOD, et récepteurs des cellules NK."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Collectines et Ficolines",
+            "bulletPoints": [
+              "Sous-unités trimériques contenant des régions 'collagen-like' et des domaines C-terminaux globulaires.",
+              "Collectines : domaines de lectines de type C ; Ficolines : domaines 'fibrinogen-like'.",
+              "Fonctionnent comme des opsonines : activation → inflammation, cytolyse (macrophage), attraction des phagocytes.",
+              "Les produits issus de la voie d'activation du système du complément induisent l'inflammation, la cytolyse par les macrophages et attirent les phagocytes."
+            ],
+            "callout": "Collectines et ficolines agissent comme des opsonines et activent la voie du complément, conduisant à la cytolyse et à l'attraction des phagocytes."
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Lectines de type C",
+            "bulletPoints": [
+              "Famille de protéines caractérisée par un domaine de reconnaissance des carbohydrates (CRD : Carbohydrates Recognition Domain) interagissant avec des glycoprotéines possédant un mannose ou un galactose, sous dépendance du Ca2+.",
+              "Expression essentiellement par les macrophages et les cellules dendritiques ; induction de la phagocytose et de la présentation antigénique.",
+              "Membres principaux : Dectine (récepteur au β-glucane — polymères de glucose, composants majeurs de la paroi des champignons, certaines plantes et bactéries), MMR (Mannose Macrophage Receptor), DC-SIGN, Dec 205 (endocytose).",
+              "MMR : fixation des oligosaccharides avec différentes affinités (N-acétyl-glucosamine) ; présentation des ligands sur des bactéries, champignons, cellules infectées par des virus et parasites → endocytose ; après fixation, le micro-organisme est phagocyté et le récepteur est recyclé à la surface cellulaire.",
+              "DC-SIGN (ICAM-3-grabbing non-integrin receptor) : récepteur exprimé spécifiquement par les cellules dendritiques ; ses ligands comprennent la glycoprotéine d'enveloppe gp120 du VIH, la glycoprotéine B d'enveloppe du CMV et le lipoarabinomannan de Mycobacterium tuberculosis."
+            ],
+            "callout": "La liaison des lectines de type C à leurs ligands est Ca2+-dépendante. DC-SIGN est exploité par le VIH, le CMV et M. tuberculosis pour infecter les cellules dendritiques."
+          },
+          {
+            "id": "subsec-3-c",
+            "title": "Récepteurs Scavengers (poubelles)",
+            "bulletPoints": [
+              "Famille de 3 classes de récepteurs membranaires multi-domaines : SR-A, SR-B et SR-C.",
+              "Liaison à des ligands polyanioniques et à des lipoprotéines de faible densité.",
+              "Exprimés par les cellules myéloïdes (macrophages et cellules dendritiques) et certaines cellules endothéliales.",
+              "Rôles : clearance des corps apoptotiques, fixation et phagocytose des micro-organismes, métabolisme lipidique."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-3-d",
+            "title": "Récepteurs du Complément",
+            "bulletPoints": [
+              "Récepteurs pour les anaphylatoxines C3a et C4a : présents sur les macrophages, PNN, PNB et mastocytes ; structure exacte encore mal élucidée ; interaction → contraction des muscles lisses in vitro.",
+              "Récepteurs du C5a : appartenant à la famille des serpentines (glycoprotéine transmembranaire à 7 portions membranaires).",
+              "CR1/CD35 : ligand C3b, C4b ; expression sur macrophages, monocytes, polynucléaires, lymphocytes T/B ; fonction : phagocytose et clairance des complexes immuns.",
+              "CR2/CD21 : ligand C3d, C3dg ; expression sur lymphocytes B ; fonction : corécepteur de l'activation B.",
+              "CR3/Mac-1/CD11b : ligands C3bi, ICAM-1, micro-organismes ; expression sur macrophages, monocytes, NK, neutrophiles ; fonction : phagocytose.",
+              "CR4/CD11c : ligand C3bi ; expression sur macrophages, monocytes, NK, neutrophiles ; fonction : phagocytose."
+            ],
+            "callout": "CR2/CD21 est un corécepteur clé de l'activation du lymphocyte B ; il est également la cible du virus Epstein-Barr (EBV)."
+          },
+          {
+            "id": "subsec-3-e",
+            "title": "Récepteurs Toll-like (TLR)",
+            "bulletPoints": [
+              "Toll est un gène d'abord identifié chez la drosophile et essentiel à sa survie.",
+              "Plus de 9 TLR chez l'homme (13 au total) ; chaque TLR reconnaît un type différent de PAMPs ; gènes localisés sur des chromosomes distincts.",
+              "TLR1 (4p14) : triacyl des lipoprotéines.",
+              "TLR2 (4q31.3-q5) : lipoprotéines, peptidoglycane des bactéries Gram+, acides lipotéichoïques, champignons, glycoprotéines virales.",
+              "TLR3 (4q31.3-q5) : ARN double brin d'origine virale ou parasitaire.",
+              "TLR4 (9q32-q33) : lipopolysaccharide (LPS), glycoprotéines virales.",
+              "TLR5 (1q33.3-q42) : flagelline.",
+              "TLR6 (4p14) : diacyl des lipoprotéines.",
+              "TLR7 (Xp22) : ARN simple brin.",
+              "TLR8 (Xp22) : ARN simple brin.",
+              "TLR9 (3p21.3) : ADN CpG non méthylé."
+            ],
+            "callout": "TLR4 est le récepteur du LPS des bactéries Gram négatif — clé dans le choc septique. Les TLR reconnaissent des PAMPs spécifiques et sont localisés sur des chromosomes distincts."
+          },
+          {
+            "id": "subsec-3-f",
+            "title": "Récepteurs intracellulaires NOD",
+            "bulletPoints": [
+              "NODs = Nucleotide-binding Oligomerisation Domain Proteins.",
+              "Gène très ancien retrouvé dans des organismes divers : plantes, insectes, mammifères.",
+              "8 membres de la famille identifiés chez l'Homme.",
+              "Ligands de la majorité de ces récepteurs encore mal connus.",
+              "NOD-1 et NOD-2 reconnaissent le peptidoglycane (PDG) des bacilles Gram négatif."
+            ],
+            "callout": "Les récepteurs NOD sont des récepteurs intracellulaires (non membranaires) reconnaissant des fragments de peptidoglycane bactérien. Mutations de NOD2 associées à la maladie de Crohn."
+          },
+          {
+            "id": "subsec-3-g",
+            "title": "Récepteurs des cellules NK",
+            "bulletPoints": [
+              "Récepteurs inhibiteurs : appartenant soit à la superfamille des immunoglobulines (KIR inhibiteurs, ILT2/LIR1, LAIR1, récepteur orphelin p75/AIRM1), soit à la superfamille des lectines dimériques de type C (NKP-P1A/CD161, CD69, CD94, molécules NKG2).",
+              "KIR inhibiteurs : possèdent 2 ou 3 domaines de type Ig dans leur partie extracellulaire (2D ou 3D) et une longue queue intracytoplasmique.",
+              "Récepteurs ILT/LIR : expression non restreinte aux NK mais aussi sur monocytes, LB et DC.",
+              "Lectines dimériques de type C : glycoprotéines transmembranaires de type II, extrémité N-terminale intra-cytoplasmique et C-terminale extra-cytoplasmique. CD94 est dépourvu de domaine ITIM ; NKG2 possède 2 motifs ITIM.",
+              "Récepteurs activateurs NCR (Natural Cytotoxicity Receptor) : récepteurs Ig-like activateurs impliqués dans la reconnaissance et la lyse des cellules tumorales. Trois NCR décrits : NKp30 (CD337), NKp44 (CD336), NKp46 (CD335).",
+              "La régulation par les récepteurs NK repose sur l'équilibre entre signaux inhibiteurs (reconnaissance du CMH de classe I du soi) et signaux activateurs (reconnaissance de ligands de stress sur les cellules tumorales ou infectées)."
+            ],
+            "callout": "Les cellules NK lisent l'absence ou la perte d'expression du CMH de classe I comme un signal de danger : récepteurs inhibiteurs sans ligand → désinhibition → cytotoxicité. C'est le principe du 'missing self'."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Récepteurs des cytokines",
+        "summary": "Les cytokines sont des glycoprotéines de faible poids moléculaire qui agissent via des récepteurs membranaires ou solubles regroupés en six types (I à VI). Ces récepteurs transmettent leur signal principalement via la voie JAK-STAT.",
+        "bulletPoints": [
+          "Les cytokines sont des glycoprotéines de faible poids moléculaire (8 à 50 kDa), médiateurs non spécifiques de l'antigène, sécrétés pendant les phases effectrices de l'immunité naturelle et spécifique.",
+          "Modes d'action des cytokines : autocrine (même cellule), paracrine (cellule voisine de type différent), endocrine (à distance), juxtacrine ; leurs actions sont souvent redondantes.",
+          "Cytokines émises principalement par les LT helpers activés et les macrophages, mais aussi par LB, éosinophiles, cellules dendritiques, endothéliales, cellules de la moelle osseuse.",
+          "Deux types de récepteurs des cytokines : récepteurs membranaires (6 sous-types) et récepteurs solubles."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Récepteurs membranaires — Type I (hématopoïétines)",
+            "bulletPoints": [
+              "Famille la plus nombreuse en membres.",
+              "Chaînes : glycoprotéines membranaires de type I (extrémité NH2-terminale orientée vers l'extérieur).",
+              "Portion extracellulaire : deux domaines d'environ 100 aa — 1er domaine avec 4 résidus cystéines formant des ponts disulfures intra-domaine ; 2ème domaine avec un motif W-S-X-W-S (tryptophane–sérine–aa quelconque–tryptophane–sérine).",
+              "Portion intracytoplasmique : longueur variable (13 à 577 aa) sans activité tyrosine kinase intrinsèque."
+            ],
+            "callout": "Motif signature des récepteurs de type I : W-S-X-W-S dans le second domaine extracellulaire. Ces récepteurs n'ont PAS d'activité tyrosine kinase intrinsèque — ils signalisent via des kinases JAK associées."
+          },
+          {
+            "id": "subsec-4-b",
+            "title": "Récepteurs membranaires — Type II (interférons)",
+            "bulletPoints": [
+              "Famille comprenant les récepteurs des interférons (α, β et γ) et de l'IL-10.",
+              "Portion extracellulaire : domaine commun avec une paire de résidus cystéines à chaque extrémité.",
+              "Domaine dupliqué dans le cas du récepteur aux interférons α et β.",
+              "Portion intracytoplasmique sans propriété tyrosine kinase intrinsèque."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-4-c",
+            "title": "Récepteurs membranaires — Type III (TNF)",
+            "bulletPoints": [
+              "Récepteurs du TNF et d'autres molécules membranaires impliquées dans la communication intercellulaire : CD40, CD30, CD27.",
+              "Architecture de base : domaines riches en cystéine.",
+              "Capacité de déclencher la mort programmée (apoptose) après fixation de leur ligand spécifique."
+            ],
+            "callout": "Les récepteurs de type III (TNF-R) peuvent enclencher l'apoptose après fixation du ligand — rôle majeur dans l'homéostasie immunitaire et l'élimination des cellules auto-réactives."
+          },
+          {
+            "id": "subsec-4-d",
+            "title": "Récepteurs membranaires — Type IV (IL-1 / IL-18)",
+            "bulletPoints": [
+              "Récepteurs pour l'IL-1, la chaîne accessoire de l'IL-1R, le récepteur de l'IL-18 et la molécule T1/ST2.",
+              "Portion extracellulaire : trois domaines Ig-like.",
+              "Portion intracytoplasmique : dépourvue d'activité tyrosine kinase."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-4-e",
+            "title": "Récepteurs membranaires — Type V (superfamille des Ig, facteurs de croissance)",
+            "bulletPoints": [
+              "Seuls récepteurs de cytokines à posséder une activité tyrosine kinase intrinsèque dans leur portion intracytoplasmique.",
+              "Partie extracellulaire : 5 domaines Ig-like.",
+              "Membres : PDGFR, LM-CSFR, EGFR, SCF et le ligand flt3."
+            ],
+            "callout": "Les récepteurs de type V (superfamille Ig) sont les SEULS récepteurs de cytokines avec une tyrosine kinase intrinsèque — ils peuvent donc signaliser directement sans kinases associées."
+          },
+          {
+            "id": "subsec-4-f",
+            "title": "Récepteurs membranaires — Type VI (chimiokines)",
+            "bulletPoints": [
+              "Structure : extrémité amino-terminale extracellulaire, 7 hélices α transmembranaires, extrémité carboxy-terminale intracellulaire, trois boucles intracellulaires.",
+              "Protéines liées au GTP (protéines G) → activation cellulaire après liaison de la chimiokine.",
+              "Le profil des récepteurs de chimiokines sur une cellule dépend de sa nature et de son stade de différenciation."
+            ],
+            "callout": "Les récepteurs de chimiokines sont des protéines à 7 domaines transmembranaires couplées aux protéines G. Exemple : CXCR4 est utilisé par le VIH comme co-récepteur d'entrée."
+          },
+          {
+            "id": "subsec-4-g",
+            "title": "Récepteurs solubles des cytokines",
+            "bulletPoints": [
+              "Production de formes solubles pour la grande majorité des récepteurs, soit par clivage protéolytique de la forme membranaire, soit par épissage alternatif d'un ARNm commun.",
+              "Les récepteurs solubles conservent leur capacité de liaison au ligand.",
+              "Rôle antagoniste (TNF, IL-1, IL-4) : entrent en compétition avec la forme membranaire pour le ligand.",
+              "Rôle protecteur : la cytokine complexée au récepteur soluble a une demi-vie plus longue que la cytokine libre → augmentation de la concentration de ligand disponible.",
+              "Rôle agoniste : liaison à leur récepteur soluble → induction de signal sur toutes les cellules exprimant les molécules de transduction."
+            ],
+            "callout": "Un même récepteur soluble peut jouer un rôle antagoniste (TNF, IL-1, IL-4) OU agoniste selon le contexte — à ne pas confondre systématiquement avec un mécanisme inhibiteur."
+          },
+          {
+            "id": "subsec-4-h",
+            "title": "Transduction du signal des récepteurs de cytokines",
+            "bulletPoints": [
+              "Les récepteurs de cytokines de types I, II, III et IV n'ont pas d'activité tyrosine kinase intrinsèque : ils signalisent via des kinases associées (voie JAK-STAT).",
+              "Exception : récepteurs de type V (superfamille des Ig) avec tyrosine kinase intrinsèque.",
+              "Récepteurs de type VI : voie des protéines G."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Immunorécepteurs adaptatifs",
+        "summary": "Les immunorécepteurs de l'immunité adaptative comprennent le BCR (B Cell Receptor) et le TCR (T Cell Receptor). Ces deux récepteurs reconnaissent spécifiquement un antigène unique et nécessitent un second signal de costimulation pour activer pleinement la cellule.",
+        "bulletPoints": [
+          "Le BCR est formé d'une immunoglobuline de membrane (sIg) associée à un hétérodimère de signalisation Igα/Igβ.",
+          "Le TCR est formé d'un hétérodimère (αβ ou γδ) associé au complexe CD3 et au dimère ζ pour la signalisation.",
+          "Chaque lymphocyte n'exprime qu'un seul récepteur antigénique spécifique.",
+          "L'absence de second signal d'activation après engagement du BCR ou TCR entraîne l'anergie ou l'apoptose du lymphocyte."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "BCR — Structure",
+            "bulletPoints": [
+              "L'immunoglobuline de membrane (sIg) est formée de 4 chaînes : 2 lourdes et 2 légères.",
+              "Partie variable (aminoterminale) : spécifique à chaque lymphocyte, constitue le récepteur à l'antigène (paratope).",
+              "Partie constante (carboxyterminale) : rôle structural.",
+              "Partie intracellulaire de l'Ig membranaire : courte, sans motifs de signalisation propres.",
+              "La portion intracytoplasmique de l'Ig de membrane est associée de manière non covalente au complexe de signalisation constitué de l'hétérodimère Igα/Igβ.",
+              "Le gène mb-1 code la chaîne Igα (reconnue par l'Ac CD79a) et le gène b29 code la chaîne Igβ (reconnue par l'Ac CD79b)."
+            ],
+            "callout": "L'Ig membranaire n'a pas de capacité de signalisation intrinsèque — c'est l'hétérodimère Igα/Igβ (CD79a/CD79b), portant les motifs ITAM, qui transmet le signal."
+          },
+          {
+            "id": "subsec-5-b",
+            "title": "BCR — Corécepteurs",
+            "bulletPoints": [
+              "Corécepteur de stimulation : complexe CD19/CD21/CD81 — CD19 abaisse le seuil de sensibilité du BCR à l'Ag d'un facteur 10, favorise la stimulation du LB par le LT et est impliqué dans des interactions cellulaires homotypiques (CD81).",
+              "Corécepteur d'inhibition : CD32 (FcγRIIb) — coalition du BCR et du CD32 par un complexe Ag-Ac délivre un signal négatif au LB via des motifs ITIM."
+            ],
+            "callout": "CD19 amplifie le signal BCR x10 : essentiel pour les réponses aux antigènes thymo-dépendants. CD32 (motif ITIM) freine l'activation pour éviter les réponses auto-immunes."
+          },
+          {
+            "id": "subsec-5-c",
+            "title": "BCR — Activation",
+            "bulletPoints": [
+              "Nécessité de l'activation de plusieurs BCR à la surface du lymphocyte (dimérisation).",
+              "Activation du signal : recrutement de kinases → phosphorylation/activation des résidus ITAM → transmission du signal → activation de la transcription de gènes impliqués dans la survie, la différenciation et la prolifération lymphocytaire.",
+              "Un 2ème signal d'activation est nécessaire après stimulation du BCR — deux possibilités selon le type d'antigène : antigène thymo-dépendant (protéique, bactérien ou viral) → reconnaissance par le LT qui active le LB ; antigène thymo-indépendant (polysaccharide capsulaire, LPS, protéines natives, épitope viral ou bactérien) → forte oligomérisation du BCR."
+            ],
+            "callout": "RÈGLE CRITIQUE : un seul signal BCR ne suffit pas — un 2ème signal (LT helper ou oligomérisation forte) est requis. Sans lui : anergie ou apoptose du lymphocyte B."
+          },
+          {
+            "id": "subsec-5-d",
+            "title": "BCR — Fonctions",
+            "bulletPoints": [
+              "Dans le lymphocyte B immature : étape de maturation = signal de survie si BCR fonctionnel ; étape de sélection = signal de survie si pas d'auto-réactivité, signal de mort sinon.",
+              "Dans le lymphocyte B mature : signal de survie après sortie de la moelle — mort en 1 semaine en l'absence de rencontre d'un antigène spécifique ; reconnaissance d'un Ag spécifique = 1er signal d'activation et de différenciation ; nécessité d'un 2ème signal sinon apoptose en quelques jours, conduisant à la réponse immune adaptative effectrice."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-5-e",
+            "title": "TCR — Structure",
+            "bulletPoints": [
+              "Le TCR est un hétérodimère associant deux chaînes α et β (ou γ et δ) : glycoprotéine de membrane de poids moléculaire entre 40 et 50 kDa, réunies par un pont disulfure.",
+              "TCR αβ représentent 95 % des T matures.",
+              "Trois portions : extracellulaire, transmembranaire et intracytoplasmique.",
+              "Portion extracellulaire : 2 domaines Ig-like — région variable (extrémité N-terminale), région constante, très courte région charnière. Le TCR appartient à la superfamille des Ig.",
+              "Segment transmembranaire : acides aminés chargés positivement (2 pour les chaînes α et δ, 1 pour β et γ) assurant la cohésion du complexe multimoléculaire TCR-CD3.",
+              "Portion intracytoplasmique : très courte (5 acides aminés).",
+              "Complexe de signalisation du TCR : complexe CD3 + dimère ζ (homodimère lié par un pont disulfure) + motifs ITAM."
+            ],
+            "callout": "Le TCR a une queue intracytoplasmique très courte (5 aa) et ne peut pas signaliser seul — la signalisation est entièrement assurée par le complexe CD3 et le dimère ζ portant les motifs ITAM."
+          },
+          {
+            "id": "subsec-5-f",
+            "title": "TCR — Différents types",
+            "bulletPoints": [
+              "Diversité du TCR expliquée par les mêmes mécanismes de recombinaison génétique que pour les gènes des immunoglobulines ; enzymes impliquées (recombinases, ligases, endonucléases) communes aux deux lignées B et T.",
+              "Absence de ces enzymes → déficit immunitaire combiné sévère avec absence de lymphocytes B et T.",
+              "TCR αβ : association des chaînes α et β ; particularité : le gène δ est localisé au sein du locus α.",
+              "TCR γδ : association des chaînes γ et δ ; nécessite la présence du complexe CD3 pour être exprimé à la membrane. Locus δ dans le locus α sur le chromosome 14 ; chaîne δ ne possède que des segments V et J.",
+              "LT TCR γδ : CD3+CD4−CD8−, représentent 1 à 10 % des lymphocytes T sanguins ; majorité se différencient dans le thymus.",
+              "Molécule CD3 : toujours associée au TCR (αβ ou γδ), composée de CD3γ ; associée au TCR par charges négatives (TCR chargé positivement) ; domaines extra- et intracellulaires comprenant des motifs ITAM ; capacité d'activer les tyrosines kinases ; double fonction : signalisation + transport du TCR à la membrane plasmique."
+            ],
+            "callout": "La molécule CD3 assure à la fois la signalisation (via ITAM) ET le transport du TCR à la surface membranaire — sans CD3, pas de TCR en surface."
+          },
+          {
+            "id": "subsec-5-g",
+            "title": "TCR — Corécepteurs CD4 et CD8",
+            "bulletPoints": [
+              "CD4 : glycoprotéine monocaténaire transmembranaire de 54 kDa ; reconnaît spécifiquement les Ag HLA de classe II ; augmente la sensibilité du TCR à l'Ag ; exprimé par les 2/3 des lymphocytes T sanguins ; faible expression sur monocytes, macrophages et cellules dendritiques.",
+              "Mode d'action du CD4 : après 1ère interaction TCR–CMH peptide, modification de la conformation de CD4 → CD4 s'approche du CMH II → mise en contact de la protéine Lck (associée au CD4) et de la protéine CD3 (associée au TCR) → phosphorylation des motifs ITAM du CD3 et cascade de signalisation.",
+              "CD8 : hétérodimère constitué de 2 chaînes liées de manière covalente ; reconnaît les Ag HLA de classe I (diminue la dose requise de peptide pour l'activation du LT) ; exprimé par le 1/3 des LT sanguins ; faible expression par une sous-population de cellules NK (CD3−CD8+)."
+            ],
+            "callout": "CD4 → CMH de classe II (LT helper) ; CD8 → CMH de classe I (LT cytotoxique). Ces corécepteurs recrutent Lck, qui phosphoryle les ITAM de CD3 pour amplifier le signal."
+          },
+          {
+            "id": "subsec-5-h",
+            "title": "TCR — Activation",
+            "bulletPoints": [
+              "Les motifs ITAM ne sont pas phosphorylés au repos.",
+              "Activation du lymphocyte T : reconnaissance du complexe (CMH–peptide) sur une cellule présentatrice d'antigène → modification de conformation des chaînes de signalisation.",
+              "Génération du signal : recrutement de kinases, co-activation des corécepteurs CD4 ou CD8, phosphorylation/activation des résidus ITAM, activation de CD28 par les molécules de costimulation des CPA activées par les pathogènes.",
+              "Activation transcriptionnelle : trois voies de signalisation distinctes → activation de la transcription de gènes impliqués dans la survie, la différenciation et la prolifération cellulaire → différenciation et prolifération lymphocytaire."
+            ],
+            "callout": "L'activation complète du LT nécessite 2 signaux : Signal 1 = TCR + CMH/peptide ; Signal 2 = CD28 + B7 (sur les CPA). Sans Signal 2 : anergie clonale."
+          },
+          {
+            "id": "subsec-5-i",
+            "title": "TCR — Fonctions",
+            "bulletPoints": [
+              "Dans le lymphocyte T immature : maturation du TCR permet au lymphocyte de franchir les étapes de maturation et de sélection thymique.",
+              "Dans le lymphocyte T mature : signal de survie si reconnaissance d'un Ag spécifique, activation/différenciation, réponse cellulaire T."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-6",
+        "title": "Récepteurs des immunoglobulines (Récepteurs Fc)",
+        "summary": "Les récepteurs Fc (FcR) reconnaissent la partie Fc des immunoglobulines. Ils sont exprimés sur de nombreux types cellulaires et jouent des rôles variés selon le type cellulaire : phagocytose, cytotoxicité, modulation de l'activation.",
+        "bulletPoints": [
+          "Les fonctions des RFc sont multiples et variables selon le récepteur Fc et selon le type cellulaire.",
+          "Fonctions principales : endocytose et phagocytose (opsonisation), exocytose de vésicules de médiateurs chimiques (inflammation, cytotoxicité), modulation de l'activation cellulaire.",
+          "L'unique récepteur inhibiteur FcγRIIb → inhibe les voies de signalisation activatrices de n'importe quel récepteur à motif ITAM."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-6-a",
+            "title": "Récepteurs Fc des IgG (FcγR)",
+            "bulletPoints": [
+              "FcγRIa (CD64) : récepteur de forte affinité — chaîne α indispensable pour la reconnaissance spécifique (3 domaines Ig extra-cellulaires) + 2 chaînes γ transductrices présentant chacune un motif ITAM ; expression sur macrophages, monocytes, neutrophiles, éosinophiles, cellules dendritiques.",
+              "FcγRIIa (CD32a) : récepteur de faible affinité ; expression sur macrophages, neutrophiles, éosinophiles, plaquettes, cellules dendritiques, cellules de Langerhans.",
+              "FcγRIIb (CD32b) : récepteur inhibiteur (ITIM) ; expression sur LB, mastocytes, basophiles, neutrophiles, éosinophiles, cellules dendritiques, cellules de Langerhans, macrophages.",
+              "FcγRIIIa (CD16a) : expression sur macrophages, monocytes, NK, mastocytes, PNE, DC, cellules de Langerhans.",
+              "FcγRIIIb (CD16b) : expression sur PNN, PNE."
+            ],
+            "callout": "FcγRIIb (CD32b) est l'UNIQUE récepteur Fc inhibiteur — il inhibe via ITIM les voies activatrices de tous les récepteurs à ITAM. Clé dans l'homéostasie et la prévention des réponses auto-immunes."
+          },
+          {
+            "id": "subsec-6-b",
+            "title": "Récepteurs Fc des IgA (FcαR) et IgE (FcεR)",
+            "bulletPoints": [
+              "FcαRI (CD89) : expression sur macrophages, neutrophiles, éosinophiles.",
+              "FcεRI : récepteur de forte affinité présent sur PNE, PNB, mastocytes et cellules de Langerhans. Formé de 4 chaînes : une longue chaîne α extramembranaire (superfamille Ig), une chaîne β avec 4 segments transmembranaires, deux chaînes γ en homodimère reliées par un pont disulfure.",
+              "FcεRII (CD23) : faible affinité, présent sur monocytes/macrophages, éosinophiles hypodenses, plaquettes, mastocytes, basophiles, cellules de Langerhans. Existence de 2 isoformes a et b différant par leur région cytoplasmique (a > b en taille)."
+            ],
+            "callout": "FcεRI (forte affinité) sur les mastocytes et basophiles est le récepteur clé dans les réactions allergiques de type I (anaphylaxie) : les IgE se fixent à FcεRI puis la bridging par l'allergène déclenche la dégranulation."
+          }
+        ]
+      },
+      {
+        "id": "sec-7",
+        "title": "Activation cellulaire par les immunorécepteurs",
+        "summary": "La fixation de l'antigène sur l'immunorécepteur déclenche une cascade de phosphorylations intracellulaires impliquant des kinases src et syk, des molécules adaptatrices, une élévation du calcium intracellulaire et l'activation de facteurs de transcription.",
+        "bulletPoints": [
+          "L'immunorécepteur est une molécule de couplage transmettant des signaux de l'extérieur vers l'intérieur de la cellule immunocompétente.",
+          "Conditions d'activation : l'immunorécepteur doit fixer l'Ag ET l'Ag doit être capable d'agréger les sous-unités de reconnaissance.",
+          "L'activation cellulaire comprend des réponses immédiates (réactions enzymatiques) et des réponses tardives (expression de gènes codant cytokines, récepteurs de cytokines, kinases et cyclines).",
+          "L'agrégation des immunorécepteurs induit la phosphorylation des tyrosines des ITAM par les kinases src.",
+          "Les ITAM phosphorylés recrutent des molécules à domaine SH2 comprenant des enzymes (kinases syk) et des molécules adaptatrices.",
+          "Les molécules adaptatrices recrutent d'autres molécules phosphorylées par la kinase syk.",
+          "Organisation de complexes moléculaires autour des domaines intracytoplasmiques des récepteurs → cascades de réactions propageant les signaux → élévation de la concentration intracellulaire de Ca2+ → activation de facteurs de transcription (gènes cibles)."
+        ],
+        "subsections": []
+      },
+      {
+        "id": "sec-8",
+        "title": "Régulation des immunorécepteurs",
+        "summary": "Les immunorécepteurs sont régulés par autoregulation (nombre d'ITAM phosphorylés, phosphatases SHP-1 et SHIP) et par des corécepteurs activateurs ou inhibiteurs coagrégés.",
+        "bulletPoints": [
+          "La régulation des immunorécepteurs comprend deux mécanismes : l'autorégulation et l'action des corécepteurs.",
+          "Régulation positive : nombre d'ITAM phosphorylés conditionne le degré de recrutement des protéines kinases syk → amplitude du signal.",
+          "Régulation négative : phosphatases SHP-1 (Tyrosine phosphatase) et SHIP (Inositol phosphatase) déphosphorylent et inactivent les kinases src et syk.",
+          "Corécepteurs coagrégés avec les immunorécepteurs peuvent moduler positivement ou négativement les signaux transmis."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-8-a",
+            "title": "Autorégulation",
+            "bulletPoints": [
+              "Régulation positive : le nombre d'ITAM phosphorylés conditionne le degré de recrutement des protéines kinases syk → détermine l'amplitude du signal.",
+              "Régulation négative : deux phosphatases associées aux immunorécepteurs → déphosphorylation et inactivation des kinases src et syk : tyrosine phosphatase SHP-1 (SH2 domains-containing Protein Tyrosine Phosphatase-1) et inositol phosphatase SHIP (SH2 domain-containing 5'-Inositol Phosphatase)."
+            ],
+            "callout": "SHP-1 et SHIP sont les deux phosphatases régulatrices négatives clés des immunorécepteurs — elles éteignent le signal en déphosphorylant les kinases src et syk."
+          },
+          {
+            "id": "subsec-8-b",
+            "title": "Corécepteurs",
+            "bulletPoints": [
+              "Corécepteurs coagrégés avec les immunorécepteurs capables de réguler positivement ou négativement les signaux transmis après liaison à l'Ag.",
+              "Reconnaissance de l'Ag par les corécepteurs : le plus souvent indirecte via des molécules fixées sur l'Ag.",
+              "Régulation positive — exemples : CD19 en association avec CD21 (surface des LB) et CD28 (surface des LT) ; coagrégation avec l'immunorécepteur → recrutement d'une kinase à domaine SH2 → recrutement des kinases Btk et Itk → synergie des deux systèmes.",
+              "CD28 délivre un second signal pour activer les cellules T normales et éviter l'anergie cellulaire voire l'apoptose.",
+              "Régulation négative : recrutement des phosphatases SHIP et SHP-1 → régulation négative de l'activation ; exemple : CD32 (FcγRIIb) et certains récepteurs des cellules NK portent un motif ITIM qui recrute SHP-1 ou SHIP → blocage de la voie calcique et de la voie Ras."
+            ],
+            "callout": "CD28 est essentiel comme corécepteur activateur des LT : sans CD28, le TCR seul ne suffit pas à activer le LT (anergie). CTLA-4 et PD-1 sont des exemples de corécepteurs inhibiteurs exploités en immunothérapie anticancéreuse."
+          }
+        ]
+      },
+      {
+        "id": "sec-9",
+        "title": "Applications cliniques",
+        "summary": "La connaissance des immunorécepteurs a des applications concrètes en diagnostic immunologique et en thérapeutique (modulateurs de costimulation, anticorps monoclonaux ciblant les récepteurs, neutralisation de toxines).",
+        "bulletPoints": [
+          "Chaque lymphocyte n'exprime qu'un seul récepteur antigénique spécifique : base de la spécificité de la réponse adaptative.",
+          "Lorsque le TCR reconnaît un antigène spécifique lié à une molécule HLA de classe I ou II → réponses variées (sécrétion de cytokines inflammatoires et/ou prolifération).",
+          "Applications diagnostiques : test de réactivité des lymphocytes in vivo ou in vitro (détectable si > 1/10 000 cellules T) — exemple : test permettant de différencier une sensibilisation au béryllium d'une sarcoïdose.",
+          "Applications thérapeutiques : modulateurs de la costimulation des cellules T (rhumatisme articulaire), modulation de la signalisation BCR (anti-CD20, modulateurs du flux calcique, induction de l'apoptose lymphocytaire), neutralisation de toxines (Ac bloquant le site de fixation cellulaire de la toxine), diminution du caractère infectieux de certains virus et bactéries."
+        ],
+        "subsections": []
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Immunorécepteur",
+        "definition": "Récepteur spécifique présent à la surface des cellules immunitaires, dont la fixation d'un ligand (antigène ou autre) déclenche une cascade de signalisation intracellulaire menant à l'activation cellulaire."
+      },
+      {
+        "term": "ITAM (Immunoreceptor Tyrosine-based Activation Motif)",
+        "definition": "Motif peptidique dans la portion intracytoplasmique des sous-unités de signalisation, formé d'une double séquence YxxL/I séparées par 6 à 8 acides aminés. Assure la régulation positive de l'activation cellulaire."
+      },
+      {
+        "term": "ITIM (Immunoreceptor Tyrosine-based Inhibitory Motif)",
+        "definition": "Motif peptidique formé d'une simple séquence YxxL/I. Assure la régulation négative de l'activation cellulaire en recrutant des phosphatases inhibitrices."
+      },
+      {
+        "term": "PRR (Pattern Recognition Receptor)",
+        "definition": "Récepteurs de l'immunité innée reconnaissant des motifs structuraux conservés (PAMPs) présents sur les micro-organismes mais absents des cellules eucaryotes."
+      },
+      {
+        "term": "PAMPs (Pathogen-Associated Molecular Patterns)",
+        "definition": "Structures moléculaires très conservées présentes sur l'enveloppe des micro-organismes (bactéries, virus, champignons) mais absentes des cellules eucaryotes saines."
+      },
+      {
+        "term": "BCR (B Cell Receptor)",
+        "definition": "Récepteur antigénique des lymphocytes B, constitué d'une immunoglobuline de membrane (sIg) associée à l'hétérodimère de signalisation Igα/Igβ (CD79a/CD79b) portant des motifs ITAM."
+      },
+      {
+        "term": "TCR (T Cell Receptor)",
+        "definition": "Récepteur antigénique des lymphocytes T, hétérodimère αβ (95%) ou γδ (5%) associé au complexe CD3 et au dimère ζ pour la signalisation intracellulaire."
+      },
+      {
+        "term": "CD3",
+        "definition": "Complexe moléculaire polymère toujours associé au TCR (αβ ou γδ), composé de CD3γ. Porte des motifs ITAM et assure à la fois la signalisation intracellulaire et le transport du TCR à la membrane plasmique."
+      },
+      {
+        "term": "Dimère ζ (zéta)",
+        "definition": "Homodimère associé au TCR, lié par un pont disulfure dans le segment transmembranaire. Porte des motifs ITAM et participe à la signalisation post-activation du TCR."
+      },
+      {
+        "term": "Collectines",
+        "definition": "Protéines sériques à sous-unités trimériques contenant des régions collagen-like et des domaines lectines de type C. Fonctionnent comme opsonines et activent le complément."
+      },
+      {
+        "term": "Ficolines",
+        "definition": "Protéines solubles à sous-unités trimériques avec des domaines 'fibrinogen-like'. Comme les collectines, fonctionnent comme opsonines activant le complément."
+      },
+      {
+        "term": "Lectines de type C",
+        "definition": "Famille de protéines exprimées sur macrophages et cellules dendritiques, possédant un CRD (Carbohydrate Recognition Domain) Ca2+-dépendant interagissant avec des sucres (mannose, galactose) des pathogènes. Induisent phagocytose et présentation antigénique."
+      },
+      {
+        "term": "Dectine",
+        "definition": "Lectine de type C, récepteur du β-glucane (polymère de glucose composant majeur des parois de champignons, certaines plantes et bactéries)."
+      },
+      {
+        "term": "MMR (Mannose Macrophage Receptor)",
+        "definition": "Lectine de type C fixant les oligosaccharides portant du N-acétyl-glucosamine sur des bactéries, champignons et cellules infectées. Après fixation, le micro-organisme est phagocyté et le récepteur est recyclé."
+      },
+      {
+        "term": "DC-SIGN",
+        "definition": "ICAM-3-grabbing non-integrin receptor. Lectine de type C exprimée spécifiquement par les cellules dendritiques, liant la gp120 du VIH, la glycoprotéine B du CMV et le lipoarabinomannan de M. tuberculosis."
+      },
+      {
+        "term": "Récepteurs Scavengers (SR)",
+        "definition": "Famille de 3 classes de récepteurs membranaires multi-domaines (SR-A, SR-B, SR-C) exprimés sur cellules myéloïdes et endothéliales. Rôles dans la clearance des corps apoptotiques, la phagocytose des micro-organismes et le métabolisme lipidique."
+      },
+      {
+        "term": "TLR (Toll-Like Receptor)",
+        "definition": "Famille de récepteurs de l'immunité innée (au moins 13 chez l'homme) reconnaissant chacun un type spécifique de PAMPs (LPS, flagelline, ARN viral, ADN CpG…). Gènes distribués sur des chromosomes distincts."
+      },
+      {
+        "term": "NOD (Nucleotide-binding Oligomerisation Domain Proteins)",
+        "definition": "Récepteurs intracellulaires de l'immunité innée. 8 membres identifiés chez l'Homme. NOD-1 et NOD-2 reconnaissent le peptidoglycane (PDG) des bacilles Gram négatif."
+      },
+      {
+        "term": "KIR (Killer-cell Ig-like Receptor)",
+        "definition": "Récepteurs inhibiteurs des cellules NK appartenant à la superfamille des immunoglobulines, possédant 2 ou 3 domaines Ig extracellulaires et une longue queue intracytoplasmique portant des ITIM."
+      },
+      {
+        "term": "NCR (Natural Cytotoxicity Receptor)",
+        "definition": "Récepteurs activateurs Ig-like des cellules NK impliqués dans la reconnaissance et la lyse des cellules tumorales. Comprend NKp30 (CD337), NKp44 (CD336) et NKp46 (CD335)."
+      },
+      {
+        "term": "Cytokines",
+        "definition": "Glycoprotéines de faible poids moléculaire (8 à 50 kDa), médiateurs non spécifiques de l'Ag émis par LT helpers activés, macrophages et autres cellules. Modes d'action : autocrine, paracrine, endocrine, juxtacrine."
+      },
+      {
+        "term": "Récepteurs de type I (hématopoïétines)",
+        "definition": "Famille la plus nombreuse des récepteurs de cytokines. Glycoprotéines membranaires de type I avec motif W-S-X-W-S dans le 2ème domaine extracellulaire et sans activité tyrosine kinase intrinsèque."
+      },
+      {
+        "term": "Récepteurs solubles",
+        "definition": "Formes solubles des récepteurs de cytokines produites par clivage protéolytique ou épissage alternatif. Peuvent avoir des rôles antagoniste, protecteur ou agoniste selon le contexte."
+      },
+      {
+        "term": "SHP-1 (SH2 domains-containing Protein Tyrosine Phosphatase-1)",
+        "definition": "Tyrosine phosphatase associée aux immunorécepteurs, recrutée par les motifs ITIM. Déphosphoryle et inactive les kinases src et syk → régulation négative de l'activation cellulaire."
+      },
+      {
+        "term": "SHIP (SH2 domain-containing 5'-Inositol Phosphatase)",
+        "definition": "Inositol phosphatase associée aux immunorécepteurs, recrutée par les motifs ITIM. Déphosphoryle et inactive les kinases src et syk → régulation négative de l'activation cellulaire."
+      },
+      {
+        "term": "CD4",
+        "definition": "Corécepteur du TCR, glycoprotéine monocaténaire transmembranaire de 54 kDa exprimée sur 2/3 des LT sanguins. Reconnaît spécifiquement le CMH de classe II et amplifie le signal TCR en recrutant la kinase Lck."
+      },
+      {
+        "term": "CD8",
+        "definition": "Corécepteur du TCR, hétérodimère exprimé sur 1/3 des LT sanguins. Reconnaît le CMH de classe I et diminue le seuil d'activation du LT cytotoxique."
+      },
+      {
+        "term": "Lck",
+        "definition": "Protéine tyrosine kinase de la famille src, associée au corécepteur CD4 (et CD8). Après interaction TCR–CMH/peptide, Lck phosphoryle les motifs ITAM de CD3, initiant la cascade de signalisation."
+      },
+      {
+        "term": "Kinase Syk",
+        "definition": "Tyrosine kinase recrutée au niveau des ITAM phosphorylés des immunorécepteurs. Phosphoryle les molécules adaptatrices et propage la cascade de signalisation intracellulaire."
+      },
+      {
+        "term": "Kinase Src",
+        "definition": "Famille de tyrosines kinases (dont Lck, Fyn) phosphorylant les tyrosines des ITAM lors de l'agrégation des immunorécepteurs par l'antigène, initiant la cascade de signalisation."
+      },
+      {
+        "term": "FcγRIa (CD64)",
+        "definition": "Récepteur Fc des IgG de forte affinité. Chaîne α (3 domaines Ig) + 2 chaînes γ à ITAM. Exprimé sur macrophages, monocytes, neutrophiles, éosinophiles, DC."
+      },
+      {
+        "term": "FcγRIIb (CD32b)",
+        "definition": "Seul récepteur Fc inhibiteur (motif ITIM). Exprimé sur LB, mastocytes, basophiles, neutrophiles, éosinophiles, DC, macrophages. Bloque les voies de signalisation activatrices de tout récepteur à ITAM."
+      },
+      {
+        "term": "FcεRI",
+        "definition": "Récepteur de forte affinité pour les IgE. Formé de 4 chaînes (α-β-γγ). Présent sur mastocytes, basophiles, PNE et cellules de Langerhans. Clé dans les réactions allergiques de type I."
+      },
+      {
+        "term": "Igα / Igβ (CD79a / CD79b)",
+        "definition": "Hétérodimère de signalisation associé à l'immunoglobuline membranaire dans le BCR. Igα est codée par mb-1, Igβ par b29. Chaque chaîne porte un motif ITAM."
+      },
+      {
+        "term": "CD19",
+        "definition": "Corécepteur stimulateur du BCR (en complexe avec CD21 et CD81). Abaisse le seuil de sensibilité du BCR à l'Ag d'un facteur 10 et favorise la stimulation du LB par le LT."
+      },
+      {
+        "term": "CD28",
+        "definition": "Corécepteur activateur du TCR présent sur les LT. Délivre un 2ème signal d'activation indispensable pour éviter l'anergie cellulaire. Se lie aux molécules B7 (CD80/CD86) des CPA."
+      },
+      {
+        "term": "Missing self",
+        "definition": "Principe d'activation des cellules NK : l'absence ou la perte du CMH de classe I (signal inhibiteur) lève l'inhibition des NK → cytotoxicité contre les cellules tumorales ou infectées."
+      },
+      {
+        "term": "CMH (Complexe Majeur d'Histocompatibilité) / HLA",
+        "definition": "Molécules de présentation antigénique. CMH de classe I présentent les peptides aux LT CD8+ ; CMH de classe II présentent les peptides aux LT CD4+. Reconnus par les corécepteurs CD8 et CD4 respectivement."
+      },
+      {
+        "term": "Opsonisation",
+        "definition": "Processus par lequel un micro-organisme est recouvert d'opsonines (anticorps, collectines, ficolines, fragments du complément) facilitant sa reconnaissance et sa phagocytose par les macrophages et neutrophiles."
+      },
+      {
+        "term": "Antigène thymo-dépendant",
+        "definition": "Antigène de nature protéique (produit bactérien ou viral) dont la réponse immunitaire humorale nécessite l'aide d'un LT helper (signal 2 fourni par le LT activé au LB)."
+      },
+      {
+        "term": "Antigène thymo-indépendant",
+        "definition": "Antigène non protéique (polysaccharides capsulaires, LPS, protéines natives…) capable de stimuler les LB sans aide des LT, par forte oligomérisation du BCR."
+      }
+    ]
+  }

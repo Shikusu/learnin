@@ -1,0 +1,166 @@
+{
+    "id": "lesson-001",
+    "title": "Immunité Spécifique à Médiation Humorale",
+    "tldr": "Cette leçon détaille les mécanismes de l'immunité acquise humorale, centrée sur la production d'anticorps par les lymphocytes B pour neutraliser les agents pathogènes extracellulaires.",
+    "keyTakeaways": [
+      "L'immunité humorale repose sur la production d'anticorps (immunoglobulines) par les lymphocytes B différenciés en plasmocytes.",
+      "La réponse nécessite souvent une coopération entre les cellules présentatrices d'antigène (CPA), les lymphocytes T CD4+ et les lymphocytes B.",
+      "Il existe une distinction majeure entre les antigènes thymo-dépendants (avec mémoire et switch de classe) et thymo-indépendants (réponse courte, principalement IgM).",
+      "La mémoire immunitaire assure une protection plus rapide, intense et durable lors des contacts ultérieurs avec un antigène spécifique."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définitions",
+        "summary": "Présentation des concepts de base de l'immunité spécifique et des différents types d'acquisition de l'immunité.",
+        "bulletPoints": [
+          "L'immunité spécifique intervient en cas d'échec de l'immunité innée pour éliminer de façon ciblée l'agent pathogène.",
+          "Elle est caractérisée par la spécificité, la diversité, la reconnaissance du soi/non-soi et la mémoire.",
+          "Le délai de mise en place est de 3 à 4 jours lors du premier contact."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Types d'Immunité Acquise",
+            "bulletPoints": [
+              "Immunité passive naturelle : Transmission des anticorps maternels via le placenta ou le lait.",
+              "Immunité passive artificielle : Administration d'anticorps préformés (immunoglobulines).",
+              "Immunité active naturelle : Résultat d'une infection directe par un pathogène.",
+              "Immunité active artificielle : Résultat de l'immunisation par la vaccination."
+            ],
+            "callout": "L'immunité passive offre une protection limitée dans le temps car les effecteurs sont transférés et non produits par l'individu lui-même."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Effecteurs et Cellules de l'Immunité Humorale",
+        "summary": "Description des acteurs cellulaires et moléculaires impliqués dans la réponse humorale.",
+        "bulletPoints": [
+          "Les effecteurs principaux sont les immunoglobulines (anticorps) produits par les lymphocytes B.",
+          "La réponse se déroule majoritairement dans les zones B des organes lymphoïdes secondaires.",
+          "Les lymphocytes B reconnaissent les épitopes conformationnels via leur récepteur BCR."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Les Lymphocytes B (LB)",
+            "bulletPoints": [
+              "Différenciation : Naissent et maturent dans la moelle osseuse.",
+              "Populations : LB naïfs, centroblastes, centrocytes, plasmocytes et LB mémoire.",
+              "Transformation : Les LB activés deviennent des plasmocytes, véritables usines à anticorps."
+            ],
+            "callout": "Classes d'anticorps : IgM (réponse primaire), IgG (réponse secondaire durable), IgA (muqueuses), IgE (allergie), IgD (rôle inconnu)."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "Rôles des Lymphocytes T et des CPA",
+            "bulletPoints": [
+              "CPA : Phagocytent, apprêtent l'antigène et le présentent via le CMH II avec le co-signal B7.",
+              "Lymphocytes T CD4+ (Helper) : Fournissent le second signal d'activation aux LB via des cytokines et le contact CD40/CD40L."
+            ],
+            "callout": "Sans le second signal (molécules de co-stimulation), le système immunitaire entre en état de tolérance au lieu de s'activer."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Mécanismes d'Activation et Réponses",
+        "summary": "Comparaison entre les réponses aux antigènes thymo-dépendants et thymo-indépendants.",
+        "bulletPoints": [
+          "Antigènes Thymo-dépendants : Protéines solubles nécessitant une aide des T CD4+. Entraînent une commutation de classe (switch) et une mémoire.",
+          "Antigènes Thymo-indépendants : Polysaccharides ou LPS activant directement les LB. Réponse faible, principalement IgM, sans mémoire réelle."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Rôle des Cytokines (Réponse Thymo-dépendante)",
+            "bulletPoints": [
+              "IL-2 : Prolifération des lymphocytes B.",
+              "IL-4 et IL-13 : Orientation vers la production d'IgG et d'IgE.",
+              "IL-10 : Orientation vers la production d'IgA.",
+              "IL-5 : Amplification globale et synthèse d'IgM, IgG et IgA.",
+              "IL-6 : Maintien de la prolifération des plasmocytes."
+            ],
+            "callout": "La réponse secondaire est presque instantanée, beaucoup plus intense et présente une meilleure affinité pour l'antigène que la réponse primaire."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Contrôle et Régulation",
+        "summary": "Facteurs influençant l'intensité et la durée de la réponse immunitaire humorale.",
+        "bulletPoints": [
+          "Antigène : La production d'Ac s'arrête dès que l'Ag disparaît.",
+          "Rétrocontrôle par les Anticorps : Utilisation d'anti-idiotypes pour réguler la réponse.",
+          "Lymphocytes T régulateurs : Inhibent l'action des T auxiliaires pour modérer la réponse.",
+          "Facteurs neuro-endocriniens : Les glucocorticoïdes et les hormones sexuelles (androgènes, œstrogènes) peuvent affaiblir la réponse."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Génétique et Coopération",
+            "bulletPoints": [
+              "Les gènes VDJ codent pour la production des anticorps.",
+              "La coopération T-B est sous le contrôle des gènes Ir (région I du CMH).",
+              "La variabilité immunitaire dépend de l'individu, de la race et de l'espèce."
+            ],
+            "callout": "Réseau idiotypique : Un système où les anticorps sont eux-mêmes reconnus par d'autres anticorps (anti-idiotypes) pour maintenir l'équilibre immunitaire."
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Exploration Biologique",
+        "summary": "Méthodes cliniques pour évaluer l'état de l'immunité humorale d'un patient.",
+        "bulletPoints": [
+          "Exploration quantitative : Électrophorèse des protéines plasmatiques (EPP) et néphélémétrie.",
+          "Exploration qualitative : Recherche d'anomalies (gammapathies monoclonales) ou d'auto-anticorps.",
+          "Tests Ag-Ac : ELISA, Immunofluorescence, Agglutination au latex."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Valeurs de Référence (Adulte Sain)",
+            "bulletPoints": [
+              "IgG : 7,20 – 14,70 g/l",
+              "IgA : 1,10 – 3,60 g/l",
+              "IgM : 0,48 – 3,10 g/l",
+              "Gamma-globulines totales : 6 à 13 g/l"
+            ],
+            "callout": "Pathologies : La recherche d'auto-anticorps (ANA, FR, ANCA) est cruciale pour le diagnostic des maladies auto-immunes."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "BCR (B Cell Receptor)",
+        "definition": "Récepteur spécifique d'antigène situé à la surface des lymphocytes B."
+      },
+      {
+        "term": "Plasmocyte",
+        "definition": "Stade final de différenciation du lymphocyte B activé, spécialisé dans la sécrétion massive d'anticorps."
+      },
+      {
+        "term": "Épitope",
+        "definition": "Partie spécifique de l'antigène reconnue par un anticorps ou un récepteur lymphocytaire."
+      },
+      {
+        "term": "Commutation de classe (Switch)",
+        "definition": "Processus biologique permettant à un lymphocyte B de passer de la production d'IgM à celle d'IgG, IgA ou IgE."
+      },
+      {
+        "term": "CPA (Cellule Présentatrice d'Antigène)",
+        "definition": "Cellule capable de capturer, traiter et présenter un antigène aux lymphocytes T."
+      },
+      {
+        "term": "Idiotype",
+        "definition": "Configuration antigénique particulière de la région variable d'un anticorps."
+      },
+      {
+        "term": "Néphélémétrie",
+        "definition": "Technique de laboratoire permettant de doser précisément les immunoglobulines en mesurant la lumière dispersée par des complexes Ag-Ac."
+      }
+    ]
+  }

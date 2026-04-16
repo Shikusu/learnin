@@ -1,0 +1,216 @@
+{
+    "id": "lesson-001",
+    "title": "Immunité Naturelle",
+    "tldr": "L'immunité naturelle constitue la première ligne de défense immédiate et non spécifique de l'organisme, s'appuyant sur des barrières physiques, chimiques et cellulaires pour contrer les pathogènes.",
+    "keyTakeaways": [
+      "L'immunité innée agit instantanément (secondes/minutes) et de manière non spécifique contre les agresseurs.",
+      "Les barrières anatomiques (peau, muqueuses) et physiologiques (pH, enzymes) empêchent la pénétration et la prolifération des germes.",
+      "La phagocytose est un processus vital en quatre étapes (chimiotactisme, ingestion, digestion, exocytose) réalisé par des cellules spécialisées.",
+      "L'inflammation est une réponse coordonnée facilitant l'arrivée des effecteurs immunitaires et la réparation tissulaire.",
+      "L'immunité naturelle sert de pont indispensable pour activer et orienter la réponse immunitaire adaptative (spécifique)."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction et Définition",
+        "summary": "Présentation des concepts fondamentaux de l'immunité innée.",
+        "bulletPoints": [
+          "Première ligne de défense contre les pathogènes.",
+          "Mécanismes mobilisables immédiatement (secondes ou minutes).",
+          "Action non spécifique dirigée contre divers agents pathogènes.",
+          "Implique des composants humoraux (solubles) et cellulaires."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Définition",
+            "bulletPoints": [
+              "Ensemble de mécanismes de défense non spécifiques.",
+              "Agit dès le premier contact avec le pathogène."
+            ],
+            "callout": "L'immunité innée est définie comme un ensemble de mécanismes de défense non spécifiques capables d'agir immédiatement après le contact avec un agent pathogène."
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Barrières Anatomiques",
+        "summary": "Analyse de la peau et des muqueuses comme remparts physiques et biologiques.",
+        "bulletPoints": [
+          "Constituent la première interface avec l'environnement extérieur.",
+          "Utilisent trois types de mécanismes : physiques, chimiques et biologiques."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "La Peau",
+            "bulletPoints": [
+              "Mécanisme physique : Cellules épithéliales kératinisées et renouvellement permanent.",
+              "Mécanisme chimique : Sébum et sueur créant un pH acide (3-5) bactéricide.",
+              "Mécanisme biologique : Flore commensale entrant en compétition avec les pathogènes."
+            ],
+            "callout": "La barrière physique de la peau est efficace sauf en cas de lésions (piqûres, brûlures, traumatismes) qui créent une brèche pour les corps étrangers."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "Les Muqueuses",
+            "bulletPoints": [
+              "Mécanisme physique : Cellules jointives, péristaltisme, mouvements ciliaires et écoulement de fluides (urine, larmes).",
+              "Mécanisme chimique : Présence de lysozyme et de lactoferrine (lyse bactérienne et activité antivirale).",
+              "Mécanisme biologique : Flore commensale (ex: flore de Doderlein) produisant de l'acidité inhibitrice."
+            ],
+            "callout": "La lactoferrine présente dans les muqueuses possède une capacité de lyse bactérienne après liaison au LPS et une activité antivirale."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Barrières Physiologiques",
+        "summary": "Facteurs solubles et conditions corporelles limitant la croissance microbienne.",
+        "bulletPoints": [
+          "Sollicitées lorsque les barrières anatomiques sont franchies.",
+          "Basées sur la température et des substances enzymatiques."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Température et Enzymes",
+            "bulletPoints": [
+              "La température corporelle normale inhibe la croissance de certains pathogènes.",
+              "Lysozyme : Dégrade le peptidoglycane des bactéries Gram+ et active les autolysines des Gram-.",
+              "Lactopéroxydase : Intervient dans la production de radicaux libres d'oxygène toxiques.",
+              "Défensines : Peptides cationiques produits par les macrophages qui forment des canaux dans les membranes bactériennes."
+            ],
+            "callout": "La fièvre (accroissement de la température) est un mécanisme actif pour inhiber davantage la croissance des pathogènes si nécessaire."
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Barrières de Défenses Cellulaires",
+        "summary": "Rôle des cellules immunitaires et mécanisme détaillé de la phagocytose.",
+        "bulletPoints": [
+          "Interviennent quand les barrières précédentes sont inactives.",
+          "Regroupent des cellules phagocytaires (PNN, macrophages) et non phagocytaires (NK, mastocytes)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Le Processus de Phagocytose",
+            "bulletPoints": [
+              "Chimiotactisme : Attraction des cellules vers le foyer inflammatoire.",
+              "Adhésion et Ingestion : Formation de pseudopodes et création du phagosome.",
+              "Digestion (Microbicidie) : Fusion avec les lysosomes pour former le phagolysosome.",
+              "Exocytose : Rejet des débris bactériens après digestion enzymatique."
+            ],
+            "callout": "La microbicidie peut être oxygéno-dépendante (production d'hypochlorite et d'ions superoxydes) ou oxygéno-indépendante (acidification, lysozyme, lactoferrine)."
+          },
+          {
+            "id": "subsec-4-b",
+            "title": "Les Acteurs Cellulaires",
+            "bulletPoints": [
+              "Polynucléaires Neutrophiles (PNN) : Protection contre les bactéries extracellulaires ; leur mort forme le pus.",
+              "Polynucléaires Éosinophiles et Basophiles : Lutte contre les helminthes et réactions allergiques.",
+              "Macrophages : Phagocytose, présentation de l'antigène et production de cytokines.",
+              "Cellules NK : Cytotoxicité naturelle via l'exocytose de granules ou l'expression de Fas-L."
+            ],
+            "callout": "Le macrophage joue un rôle 'charnière' car il amplifie la réponse naturelle tout en stimulant l'immunité acquise via la présentation d'antigènes."
+          }
+        ]
+      },
+      {
+        "id": "sec-5",
+        "title": "Barrières Inflammatoires",
+        "summary": "Réponse tissulaire à l'agression et processus de réparation.",
+        "bulletPoints": [
+          "Résulte de l'activation des TLR (Toll-like Receptors).",
+          "Facilite l'afflux des effecteurs immunitaires sur le lieu de l'infection."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-5-a",
+            "title": "Phases de l'Inflammation",
+            "bulletPoints": [
+              "Phase Vasculaire : Vasodilatation, augmentation de la perméabilité et exsudation de plasma.",
+              "Phase Cellulaire : Recrutement des leucocytes circulants et phagocytose.",
+              "Phase de Résolution : Restauration de l'intégrité tissulaire et remodelage par les myofibroblastes."
+            ],
+            "callout": "Les 4 signes cardinaux de l'inflammation sont : Chaleur, Rougeur, Tumeur (œdème) et Douleur."
+          },
+          {
+            "id": "subsec-5-b",
+            "title": "Médiateurs de l'Inflammation",
+            "bulletPoints": [
+              "Protéines de phase aiguë : CRP (Protéine C-réactive), Haptoglobine, Fibrinogène.",
+              "Cytokines pro-inflammatoires : IL-1, IL-6, TNF-alpha.",
+              "Système du Complément : Cascade de protéines plasmatiques pour l'élimination des pathogènes."
+            ],
+            "callout": "La CRP et d'autres protéines plasmatiques voient leur concentration augmenter massivement durant la phase aiguë de l'inflammation."
+          }
+        ]
+      },
+      {
+        "id": "sec-6",
+        "title": "Coordination Innée et Adaptative",
+        "summary": "Comment la réponse naturelle initie la réponse spécifique.",
+        "bulletPoints": [
+          "Production de 'seconds signaux' nécessaires à l'activation des lymphocytes T.",
+          "Expression de molécules costimulatrices (comme B7) et de cytokines (IL-12) par les cellules dendritiques.",
+          "Orientation de la réponse : Médiation cellulaire pour les microbes intracellulaires, humorale pour les microbes sanguins."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-6-a",
+            "title": "Importance de l'activation",
+            "bulletPoints": [
+              "L'activation du complément aide à la reconnaissance par les lymphocytes B via le récepteur CR2.",
+              "Contrôle de la réponse pour éviter les réactions contre des substances inoffensives."
+            ],
+            "callout": "Sans les signaux de danger fournis par l'immunité innée, la réponse immunitaire adaptative ne peut pas être correctement activée."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Immunité Innée",
+        "definition": "Système de défense non spécifique et immédiat de l'organisme."
+      },
+      {
+        "term": "Phagocytose",
+        "definition": "Processus d'ingestion et de destruction des particules étrangères par des cellules spécialisées."
+      },
+      {
+        "term": "Lysozyme",
+        "definition": "Enzyme bactéricide présente dans les sécrétions, capable de dégrader la paroi bactérienne."
+      },
+      {
+        "term": "Chimiotactisme",
+        "definition": "Mouvement de cellules immunitaires vers un foyer inflammatoire guidé par des signaux chimiques."
+      },
+      {
+        "term": "Phagosome",
+        "definition": "Vacuole intracellulaire contenant le micro-organisme internalisé."
+      },
+      {
+        "term": "Cytokines",
+        "definition": "Protéines de signalisation régulant la réponse immunitaire et l'inflammation."
+      },
+      {
+        "term": "CRP (Protéine C-Réactive)",
+        "definition": "Protéine plasmatique dont le taux augmente rapidement en cas d'inflammation aiguë."
+      },
+      {
+        "term": "Défensines",
+        "definition": "Peptides antimicrobiens créant des pores dans les membranes des pathogènes."
+      },
+      {
+        "term": "Flore Commensale",
+        "definition": "Ensemble des micro-organismes non pathogènes vivant normalement sur la peau ou les muqueuses."
+      },
+      {
+        "term": "Complément",
+        "definition": "Groupe de protéines plasmatiques participant à la lyse des pathogènes et au recrutement cellulaire."
+      }
+    ]
+  }

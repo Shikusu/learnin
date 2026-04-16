@@ -43,7 +43,7 @@ export const MODULES = [
     slug: "organes",
     name: "Organes Lymphoïdes",
     subtitle: "Architecture du système immunitaire",
-    icon: "🫀",
+    icon: "🧠",
     color: "#e67e22",
     bg: "#fdf5ec",
     slideCount: 44,

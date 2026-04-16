@@ -1,0 +1,173 @@
+{
+    "id": "lesson-001",
+    "title": "La Tolérance Immunitaire",
+    "tldr": "La tolérance immunitaire est l'incapacité spécifique de l'organisme à développer une réponse contre ses propres antigènes, assurée par des mécanismes centraux (élimination lors du développement) et périphériques (régulation post-maturation).",
+    "keyTakeaways": [
+      "La tolérance naturelle se divise en tolérance centrale (thymus et moelle osseuse) et périphérique (organes lymphoïdes secondaires et tissus).",
+      "La tolérance des lymphocytes T est beaucoup plus rigoureuse et centrale que celle des lymphocytes B.",
+      "La sélection centrale repose sur l'élimination (apoptose) des cellules fortement autoréactives, avec l'aide du gène AIRE dans le thymus.",
+      "La tolérance périphérique utilise l'anergie, l'ignorance, les cellules T régulatrices (Treg), l'apoptose induite par l'activation (AICD) et les tissus immunoprivilégiés pour contrôler les fuites du système.",
+      "La tolérance induite dépend de multiples facteurs : génétique de l'hôte, âge, nature de l'antigène, dose et voie d'administration (la voie intraveineuse favorisant la tolérance)."
+    ],
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Introduction à la Tolérance Immunitaire",
+        "summary": "Définitions fondamentales et présentation des grandes catégories de la tolérance immunitaire.",
+        "bulletPoints": [
+          "La tolérance est l'incapacité spécifique d'un organisme à développer une réponse immunitaire vis-à-vis d'un antigène donné, normalement immunogène.",
+          "Elle implique l'élimination, pendant le développement, des lymphocytes porteurs de récepteurs pour les antigènes du Soi, créés suite aux recombinaisons aléatoires.",
+          "Une certaine proportion d'auto-anticorps reste utile pour l'élimination des constituants altérés du Soi.",
+          "La tolérance des lymphocytes T (LT) est de loin supérieure et plus stricte que celle des lymphocytes B (LB)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-1-a",
+            "title": "Les Types de Tolérance",
+            "bulletPoints": [
+              "Tolérance centrale : implique la présentation des antigènes du Soi dans les organes lymphoïdes primaires (thymus, moelle osseuse).",
+              "Tolérance périphérique : implique les antigènes du Soi qui s'expriment uniquement en périphérie.",
+              "La tolérance peut être naturelle (physiologique) ou induite (expérimentale ou thérapeutique)."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Tolérance Naturelle Centrale",
+        "summary": "Les mécanismes d'éducation et de sélection des lymphocytes dans les organes lymphoïdes primaires pour éviter l'auto-immunité.",
+        "bulletPoints": [
+          "L'objectif principal est de filtrer et d'éliminer les clones lymphocytaires fortement autoréactifs avant leur passage dans la circulation sanguine.",
+          "Le thymus reste fonctionnel chez l'adulte (produisant environ 50 millions de LT par jour), bien que son vieillissement puisse parfois entraîner une rupture de tolérance."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-2-a",
+            "title": "Tolérance T (Thymique)",
+            "bulletPoints": [
+              "Les thymocytes doubles positifs (CD4+CD8+) subissent une sélection dans le thymus basée sur leur interaction avec le CMH.",
+              "Sélection positive : survie des thymocytes reconnaissant le CMH du Soi. Détermine l'expression du corécepteur (CD8 si CMH I, CD4 si CMH II). Mort par négligence des cellules sans affinité.",
+              "Sélection négative : élimination par apoptose des thymocytes liant les auto-antigènes avec une forte affinité (présentés par les cellules dendritiques et macrophages).",
+              "Le coût de cette sélection est énorme : seulement 2% des précurseurs ressortent du thymus sous forme de LT matures naïfs.",
+              "Le gène AIRE (Autoimmune Regulator) permet aux cellules épithéliales médullaires d'exprimer des antigènes tissulaires périphériques pour parfaire la sélection négative."
+            ],
+            "callout": "L'hypothèse de l'affinité : Une interaction faible ou intermédiaire entre le TCR et le CMH-peptide permet la survie (sélection positive), tandis qu'une très forte affinité déclenche l'apoptose (sélection négative)."
+          },
+          {
+            "id": "subsec-2-b",
+            "title": "Tolérance B (Médullaire)",
+            "bulletPoints": [
+              "Le filtrage des lymphocytes B dans la moelle osseuse est moins rigoureux que celui des LT, expliquant la présence de nombreux LB autoréactifs.",
+              "L'élimination survient si l'IgM membranaire du LB immature se lie fortement à un antigène du Soi multivalent.",
+              "Les mécanismes incluent la délétion clonale (apoptose) ou l'anergie (inactivation en présence d'antigènes du Soi solubles)."
+            ],
+            "callout": "Receptor Editing : Un lymphocyte B autoréactif peut parfois échapper à l'apoptose en réactivant ses enzymes recombinases pour modifier sa chaîne légère et changer la spécificité de son récepteur."
+          }
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Tolérance Naturelle Périphérique",
+        "summary": "Les mécanismes de sécurité qui contrôlent ou désactivent les lymphocytes autoréactifs ayant échappé à la sélection centrale.",
+        "bulletPoints": [
+          "La tolérance périphérique peut être totale (aucune réaction cellulaire ou humorale) ou partielle (réponse de très faible amplitude)."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-3-a",
+            "title": "Mécanismes de Tolérance T Périphérique",
+            "bulletPoints": [
+              "Ignorance : Les lymphocytes autoréactifs n'ont pas accès physiquement à leur antigène. Cette ignorance peut être rompue par des dommages tissulaires (ex: infarctus libérant des Ag intracellulaires) ou des infections.",
+              "Anergie : Inactivation durable d'un LT naïf qui rencontre son antigène sans les signaux de costimulation (absence du Signal 2).",
+              "Lymphocytes T Régulateurs (Treg) : Cellules CD4+ CD25+ FoxP3+ (5% des LT CD4) qui suppriment activement les réponses agressives des autres LT autoréactifs.",
+              "Déviation Immune : Phénomène où une réponse Th1 ou Th2 s'inhibent mutuellement (ex: l'IL-10 produite par Th2 supprime la réponse inflammatoire Th1).",
+              "Épuisement / Contraction clonale : Apoptose des lymphocytes activés (AICD - Activation-Induced Cell Death) pour limiter et stopper la réponse immunitaire.",
+              "Tissus immunoprivilégiés : Sites (œil, cerveau, testicule, placenta) exprimant le FasL qui déclenche l'apoptose de tout lymphocyte T activé tentant d'y pénétrer."
+            ],
+            "callout": "Une mutation du gène FOX-P3 empêche la formation des Treg et provoque le syndrome IPEX, une maladie auto-immune sévère (polyendocrinopathie et atteinte intestinale)."
+          },
+          {
+            "id": "subsec-3-b",
+            "title": "Tolérance B Périphérique",
+            "bulletPoints": [
+              "L'activation des LB naïfs en périphérie nécessite impérativement deux signaux simultanés.",
+              "Le Signal 1 est fourni par l'antigène liant le BCR, et le Signal 2 est fourni par un lymphocyte T CD4+ auxiliaire (Th2).",
+              "L'existence de LB autoréactifs pour des antigènes solubles ne mène généralement pas à l'auto-immunité, car les LT auxiliaires spécifiques à ce même antigène ont déjà été éliminés ou rendus tolérants (double sécurité)."
+            ],
+            "callout": null
+          }
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Tolérance Induite",
+        "summary": "L'acquisition d'un état de tolérance vis-à-vis d'un antigène exogène, dépendante de multiples paramètres physiologiques et expérimentaux.",
+        "bulletPoints": [
+          "La tolérance induite est un état non définitif et manipulable, influencé par les caractéristiques de l'hôte, de l'antigène et des conditions d'administration."
+        ],
+        "subsections": [
+          {
+            "id": "subsec-4-a",
+            "title": "Facteurs liés à l'hôte",
+            "bulletPoints": [
+              "Gènes Ir (Immune Response) : L'expression de certains gènes du CMH II détermine la capacité intrinsèque d'un individu à répondre ou tolérer une immunisation.",
+              "Sexe : C'est un facteur de risque majeur, les maladies auto-immunes étant beaucoup plus fréquentes chez la femme.",
+              "Âge : L'état de tolérance s'induit beaucoup plus facilement chez l'animal nouveau-né, dont le système immunitaire est encore malléable.",
+              "Traitements : L'utilisation de thérapies immunosuppressives favorise l'induction d'une tolérance."
+            ],
+            "callout": null
+          },
+          {
+            "id": "subsec-4-b",
+            "title": "Facteurs liés à l'antigène et à l'immunisation",
+            "bulletPoints": [
+              "Distance taxonomique : Plus un antigène est phylogénétiquement éloigné (étranger), plus il déclenche une forte réponse. Une distance courte favorise la tolérance.",
+              "Nature de l'antigène : Les protéines sous forme désagrégée (monomériques) sont beaucoup plus tolérogènes que les formes agrégées.",
+              "Dose d'immunogène : La tolérance s'observe aux deux extrêmes : avec des doses extrêmement faibles (tolérance des faibles doses) ou des doses massives (paralysie immunitaire).",
+              "Voie d'administration : La voie intraveineuse (IV) favorise largement la tolérance (ciblage de la rate), tandis que les voies sous-cutanée ou intradermique favorisent l'immunisation (ciblage des ganglions)."
+            ],
+            "callout": null
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Gène AIRE (Autoimmune Regulator)",
+        "definition": "Facteur de transcription exprimé dans le thymus permettant de présenter des antigènes de tissus périphériques pour assurer l'élimination des LT autoréactifs (sélection négative)."
+      },
+      {
+        "term": "Sélection Positive",
+        "definition": "Processus de survie des thymocytes dont le récepteur (TCR) est capable de reconnaître le CMH du Soi avec une affinité adéquate."
+      },
+      {
+        "term": "Sélection Négative",
+        "definition": "Processus d'élimination (apoptose) des thymocytes dont le récepteur reconnaît avec une affinité trop forte les complexes CMH/peptides du Soi."
+      },
+      {
+        "term": "Anergie",
+        "definition": "État d'inactivation prolongée d'un lymphocyte naïf lorsqu'il rencontre son antigène spécifique sans recevoir les signaux de costimulation nécessaires."
+      },
+      {
+        "term": "Receptor Editing",
+        "definition": "Mécanisme de sauvetage permettant à un lymphocyte B immature autoréactif de modifier la chaîne légère de son récepteur pour perdre son autoréactivité."
+      },
+      {
+        "term": "Treg (Lymphocytes T Régulateurs)",
+        "definition": "Sous-population de lymphocytes T (CD4+ CD25+ FoxP3+) spécialisée dans la suppression active des réponses immunitaires excessives ou auto-immunes."
+      },
+      {
+        "term": "AICD (Activation-Induced Cell Death)",
+        "definition": "Apoptose des lymphocytes ayant été fortement activés, participant au phénomène de contraction clonale pour terminer une réponse immunitaire."
+      },
+      {
+        "term": "FasL (Fas Ligand)",
+        "definition": "Molécule exprimée à la surface des tissus immunoprivilégiés (œil, cerveau) qui déclenche la mort cellulaire par apoptose des lymphocytes T activés portant le récepteur Fas."
+      },
+      {
+        "term": "Syndrome IPEX",
+        "definition": "Maladie auto-immune sévère causée par une mutation du gène FOX-P3, entraînant l'absence de lymphocytes T régulateurs fonctionnels."
+      }
+    ]
+  }
